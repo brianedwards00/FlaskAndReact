@@ -9,18 +9,16 @@
 .custom_upload{
 padding: 25px;
 }
-.custom_text_placement{
 
-
-}
 .parent{
-border: 2px solid #0074d9;
-padding: 30px;
+padding: 10px;
 position: relative;
+  text-align: center;
 }
+
 .custom_box{
-width: 100%;
-padding: 12px;
+width: 90%;
+padding: 30px;
 
 }
 

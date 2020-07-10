@@ -71,6 +71,7 @@ def files():
     global counter
     filecounter = 1
     # Mount D is mounted to a network share
+    # sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d
     target = os.path.join('/mnt/d/Anubhav/Brian', 'test_docs')
     if not os.path.isdir(target):
         os.makedirs(target)
@@ -94,12 +95,12 @@ def files():
             extension = extension.replace('.', '')
             # Creates a variable that will soon be added to the specific Run # json object
             data_2 = {extension + '_path' + str(filecounter): destination}
-            # Combines the specific Run # value from before and adds a key:value
+            # Combines the specific Run # value from before and adds a new key:value to it
             # (eg txt_path1: *path to where it will go to*)
             data_1.update(data_2)
             # Adds the key in front of the value created above
             json_data_to_add = {"Run #" + str(counter): data_1}
-            # Overwrite all the data to include the new Run # values
+            # Overwrite all the data to include the new Run # with added values
             json_data.update(json_data_to_add)
             # Goes to beginning of the file
             file_json.seek(0)

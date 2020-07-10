@@ -11,7 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Second Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react-flask-app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Git" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -73,7 +78,8 @@
       <workItem from="1594221624668" duration="6130000" />
       <workItem from="1594242216443" duration="4784000" />
       <workItem from="1594248658637" duration="3144000" />
-      <workItem from="1594310730056" duration="17416000" />
+      <workItem from="1594310730056" duration="18530000" />
+      <workItem from="1594392832940" duration="17189000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -109,17 +115,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1593459630847" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1593469776708">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1594413530086">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593469776708" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594413530086" />
+    <state x="508" y="238" key="Github.ShareDialog" timestamp="1594413585031">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="508" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594413585031" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1594414050462">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594414050462" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594338626776">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594338626776" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594336876644">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594413924517">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594336876644" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594413924517" />
   </component>
 </project>

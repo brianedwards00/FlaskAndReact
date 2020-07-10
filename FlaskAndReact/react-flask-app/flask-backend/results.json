@@ -1,9 +1,0 @@
-{
-    "Run #1": {
-        "dataset_name": "Brian",
-        "dataset_id": "1234",
-        "raw_path1": "/mnt/d/Anubhav/Brian/test_docs/FECB_ATCC_29133_819_Light_Lipid_NEG_150mm_20Mar15_Polaroid_14-12-16.raw",
-        "fasta_path2": "/mnt/d/Anubhav/Brian/test_docs/ID_005068_1AB6D8F6.fasta",
-        "txt_path3": "/mnt/d/Anubhav/Brian/test_docs/MSGFPlus_PartTryp_MetOx_20ppmParTol.txt"
-    }
-}

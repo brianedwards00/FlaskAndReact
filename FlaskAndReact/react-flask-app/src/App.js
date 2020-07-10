@@ -25,15 +25,27 @@ class App extends React.Component {
         this.setState({
             selectedFiles: event.target.files,
         })
-
     }
 
     handleSubmit = (event) => {
         // Prevents a change in URL
         event.preventDefault()
+        console.log(this.state.selectedFiles)
+        for (let i = 1; i < this.state.selectedFiles.length + 1; i++){
+
+        }
         let fileData = new FormData()
         // Loops to insert the file and filename of each file in selectedFiles into FormData()
         for (let i = 1; i < this.state.selectedFiles.length + 1; i++){
+            let ext = this.state.selectedFiles[i-1].name.split('.').pop()
+                if(ext !== "txt" && ext !== "fasta" && ext !== "raw") {
+                    window.alert("You can only upload parameter files[.txt], protein files[.fasta] " +
+                    "and mass spectrometer output files[.raw]. Please select the files again")
+                    document.getElementById('inputFiles').value = null
+                    console.log(this.state.selectedFiles)
+                    return
+                }
+
           fileData.append('file' + i.toString(),this.state.selectedFiles[i-1])
           fileData.append('filename' + i.toString(), this.state.selectedFiles[i-1].name)
         }
@@ -73,46 +85,60 @@ class App extends React.Component {
             .catch((error) => {
                 console.error('Error:', error)
             })
+        document.getElementById('inputName').value = ''
+        document.getElementById('inputId').value = ''
+        document.getElementById('inputFiles').value = null
     }
-
     render() {
         return (
-
             <div>
                 <form onSubmit={this.handleSubmit} className="parent">
-                    <label className="custom_text_placement">
-                        Enter the DataSet Name
+                    <label>
+                        <p style={{'fontSize':'20px'}}>Enter the DataSet Name</p>
                         <input type="text"
                                name="dataset_name"
+                               id = "inputName"
                                onChange={this.handleChange}
                                className="custom_box"
+                               pattern= "[a-zA-Z0-9-_]{1,}"
+                               title="A-Z, a-z , 0-9 , _ , -"
                                required
                         />
+
+                        <p style={{'fontSize': '10px'}}>Must only include letters, numbers, underscores ( _ ),
+                            and/or hyphens ( - )</p>
                     </label>
-                    <label className="custom_text_placement">
-                        Enter the DataSet ID
-                        <input type="number"
+
+                    <label>
+                        <p style={{'fontSize':'20px'}}>Enter the DataSet ID</p>
+                        <input type="text"
                                name="dataset_id"
+                               id = "inputId"
                                onChange={this.handleChange}
                                className="custom_box"
+                               pattern="[0-9]{1,}"
+                               title="0-9"
                                required
                         />
+                        <p style={{'fontSize': '10px'}}>Must only include integers 0-9, no decimal points</p>
                     </label>
                     <label>
                         Please select up to 4 files:
                         <input type="file"
                                className="custom_upload"
+                               id = "inputFiles"
                                onChange={this.handleFileChange}
                                multiple
                                required
+                               title=".txt .fasta. or .raw"
                         />
+
                     </label>
-                    <input type="submit"
+                    <input style={{'fontSize':'40px'}}
+                           type="submit"
                            value="Submit"
                            className="custom_box"
                     />
-
-
                 </form>
             </div>
         )
