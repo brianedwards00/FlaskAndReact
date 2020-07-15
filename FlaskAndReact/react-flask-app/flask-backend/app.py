@@ -111,3 +111,27 @@ def files():
     counter += 1
     response = "FINISHED with data"
     return response
+
+
+@app.route('/dropdown', methods=['GET', 'POST'])
+def dropdown():
+    string1 = ""
+    string2 = ""
+    string3 = ""
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result')
+    entries = os.listdir(target)
+    for e in entries:
+        if e != "data" and e != "plots":
+            string1 = string1 + e + "! "
+        else:
+            continue
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/data')
+    entries = os.listdir(target)
+    for e in entries:
+        string2 = string2 + e + "? "
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/plots')
+    entries = os.listdir(target)
+    for e in entries:
+        string3 = string3 + e + "$ "
+
+    return '{} {} {}'.format(string1, string2, string3)

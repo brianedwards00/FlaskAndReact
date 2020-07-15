@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FlaskAndReact.iml" filepath="$PROJECT_DIR$/.idea/FlaskAndReact.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/quick-practice/.idea/quick-practice.iml" filepath="$USER_HOME$/PycharmProjects/quick-practice/.idea/quick-practice.iml" />
     </modules>
   </component>
 </project>

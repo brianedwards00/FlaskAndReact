@@ -11,12 +11,688 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Second Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FlaskAndReact.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskAndReact.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/ansi-html" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/ansi-html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/ansi-html.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/atob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/atob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/autoprefixer.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/babylon" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/babylon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/babylon.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-blank-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-blank-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-blank-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-has-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-has-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-has-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-prefers-color-scheme" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-prefers-color-scheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/css-prefers-color-scheme.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect-port" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect-port" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect-port.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/detect.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/errno" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/errno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/errno.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/escodegen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/escodegen.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esgenerate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esgenerate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esparse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esvalidate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/he" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/he.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/html-minifier-terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/html-minifier-terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/html-minifier-terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/import-local-fixture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/import-local-fixture.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/is-ci" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/is-ci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/is-ci.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jest.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/miller-rabin" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/miller-rabin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/miller-rabin.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/multicast-dns" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/multicast-dns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/multicast-dns.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/react-scripts" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/react-scripts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/react-scripts.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/regjsparser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/regjsparser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/regjsparser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sane" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sane" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sane.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sha.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sha.js.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-conv" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-conv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-conv.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-sign" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-sign" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-sign.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-verify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-verify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/sshpk-verify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/svgo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/svgo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/watch" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/watch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/watch.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack-dev-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack-dev-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/compat-data/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/core/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/generator/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/generator/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/generator/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/generator/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/generator/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/generator/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/template/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/template/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/template/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/traverse/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/traverse/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/plugin-transform-typescript/node_modules/@babel/traverse/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/preset-env/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/template/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/template/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/template/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/traverse/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/traverse/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@babel/traverse/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/core/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/reporters/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/reporters/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/reporters/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/test-sequencer/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/test-sequencer/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@jest/test-sequencer/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@svgr/plugin-svgo/node_modules/.bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@svgr/plugin-svgo/node_modules/.bin/svgo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@svgr/plugin-svgo/node_modules/.bin/svgo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__core/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__core/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__core/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__template/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__template/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@types/babel__template/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/eslint-plugin/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/eslint-plugin/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/eslint-plugin/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/experimental-utils/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/experimental-utils/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/experimental-utils/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/parser/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/parser/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/parser/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/acorn-globals/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/acorn-globals/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/acorn-globals/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/adjust-sourcemap-loader/node_modules/loader-utils/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/adjust-sourcemap-loader/node_modules/loader-utils/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/adjust-sourcemap-loader/node_modules/loader-utils/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/assert/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/assert/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/assert.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/assert/assert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/assert/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/assert/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/assert/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/autoprefixer/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/autoprefixer/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/autoprefixer/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-extract-comments/node_modules/.bin/babylon" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/babel-extract-comments/node_modules/.bin/babylon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-extract-comments/node_modules/.bin/babylon.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/license" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/binary-extensions/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/bonjour/node_modules/.bin/multicast-dns" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/bonjour/node_modules/.bin/multicast-dns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/bonjour/node_modules/.bin/multicast-dns.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/path.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/path.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/rm.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/rm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/write.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/content/write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/entry-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/entry-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/memoization.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/memoization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/disposer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/fix-owner.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/fix-owner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/hash-to-segments.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/hash-to-segments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/move-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/move-file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/tmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/util/tmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/lib/verify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/ls.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/ls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/p-map/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/p-map/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/p-map/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/p-map/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/node_modules/p-map/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/put.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/put.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/rm.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cacache/rm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/caniuse-api/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/caniuse-api/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/caniuse-api/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/copy-concurrently/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/core-js-compat/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cosmiconfig/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cosmiconfig/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cosmiconfig/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/create-hash/node_modules/.bin/sha.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/create-hash/node_modules/.bin/sha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/create-hash/node_modules/.bin/sha.js.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/create-hmac/node_modules/.bin/sha.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/create-hmac/node_modules/.bin/sha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/create-hmac/node_modules/.bin/sha.js.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/cross-spawn/node_modules/.bin/which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/css-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/index.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/index.js.flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/csstype/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/del/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/del/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/del/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/diffie-hellman/node_modules/.bin/miller-rabin" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/diffie-hellman/node_modules/.bin/miller-rabin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/diffie-hellman/node_modules/.bin/miller-rabin.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/enhanced-resolve/node_modules/memory-fs/node_modules/.bin/errno" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/enhanced-resolve/node_modules/memory-fs/node_modules/.bin/errno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/enhanced-resolve/node_modules/memory-fs/node_modules/.bin/errno.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esparse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esvalidate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/escodegen/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-config-react-app/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-config-react-app/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-config-react-app/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-flowtype/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-flowtype/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-flowtype/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-import/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-import/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-import/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-jsx-a11y/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-jsx-a11y/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-jsx-a11y/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react-hooks/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react-hooks/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react-hooks/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-plugin-react/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/referencer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/referencer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/scope.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/lib/scope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint-scope/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/glob-parent/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/glob-parent/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/glob-parent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/eslint/node_modules/glob-parent/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/acorn-jsx/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/acorn-jsx/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/espree/node_modules/acorn-jsx/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/file-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/file-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/file-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/flat-cache/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/flat-cache/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/flat-cache/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/binary-extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/binary-extensions.json.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/binary-extensions/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/glob-parent/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/glob-parent/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/glob-parent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/glob-parent/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/is-binary-path/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/is-binary-path/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/is-binary-path/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/is-binary-path/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/fork-ts-checker-webpack-plugin/node_modules/is-binary-path/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/node_modules/is-glob/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/node_modules/is-glob/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/node_modules/is-glob/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/node_modules/is-glob/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/glob-parent/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/global-prefix/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/global-prefix/node_modules/.bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/global-prefix/node_modules/.bin/which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/he" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/he.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-minifier-terser/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/html-minifier-terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/html-minifier-terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/html-minifier-terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/html-webpack-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-conv" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-conv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-conv.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-sign" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-sign" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-sign.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-verify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-verify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/http-signature/node_modules/.bin/sshpk-verify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/invariant/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/invariant/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/invariant/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/license" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/is-binary-path/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-source-maps/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-source-maps/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/istanbul-lib-source-maps/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/import-local-fixture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/import-local-fixture.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/is-ci" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/is-ci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-cli/node_modules/.bin/is-ci.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/escodegen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/escodegen.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/esgenerate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-environment-jsdom/node_modules/jsdom/node_modules/.bin/esgenerate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-haste-map/node_modules/.bin/sane" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-haste-map/node_modules/.bin/sane" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-haste-map/node_modules/.bin/sane.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-jasmine2/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-jasmine2/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-jasmine2/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-runner/node_modules/.bin/jest-runtime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-runner/node_modules/.bin/jest-runtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-runner/node_modules/.bin/jest-runtime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-snapshot/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/is-ci" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/is-ci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/is-ci.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest-util/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/import-local-fixture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/import-local-fixture.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/jest" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/jest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jest/node_modules/.bin/jest.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esparse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esvalidate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/js-yaml/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/escodegen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/escodegen.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/esgenerate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/jsdom/node_modules/.bin/esgenerate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/find-cache-dir/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/find-cache-dir/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-fs-cache/node_modules/find-cache-dir/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-utils/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/loader-utils/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/loader-utils/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/memory-fs/node_modules/.bin/errno" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/memory-fs/node_modules/.bin/errno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/memory-fs/node_modules/.bin/errno.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/src/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/mini-css-extract-plugin/node_modules/schema-utils/src/validateOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/move-concurrently/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/.zuul.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/assert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/inherits.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/inherits_browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/inherits/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/.zuul.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/support/isBuffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/support/isBufferBrowser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/browser/inspect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/browser/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/node/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/node/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/node/inspect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/node/log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/test/node/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/node_modules/util/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-libs-browser/node_modules/assert/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-notifier/node_modules/.bin/which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-releases/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/node-releases/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/node-releases/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/normalize-package-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/normalize-package-data/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/normalize-package-data/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/optimize-css-assets-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/optimize-css-assets-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/optimize-css-assets-webpack-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/pbkdf2/node_modules/.bin/sha.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/pbkdf2/node_modules/.bin/sha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/pbkdf2/node_modules/.bin/sha.js.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/portfinder/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/portfinder/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/portfinder/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-attribute-case-insensitive/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-attribute-case-insensitive/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-attribute-case-insensitive/node_modules/postcss-selector-parser/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-browser-comments/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-browser-comments/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-browser-comments/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-calc/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-calc/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-calc/node_modules/postcss-selector-parser/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-colormin/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-colormin/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-colormin/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/src/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-loader/node_modules/schema-utils/src/validateOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-merge-rules/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-merge-rules/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-merge-rules/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-minify-params/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-minify-params/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-minify-params/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-local-by-default/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-local-by-default/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-local-by-default/node_modules/postcss-selector-parser/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-scope/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-scope/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-modules-scope/node_modules/postcss-selector-parser/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize-unicode/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize-unicode/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize-unicode/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-normalize/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/autoprefixer.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-blank-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-blank-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-blank-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-has-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-has-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-has-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-prefers-color-scheme" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-prefers-color-scheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-preset-env/node_modules/.bin/css-prefers-color-scheme.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-reduce-initial/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-reduce-initial/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-reduce-initial/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-selector-parser/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-selector-parser/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-svgo/node_modules/.bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-svgo/node_modules/.bin/svgo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/postcss-svgo/node_modules/.bin/svgo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/prop-types/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/prop-types/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/prop-types/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect-port" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect-port" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect-port.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/.bin/detect.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/cross-spawn/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/cross-spawn/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/cross-spawn/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/loader-utils/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/loader-utils/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dev-utils/node_modules/loader-utils/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dom/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-dom/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-dom/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/jest" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/jest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/jest.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack-dev-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack-dev-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react-scripts/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/react/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/react/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/regexpu-core/node_modules/.bin/regjsparser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/regexpu-core/node_modules/.bin/regjsparser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/regexpu-core/node_modules/.bin/regjsparser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/regjsparser/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/regjsparser/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/regjsparser/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/request/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/request/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/request/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/resolve-url-loader/node_modules/loader-utils/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/resolve-url-loader/node_modules/loader-utils/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/resolve-url-loader/node_modules/loader-utils/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sane/node_modules/.bin/watch" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/sane/node_modules/.bin/watch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sane/node_modules/.bin/watch.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sass-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/scheduler/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/scheduler/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/scheduler/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/declarations/ValidationError.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/declarations/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/declarations/keywords/absolutePath.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/declarations/util/Range.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/declarations/validate.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/dist/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/dist/keywords/absolutePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/dist/util/Range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/dist/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/schema-utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/send/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/send/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/send/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sockjs/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/sockjs/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/sockjs/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/source-map-resolve/node_modules/.bin/atob" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/source-map-resolve/node_modules/.bin/atob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/source-map-resolve/node_modules/.bin/atob.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/ssri/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/src/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/style-loader/node_modules/schema-utils/src/validateOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/stylehacks/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/stylehacks/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/stylehacks/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/svgo/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/url-loader/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-middleware/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/ansi-html" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/ansi-html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/ansi-html.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/import-local-fixture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/import-local-fixture.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/src/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-dev-server/node_modules/schema-utils/src/validateOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-log/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-log/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-log/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-manifest-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-manifest-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack-manifest-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/README.es.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/get.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/content/path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/content/read.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/content/rm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/content/write.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/entry-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/memoization.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/util/fix-owner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/util/hash-to-segments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/util/move-file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/util/tmp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/util/y.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/lib/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/locales/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/locales/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/locales/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/locales/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/ls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/node_modules/.bin/mkdirp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/node_modules/.bin/rimraf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/put.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/rm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/cacache/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/definition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/pattern-visitor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/reference.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/referencer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/scope-manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/scope.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/lib/variable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/eslint-scope/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/src/ValidationError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/schema-utils/src/validateOptions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/ssri/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/ssri/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/ssri/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/ssri/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/ssri/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/terser" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/workbox-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/workbox-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/workbox-webpack-plugin/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/worker-farm/node_modules/.bin/errno" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/worker-farm/node_modules/.bin/errno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/worker-farm/node_modules/.bin/errno.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/write/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/write/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/write/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +719,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Git" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/quick-practice" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -79,7 +756,13 @@
       <workItem from="1594242216443" duration="4784000" />
       <workItem from="1594248658637" duration="3144000" />
       <workItem from="1594310730056" duration="18530000" />
-      <workItem from="1594392832940" duration="17189000" />
+      <workItem from="1594392832940" duration="17646000" />
+      <workItem from="1594655132258" duration="6366000" />
+      <workItem from="1594674774517" duration="196000" />
+      <workItem from="1594675330221" duration="3124000" />
+      <workItem from="1594744127762" duration="15567000" />
+      <workItem from="1594826701624" duration="7141000" />
+      <workItem from="1594843627063" duration="13181000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -88,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594338618409</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit adding data validation">
+      <created>1594414648804</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594414648804</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,32 +798,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Commit" />
+    <MESSAGE value="Commit adding data validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit adding data validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593459630847">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1593459630847" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1594413530086">
+    <state x="431" y="164" key="FileChooserDialogImpl" timestamp="1594658858704">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594413530086" />
+    <state x="431" y="164" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594658858704" />
     <state x="508" y="238" key="Github.ShareDialog" timestamp="1594413585031">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="508" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1594413585031" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1594414050462">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1594674961206">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594414050462" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1594414670312">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594414670312" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594338626776">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594338626776" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594413924517">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594756273303">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594413924517" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594756273303" />
   </component>
 </project>
