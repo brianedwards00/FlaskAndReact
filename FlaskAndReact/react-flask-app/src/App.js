@@ -11,30 +11,12 @@ class App extends React.Component {
         super(props)
         // Sets the variables that each front-end instance will have
         this.state = {
-            dataset_name: '', dataset_id: '', selectedFiles: null, optionss: [{value: 'data',label:'data',options:[]},
-                {value: 'plot',label:'plot',options:[]}],
-            options: [
-                {
-                    value: 'data', label: 'Data',
-                    options: [
-                        {
-                            value: '1csv', label: '1Csv',
-
-                        },
-                    ],
-                },
-                {
-                    value: 'plots', label: 'Plots',
-                    options: [
-                        {
-                            value: '1plot', label: '1Plot'
-                        },
-                    ],
-                },
-                {
-                    value: '2csv', label: '2Csv'
-                },
-            ],
+            dataset_name: '',
+            dataset_id: '',
+            selectedFiles: null,
+            options: [{value: 'data', label: 'data', options: []},
+                {value: 'plot', label: 'plot', options: []}],
+            optionsChosen: [],
         }
 
 
@@ -46,6 +28,7 @@ class App extends React.Component {
         this.handleFileChange = this.handleFileChange.bind(this)
         this.handleSecondSubmit = this.handleSecondSubmit.bind(this)
         this.handleDropDownChoice = this.handleDropDownChoice.bind(this)
+        this.handleDropDownChange = this.handleDropDownChange.bind(this)
     }
 
     // Will update the "name" value with whatever value has been inserted in "name"
@@ -61,52 +44,67 @@ class App extends React.Component {
 
     handleDropDownChoice = (event, text) => {
         text = text.split(" ")
-        console.log(text)
         for (let i = 0; i < text.length; i++) {
             if (text[i].includes('!')) {
                 text[i] = text[i].replace('!','')
                 this.setState({
-                    optionss: this.state.optionss.concat({value: text[i],label:text[i]})
+                    options: this.state.options.concat({value: text[i],label:text[i]})
                 })
             }
             if (text[i].includes('?')){
                 text[i] = text[i].replace('?','')
                 this.setState({
-                    optionss :this.state.optionss.concat(
-                        this.state.optionss[0].options.push({value: text[i],label:text[i]}))
+                    options :this.state.options.concat(
+                        this.state.options[0].options.push({value: text[i],label:text[i]}))
                 })
             }
             if (text[i].includes('$')){
                 text[i] = text[i].replace('$','')
                 this.setState({
-                    optionss :this.state.optionss.concat(
-                        this.state.optionss[1].options.push({value: text[i],label:text[i]}))
+                    options :this.state.options.concat(
+                        this.state.options[1].options.push({value: text[i],label:text[i]}))
                 })
             }
         }
-        console.log(this.state.optionss)
-        for (let i = 0; i < this.state.optionss.length;i++) {
-            if (!isNaN(this.state.optionss[i])) {
-                this.state.optionss.splice(i,1)
+        for (let i = 0; i < this.state.options.length;i++) {
+            if (!isNaN(this.state.options[i])) {
+                this.state.options.splice(i)
             }
         }
-        console.log(this.state.optionss)
     }
 
 
-    handleDropDownChange =event => {
-
+    handleDropDownChange =(optionsChosen) => {
+        this.setState({optionsChosen}, () =>console.log('state', this.state))
     }
+
 
     handleSecondSubmit = (event) => {
         event.preventDefault()
-        console.log('Hi')
+        console.log(this.state.optionsChosen)
+        fetch(
+            "http://localhost:5000/dropdown_submit", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; ' +
+                        'charset = utf-8'
+                },
+                body: JSON.stringify(this.state.optionsChosen),
+            })
+            .then(response => response)
+            .then(obj => {
+                console.log('Success:', obj)
+            })
+            .catch((error) => {
+                console.error('Error:', error)
+            })
 
 }
 
     handleSubmit = (event) => {
         // Prevents a change in URL
         event.preventDefault()
+        document.getElementById('success').innerHTML = "Loading..."
         console.log(this.state.selectedFiles)
         for (let i = 1; i < this.state.selectedFiles.length + 1; i++) {
         }
@@ -135,6 +133,7 @@ class App extends React.Component {
         let obj = {}
         obj.dataset_name = this.state.dataset_name
         obj.dataset_id = this.state.dataset_id
+
         // Uses a POST request to send obj as a JSON string
         fetch(
             "http://localhost:5000/data", {
@@ -155,7 +154,7 @@ class App extends React.Component {
                 console.error('Error:', error)
             })
         // Uses a POST request to send the FormData
-        document.getElementById('success').innerHTML = "Loading..."
+
         fetch(
             "http://localhost:5000/files", {
                 method: 'POST',
@@ -179,6 +178,7 @@ class App extends React.Component {
                     "please make sure 'results.json' is in json format or empty and try again"
             })
     }
+
 
 
 
@@ -230,12 +230,14 @@ class App extends React.Component {
                            type="submit"
                            value="Submit"
                     />
+
                 </form>
                 <p id="success"/>
                 <form onSubmit={this.handleSecondSubmit} id="form2" className={"form2"}>
                     <MultiLevelSelect
                     id = "select"
-                    options={this.state.optionss}
+                    options={this.state.options}
+                    name = "optionsChosen"
                     onChange = {this.handleDropDownChange}
                     />
                     <input style={{'fontSize': '20px'}}

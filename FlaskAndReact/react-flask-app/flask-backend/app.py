@@ -1,5 +1,6 @@
-from flask import Flask, request
+from flask import Flask, request, send_file
 import json
+import zipfile
 from json.decoder import JSONDecodeError
 from flask_cors import CORS
 import time
@@ -9,6 +10,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 CORS(app)
 counter = 1
+target = ""
 
 
 def timeit(method):
@@ -68,7 +70,7 @@ def data():
 @app.route('/files', methods=['GET', 'POST'])
 @timeit
 def files():
-    global counter
+    global counter, target
     filecounter = 1
     # Mount D is mounted to a network share
     # sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d
@@ -115,6 +117,7 @@ def files():
 
 @app.route('/dropdown', methods=['GET', 'POST'])
 def dropdown():
+    global target
     string1 = ""
     string2 = ""
     string3 = ""
@@ -125,13 +128,53 @@ def dropdown():
             string1 = string1 + e + "! "
         else:
             continue
-    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/data')
-    entries = os.listdir(target)
+    target1 = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/data')
+    entries = os.listdir(target1)
     for e in entries:
         string2 = string2 + e + "? "
-    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/plots')
-    entries = os.listdir(target)
+    target2 = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/plots')
+    entries = os.listdir(target2)
     for e in entries:
         string3 = string3 + e + "$ "
 
     return '{} {} {}'.format(string1, string2, string3)
+
+
+@app.route('/dropdown_submit', methods=['GET', 'POST'])
+def dropdown_submit():
+    global target
+    input_raw = request.get_data()
+    print(input_raw)
+    input_decoded = input_raw.decode("utf8").replace("'", '"')
+    print(input_decoded)
+    input_json = json.loads(input_decoded)
+    print(type(input_json), input_json)
+    entries = os.listdir(target)
+    print(input_json[0]['value'])
+    # Searching in an array of dictionaries
+    for i in input_json:
+        file_name = ""
+        for j in i:
+            print(j, 'HI', type(j))
+            if j == "value":
+                file_name = i[j]
+                print(file_name, 'A')
+            if j == "options":
+                # Searching in another array of dictionaries if options is found
+                # (1 array, 1 dict in this case bc of 'options')
+                for k in i[j]:
+                    for m in k:
+                        if m == "value":
+                            file_name = k[m]
+        print('The real file IS',file_name)
+
+        '''
+        if input_json[i]['options'] is None:
+            file_name = i['value']
+            find_file = os.path.join(target, file_name)
+            print(find_file)
+            '''
+
+    # zipf = zipfile.ZipFile('DD.zip','w', zipfile.ZIP_DEFLATED)
+
+    return 'hi'
