@@ -10,10 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Adding Dropdown Menu Choices">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Working On DropDown Submit feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,8 @@
       <workItem from="1594826701624" duration="7141000" />
       <workItem from="1594843627063" duration="13408000" />
       <workItem from="1594914416764" duration="11906000" />
-      <workItem from="1595000126053" duration="15979000" />
+      <workItem from="1595000126053" duration="16173000" />
+      <workItem from="1595258176416" duration="4906000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594857003360</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working On DropDown Submit feature">
+      <created>1595030542802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595030542802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +138,8 @@
     <MESSAGE value="Second Commit" />
     <MESSAGE value="Commit adding data validation" />
     <MESSAGE value="Adding Dropdown Menu Choices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Dropdown Menu Choices" />
+    <MESSAGE value="Working On DropDown Submit feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working On DropDown Submit feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593459630847">
@@ -150,17 +158,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1594857022081">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595030556746">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1594857022081" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595030556746" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594922350681">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594922350681" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595026043112">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595030553071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595026043112" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595030553071" />
   </component>
 </project>

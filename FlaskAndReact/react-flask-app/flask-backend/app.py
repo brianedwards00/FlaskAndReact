@@ -14,6 +14,12 @@ target = ""
 
 
 def timeit(method):
+    """
+    decorator to time my function.
+    :param method: any function
+    :return: time in
+    """
+
     def timed(*args, **kw):
         ts = time.time()
         result = method(*args, **kw)
@@ -31,6 +37,10 @@ def timeit(method):
 
 @app.route('/data', methods=['GET', 'POST'])
 def data():
+    """
+    Collects dataset name and id and records it onto a json file stored locally
+    :return: the json object that will be inserted into the file
+    """
     global counter
     # Receives the json data from front end
     input_data = request.get_data()
@@ -70,6 +80,10 @@ def data():
 @app.route('/files', methods=['GET', 'POST'])
 @timeit
 def files():
+    """
+    Receives files and uploads them to 'target'
+    :return: Finished as a <string>
+    """
     global counter, target
     filecounter = 1
     # Mount D is mounted to a network share
@@ -117,6 +131,10 @@ def files():
 
 @app.route('/dropdown', methods=['GET', 'POST'])
 def dropdown():
+    """
+    Creates the dropdown choices from a specific network file location
+    :return: All the file names including in 'target'
+    """
     global target
     string1 = ""
     string2 = ""
@@ -128,11 +146,11 @@ def dropdown():
             string1 = string1 + e + "! "
         else:
             continue
-    target1 = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/data')
+    target1 = os.path.join(target,'data')
     entries = os.listdir(target1)
     for e in entries:
         string2 = string2 + e + "? "
-    target2 = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result/plots')
+    target2 = os.path.join(target,'plots')
     entries = os.listdir(target2)
     for e in entries:
         string3 = string3 + e + "$ "
@@ -142,32 +160,24 @@ def dropdown():
 
 @app.route('/dropdown_submit', methods=['GET', 'POST'])
 def dropdown_submit():
+    """
+    Collects the file names from front end, finds the files on the network, packs them into a zip, and sends it to
+    front end
+    :return:
+    """
     global target
     input_raw = request.get_data()
-    print(input_raw)
     input_decoded = input_raw.decode("utf8").replace("'", '"')
-    print(input_decoded)
     input_json = json.loads(input_decoded)
-    print(type(input_json), input_json)
     entries = os.listdir(target)
-    print(input_json[0]['value'])
     # Searching in an array of dictionaries
-    for i in input_json:
-        file_name = ""
-        for j in i:
-            print(j, 'HI', type(j))
-            if j == "value":
-                file_name = i[j]
-                print(file_name, 'A')
-            if j == "options":
-                # Searching in another array of dictionaries if options is found
-                # (1 array, 1 dict in this case bc of 'options')
-                for k in i[j]:
-                    for m in k:
-                        if m == "value":
-                            file_name = k[m]
-        print('The real file IS',file_name)
-
+    for inner_obj in input_json:
+        my_val = inner_obj['value']
+        if inner_obj.get('options') is not None:
+            option_list = inner_obj['options']
+            option_obj = option_list[0]
+            my_val = option_obj['value']
+        print('The real file name is:', my_val)
         '''
         if input_json[i]['options'] is None:
             file_name = i['value']

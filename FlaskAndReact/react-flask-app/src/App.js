@@ -15,7 +15,7 @@ class App extends React.Component {
             dataset_id: '',
             selectedFiles: null,
             options: [{value: 'data', label: 'data', options: []},
-                {value: 'plot', label: 'plot', options: []}],
+                {value: 'plots', label: 'plots', options: []}],
             optionsChosen: [],
         }
 
