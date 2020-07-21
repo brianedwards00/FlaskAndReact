@@ -10,15 +10,16 @@
 padding: 10px;
 }
 
-.form1{
+.area1{
 padding: 10px;
-position: relative;
+position: absolute;
 
 }
 
-.form2{
+.area2{
 padding: 10px;
-position: relative;
+position: absolute;
+width: 50%;
 visibility: hidden;
 }
 

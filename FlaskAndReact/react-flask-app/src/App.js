@@ -1,9 +1,7 @@
 import React from 'react';
 import MultiLevelSelect from 'react-multi-level-selector'
 import './App.css';
-
-//1 change comment(s)
-
+import JSZip from 'jszip';
 
 class App extends React.Component {
 
@@ -19,10 +17,6 @@ class App extends React.Component {
             optionsChosen: [],
         }
 
-
-
-
-        // Connects functions to the front end
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
@@ -31,10 +25,11 @@ class App extends React.Component {
         this.handleDropDownChange = this.handleDropDownChange.bind(this)
     }
 
-    // Will update the "name" value with whatever value has been inserted in "name"
+    // Will update the "name" value with whatever value has been inserted in "name" box
     handleChange = ({target}) => {
         this.setState({[target.name]: target.value})
     }
+
     // Adds a file to the array of files in selectedFiles
     handleFileChange = event => {
         this.setState({
@@ -42,6 +37,7 @@ class App extends React.Component {
         })
     }
 
+    // String of file names will be sorted into their correct DropDown location
     handleDropDownChoice = (event, text) => {
         text = text.split(" ")
         for (let i = 0; i < text.length; i++) {
@@ -75,13 +71,19 @@ class App extends React.Component {
 
 
     handleDropDownChange =(optionsChosen) => {
-        this.setState({optionsChosen}, () =>console.log('state', this.state))
+        this.setState({optionsChosen})
     }
 
 
     handleSecondSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.optionsChosen)
+        console.log(this.state.optionsChosen[0])
+        if (this.state.optionsChosen[0] === undefined) {
+            window.alert("Please select some file(s)")
+            return
+        }
+        document.getElementById('loading').innerHTML = "Loading..."
+        let read_zip = new JSZip()
         fetch(
             "http://localhost:5000/dropdown_submit", {
                 method: 'POST',
@@ -91,20 +93,21 @@ class App extends React.Component {
                 },
                 body: JSON.stringify(this.state.optionsChosen),
             })
-            .then(response => response)
-            .then(obj => {
-                console.log('Success:', obj)
+            .then(function (response) {
+                if (response.status === 200 || response.status === 0) {
+                    return Promise.resolve(response.blob());
+                } else {
+                    return Promise.reject(new Error(response.statusText));
+                }
             })
-            .catch((error) => {
-                console.error('Error:', error)
+            .then(results_zip => read_zip.loadAsync(results_zip))
+            .then(function (zip) {
+                console.log(zip.files)
             })
-
 }
 
     handleSubmit = (event) => {
-        // Prevents a change in URL
         event.preventDefault()
-        document.getElementById('success').innerHTML = "Loading..."
         console.log(this.state.selectedFiles)
         for (let i = 1; i < this.state.selectedFiles.length + 1; i++) {
         }
@@ -129,12 +132,12 @@ class App extends React.Component {
             fileData.append('file' + i.toString(), this.state.selectedFiles[i - 1])
             fileData.append('filename' + i.toString(), this.state.selectedFiles[i - 1].name)
         }
-        // Creates a dictionary and places the necessary values in it
         let obj = {}
         obj.dataset_name = this.state.dataset_name
         obj.dataset_id = this.state.dataset_id
 
         // Uses a POST request to send obj as a JSON string
+        document.getElementById('loading_or_fail').innerHTML = "Loading..."
         fetch(
             "http://localhost:5000/data", {
                 method: 'POST',
@@ -143,18 +146,14 @@ class App extends React.Component {
                 },
                 body: JSON.stringify(obj)
             })
-            // Takes fetch's response as a json
             .then(response => response.json())
-            // If it completes, returns success
             .then(obj => {
                 console.log('Success:', obj)
             })
-            // Displays an error if it runs into one
             .catch((error) => {
                 console.error('Error:', error)
             })
-        // Uses a POST request to send the FormData
-
+        // Uses a POST request to send the FormDatav containing the files
         fetch(
             "http://localhost:5000/files", {
                 method: 'POST',
@@ -163,29 +162,24 @@ class App extends React.Component {
             .then(response => response)
             .then(fileData => {
                 console.log('Success:', fileData)
-                document.getElementById('inputName').value = ''
-                document.getElementById('inputId').value = ''
-                document.getElementById('inputFiles').value = null
                 fetch("http://localhost:5000/dropdown").then(response => response.text())
                     .then(text => this.handleDropDownChoice(event,text))
                     .then(a => document.getElementById('success').innerHTML = "Success! Now please select " +
-                    "the csv files that you would like to see:")
-                    .then(b => document.getElementById('form2').style.visibility = 'visible')
+                    "the csv/png files that you would like to see:")
+                    .then(b => document.getElementById('area2').style.visibility = 'visible')
+                    .then(c => document.getElementById('area1').style.visibility = 'hidden')
             })
             .catch((error) => {
                 console.error('Error:', error)
-                document.getElementById('success').innerHTML = "Error, " +
+                document.getElementById('loading_or_fail').innerHTML = "Error, " +
                     "please make sure 'results.json' is in json format or empty and try again"
             })
     }
-
-
-
-
+    
     render() {
         return (
-            <div style={{'border': 'solid'}}>
-                <form onSubmit={this.handleSubmit} className="form1">
+            <div>
+                <form onSubmit={this.handleSubmit} id = "area1" className={"area1"} style={{'border': 'solid'}}>
                     <label>
                         <p style={{'fontSize': '20px'}}>Enter the Dataset Name</p>
                         <input type="text"
@@ -230,10 +224,11 @@ class App extends React.Component {
                            type="submit"
                            value="Submit"
                     />
-
+                    <p id = "loading_or_fail"/>
                 </form>
-                <p id="success"/>
-                <form onSubmit={this.handleSecondSubmit} id="form2" className={"form2"}>
+
+                <form style={{'border': 'solid'}} onSubmit={this.handleSecondSubmit} id="area2" className={"area2"}>
+                    <p id="success"/>
                     <MultiLevelSelect
                     id = "select"
                     options={this.state.options}
@@ -244,6 +239,7 @@ class App extends React.Component {
                            type="submit"
                            value="Submit"
                     />
+                    <p id = "loading"/>
                 </form>
 
             </div>

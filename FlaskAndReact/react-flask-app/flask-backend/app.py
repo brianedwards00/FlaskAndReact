@@ -19,19 +19,18 @@ def timeit(method):
     :param method: any function
     :return: time in
     """
-
     def timed(*args, **kw):
         ts = time.time()
         result = method(*args, **kw)
         te = time.time()
         if 'log_time' in kw:
             name = kw.get('log_name', method.__name__.upper())
-            kw['log_time'][name] = int((te - ts) * 1000)
+            kw['log_time'][name] = time.strftime("%H:%M:%S", time.gmtime((te - ts)))
         else:
-            print('%r  %2.2f ms' % \
-                  (method.__name__, (te - ts) * 1000))
+            # print('%r took  %2.2f ms' % \
+            #       (method.__name__, (te - ts) * 1000))
+            print("{} took {}.".format(method.__name__, time.strftime("%H:%M:%S", time.gmtime((te - ts)))))
         return result
-
     return timed
 
 
@@ -146,11 +145,11 @@ def dropdown():
             string1 = string1 + e + "! "
         else:
             continue
-    target1 = os.path.join(target,'data')
+    target1 = os.path.join(target, 'data')
     entries = os.listdir(target1)
     for e in entries:
         string2 = string2 + e + "? "
-    target2 = os.path.join(target,'plots')
+    target2 = os.path.join(target, 'plots')
     entries = os.listdir(target2)
     for e in entries:
         string3 = string3 + e + "$ "
@@ -166,25 +165,35 @@ def dropdown_submit():
     :return:
     """
     global target
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', '3458', 'analysis_result')
+    zipf = zipfile.ZipFile('data.zip', 'w', zipfile.ZIP_DEFLATED)
     input_raw = request.get_data()
     input_decoded = input_raw.decode("utf8").replace("'", '"')
     input_json = json.loads(input_decoded)
-    entries = os.listdir(target)
     # Searching in an array of dictionaries
+    file_names = []
+    print(input_json)
     for inner_obj in input_json:
-        my_val = inner_obj['value']
+        print(inner_obj)
+        if inner_obj['value'] != 'data' and inner_obj['value'] != 'plots':
+            file_names.append(inner_obj['value'])
         if inner_obj.get('options') is not None:
-            option_list = inner_obj['options']
-            option_obj = option_list[0]
-            my_val = option_obj['value']
-        print('The real file name is:', my_val)
-        '''
-        if input_json[i]['options'] is None:
-            file_name = i['value']
-            find_file = os.path.join(target, file_name)
-            print(find_file)
-            '''
-
-    # zipf = zipfile.ZipFile('DD.zip','w', zipfile.ZIP_DEFLATED)
-
-    return 'hi'
+            for inner_options in inner_obj['options']:
+                print(inner_options['value'])
+                file_names.append(inner_options['value'])
+    print('The real files names are:', file_names)
+    for file in file_names:
+        entries = os.listdir(target)
+        if file in entries:
+            zipf.write(os.path.join(target, file))
+            print('In first directory')
+        else:
+            entries = os.listdir(os.path.join(target, 'data'))
+            if file in entries:
+                zipf.write(os.path.join(target, 'data',file))
+                print('In data directory')
+            else:
+                zipf.write(os.path.join(target, 'plots', file))
+                print('In plots directory')
+    zipf.close()
+    return send_file('data.zip', as_attachment=True)
