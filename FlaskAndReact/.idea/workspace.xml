@@ -10,121 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Added more concise comments">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Changed front end format display and can now accept zip files on the front sent from the back">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.bin/webpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/babel-eslint/node_modules/.bin/eslint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/TaskRunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/TaskRunner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/Webpack4Cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/Webpack5Cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/minify.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/minify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/dist/worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-cache-dir/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-cache-dir/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-cache-dir/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-cache-dir/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-up/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-up/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-up/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-up/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/find-up/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/has-flag/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/has-flag/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/has-flag/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/has-flag/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/has-flag/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/Farm.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/Farm.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/Farm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/WorkerPool.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/WorkerPool.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/WorkerPool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/base/BaseWorkerPool.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/base/BaseWorkerPool.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/base/BaseWorkerPool.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/types.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/types.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/ChildProcessWorker.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/ChildProcessWorker.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/ChildProcessWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/NodeThreadsWorker.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/NodeThreadsWorker.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/NodeThreadsWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/processChild.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/processChild.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/processChild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/threadChild.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/threadChild.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/workers/threadChild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/jest-worker/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/locate-path/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/locate-path/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/locate-path/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/locate-path/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/locate-path/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/make-dir/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/p-locate/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/p-locate/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/p-locate/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/p-locate/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/p-locate/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/path-exists/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/path-exists/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/path-exists/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/path-exists/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/path-exists/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/pkg-dir/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/pkg-dir/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/pkg-dir/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/pkg-dir/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/pkg-dir/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/bin/semver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/range.bnf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/semver/semver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/supports-color/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/supports-color/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/supports-color/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/supports-color/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/node_modules/supports-color/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/terser-webpack-plugin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/TaskRunner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/cjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/minify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/options.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/dist/worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/terser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/node_modules/.bin/webpack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/webpack/node_modules/terser-webpack-plugin/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +89,9 @@
       <workItem from="1594914416764" duration="11906000" />
       <workItem from="1595000126053" duration="16173000" />
       <workItem from="1595258176416" duration="18563000" />
-      <workItem from="1595343436944" duration="9313000" />
+      <workItem from="1595343436944" duration="14040000" />
+      <workItem from="1595431439806" duration="20355000" />
+      <workItem from="1595516958514" duration="18752000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -235,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595265953540</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed front end format display and can now accept zip files on the front sent from the back">
+      <created>1595359725785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595359725785</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +159,8 @@
     <MESSAGE value="Adding Dropdown Menu Choices" />
     <MESSAGE value="Working On DropDown Submit feature" />
     <MESSAGE value="Added more concise comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more concise comments" />
+    <MESSAGE value="Changed front end format display and can now accept zip files on the front sent from the back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed front end format display and can now accept zip files on the front sent from the back" />
   </component>
   <component name="WindowStateProjectService">
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593459630847">
@@ -278,17 +179,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595265962889">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595359732526">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595265962889" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595359732526" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594922350681">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594922350681" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595265960504">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595542667173">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595265960504" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595542667173" />
   </component>
 </project>
