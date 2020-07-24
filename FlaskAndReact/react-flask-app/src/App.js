@@ -2,6 +2,12 @@ import React from 'react';
 import MultiLevelSelect from 'react-multi-level-selector'
 import './App.css';
 import JSZip from 'jszip';
+import ReactTable from "react-table-v6";
+import "react-table-v6/react-table.css";
+import {ReactTabulator} from 'react-tabulator'
+import 'react-tabulator/lib/styles.css'
+
+
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -15,121 +21,25 @@ class App extends React.Component {
             selectedFiles: null,
             options: [{value: 'data', label: 'data', options: []},
                 {value: 'plots', label: 'plots', options: []}],
-            optionsChosen: [], file_data: []
+            optionsChosen: [],
+            file_rows: [],
+            file_columns: []
         }
+
+
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
-        this.handleSecondSubmit = this.handleSecondSubmit.bind(this)
         this.handleDropDownChoice = this.handleDropDownChoice.bind(this)
         this.handleDropDownChange = this.handleDropDownChange.bind(this)
+        this.handleSecondSubmit = this.handleSecondSubmit.bind(this)
     }
 
     // Will update the "name" value with whatever value has been inserted in "name" box
     handleChange = ({target}) => {
         this.setState({[target.name]: target.value})
     }
-
-    // Adds a file to the array of files in selectedFiles
-    handleFileChange = event => {
-        this.setState({
-            selectedFiles: event.target.files,
-        })
-    }
-
-    // String of file names will be sorted into their correct DropDown location
-    handleDropDownChoice = (event, text) => {
-        text = text.split(" ")
-        for (let i = 0; i < text.length; i++) {
-            if (text[i].includes('!')) {
-                text[i] = text[i].replace('!','')
-                this.setState({
-                    options: this.state.options.concat({value: text[i],label:text[i]})
-                })
-            }
-            if (text[i].includes('?')){
-                text[i] = text[i].replace('?','')
-                this.setState({
-                    options :this.state.options.concat(
-                        this.state.options[0].options.push({value: text[i],label:text[i]}))
-                })
-            }
-            if (text[i].includes('$')){
-                text[i] = text[i].replace('$','')
-                this.setState({
-                    options :this.state.options.concat(
-                        this.state.options[1].options.push({value: text[i],label:text[i]}))
-                })
-            }
-        }
-        for (let i = 0; i < this.state.options.length;i++) {
-            if (!isNaN(this.state.options[i])) {
-                this.state.options.splice(i)
-            }
-        }
-    }
-
-
-    handleDropDownChange =(optionsChosen) => {
-        this.setState({optionsChosen})
-    }
-
-
-    handleSecondSubmit = (event) => {
-        event.preventDefault()
-        console.log(this.state.optionsChosen[0])
-        if (this.state.optionsChosen[0] === undefined) {
-            window.alert("Please select some file(s)")
-            return
-        }
-        document.getElementById('loading').innerHTML = "Loading..."
-        document.getElementById('submit_button2').disabled = true
-        let filedata = []
-        fetch(
-            "http://localhost:5000/dropdown_submit", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json; ' +
-                        'charset = utf-8'
-                },
-                body: JSON.stringify(this.state.optionsChosen),
-            })
-            .then(function (response) {
-                if (response.status === 200 || response.status === 0) {
-                    return Promise.resolve(response.blob());
-                } else {
-                    return Promise.reject(new Error(response.statusText));
-                }
-            })
-            .then(JSZip.loadAsync)
-            .then(function(zip) {
-                // console.log(zip.file().)
-                console.log(zip.files,"First")
-                console.log(zip,'+++++',typeof zip)
-                for (let index in zip.files) {
-                    console.log('INDEX',index)
-                    console.log('STRING',zip.file(index).async("string"))
-                    console.log('ARRAY',zip.file(index).async("arraybuffer"))
-                    //return zip.files[index].async('string')
-                    return ""
-        }
-        //FIXME: promise failure, want to get back!
-        //TODO: finsied at, tpi
-            })
-            .then((text) => {
-                this.setState({file_data: text})
-
-            })
-            .then(() => document.getElementById('area2').style.visibility = 'hidden')
-            .then(() => document.getElementById('area3').style.visibility = 'visible')
-            .then(() => console.log(this.state))
-            .then(() => document.getElementById('data').innerHTML = this.state.file_data)
-            .catch((error) => {
-                console.error('Error:', error)
-            })
-
-}
 
     handleSubmit = (event) => {
         event.preventDefault()
@@ -205,15 +115,126 @@ class App extends React.Component {
                 document.getElementById('submit_button1').disabled = false
             })
     }
+
+    // Adds a file to the array of files in selectedFiles
+    handleFileChange = event => {
+        this.setState({
+            selectedFiles: event.target.files,
+        })
+    }
+
+    // String of file names will be sorted into their correct DropDown location
+    handleDropDownChoice = (event, text) => {
+        text = text.split(" ")
+        for (let i = 0; i < text.length; i++) {
+            if (text[i].includes('!')) {
+                text[i] = text[i].replace('!','')
+                this.setState({
+                    options: this.state.options.concat({value: text[i],label:text[i]})
+                })
+            }
+            if (text[i].includes('?')){
+                text[i] = text[i].replace('?','')
+                this.setState({
+                    options :this.state.options.concat(
+                        this.state.options[0].options.push({value: text[i],label:text[i]}))
+                })
+            }
+            if (text[i].includes('$')){
+                text[i] = text[i].replace('$','')
+                this.setState({
+                    options :this.state.options.concat(
+                        this.state.options[1].options.push({value: text[i],label:text[i]}))
+                })
+            }
+        }
+        for (let i = 0; i < this.state.options.length;i++) {
+            if (!isNaN(this.state.options[i])) {
+                this.state.options.splice(i)
+            }
+        }
+    }
+
+
+    handleDropDownChange =(optionsChosen) => {
+        this.setState({optionsChosen})
+    }
+
+
+    handleSecondSubmit = (event) => {
+        event.preventDefault()
+        console.log(this.state.optionsChosen[0])
+        if (this.state.optionsChosen[0] === undefined) {
+            window.alert("Please select some file(s)")
+            return
+        }
+        document.getElementById('loading').innerHTML = "Loading..."
+        document.getElementById('submit_button2').disabled = true
+
+        fetch(
+            "http://localhost:5000/dropdown_submit", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; ' +
+                        'charset = utf-8'
+                },
+                body: JSON.stringify(this.state.optionsChosen),
+            })
+            .then(function (response) {
+                if (response.status === 200 || response.status === 0) {
+                    return Promise.resolve(response.blob());
+                } else {
+                    return Promise.reject(new Error(response.statusText));
+                }
+            })
+            .then(JSZip.loadAsync)
+            .then(function(zip) {
+                // console.log(zip.file().)
+                console.log(zip.files,"First")
+                console.log(zip,'+++++',typeof zip)
+                for (let index in zip.files) {
+                    console.log('INDEX',index)
+                    return zip.file(index).async("string")
+        }
+            })
+
+            .then((text) => {
+                let lines = text.toString().split("\n")
+                let result = []
+                let headers = lines[0].split(",")
+                for (let i = 0; i< headers.length;i++) {
+                    this.state.file_columns.push({Header : headers[i], accessor: headers[i], width:250})
+                }
+                for(let i = 1; i< lines.length;i++){
+                    let obj = {}
+                    let currentline = lines[i].split(",")
+                    for (let j = 0 ; j<headers.length;j++) {
+                        obj[headers[j]] = currentline[j]
+                    }
+                    result.push(obj)
+                }
+                this.setState({file_rows: result})
+
+            })
+            .then(() => document.getElementById('area2').style.visibility = 'hidden')
+            .then(() => document.getElementById('area3').style.visibility = 'visible')
+            .catch((error) => {
+                console.error('Error:', error)
+            })
+
+}
     
     render() {
+
+      let data = this.state.file_rows
+      let columns = this.state.file_columns
+
         return (
             <div>
-                <header style={{"display" :"block","textAlign":"left","background":"#1C2C58"}}>
-                    <p style={{"display" :"inline-block","textAlign":"center", "paddingLeft":"10px",
-                        "font":"30px Arial Black","margin":"0px","color":"#F2ECE1"}}>Proteomics </p>
-                    <p  className="button" style={{"display" :"inline-block","textAlign":"center","paddingLeft":"50px", "font":"15px Gill Sans","margin":"0px","color":"#F2ECE1"}}>Input</p>
-                    <p style={{"display" :"inline-block","textAlign":"center","paddingLeft":"60px","font":"15px Gill Sans","margin":"0px","color":"#F2ECE1"}}>Output</p>
+                <header className="header">
+                    <p className="headerTitle">Proteomics </p>
+                    <p  className="button">Input</p>
+                    <p className="button">Output</p>
                 </header>
                 <form onSubmit={this.handleSubmit} id = "area1" className={"area1"}>
                     <label>
@@ -258,7 +279,6 @@ class App extends React.Component {
                         <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Only upload parameter files[.txt], protein files[.fasta]
                     and mass spectrometer output files[.raw]</p>
 
-
                     </label>
                     <input style={{'fontSize': '20px','position':'relative','top':'10px'}}
                            id = "submit_button1"
@@ -282,10 +302,10 @@ class App extends React.Component {
                            value="Submit"
                            id = "submit_button2"
                     />
-                    <p id = "loading"/>
+                    <p id = "loading" style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}}/>
                 </form>
                 <div id= "area3" className={"area3"}>
-                    <p id="data"/>
+                    <ReactTabulator data = {data} columns = {columns} tooltips={true} layout={"fitData"}/>
                 </div>
             </div>
         )

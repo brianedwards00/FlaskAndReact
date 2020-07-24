@@ -9,10 +9,16 @@
     "jquery": "^3.5.1",
     "jszip": "^3.5.0",
     "react": "^16.13.1",
+    "react-csv-to-table": "^0.0.4",
     "react-dom": "^16.13.1",
     "react-multi-level-selector": "^1.0.1",
     "react-scripts": "3.4.1",
-    "react-select": "^3.1.0"
+    "react-select": "^3.1.0",
+    "react-table": "^7.3.2",
+    "react-table-v6": "^6.8.6",
+    "react-tabulator": "^0.13.2",
+    "tabulator": "^0.2.40",
+    "tabulator-tables": "^4.7.2"
   },
   "scripts": {
     "start": "react-scripts start",

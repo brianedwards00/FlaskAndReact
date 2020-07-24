@@ -10,12 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Changed front end format display and can now accept zip files on the front sent from the back">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Started adding CSS styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/quick-practice" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -91,7 +94,9 @@
       <workItem from="1595258176416" duration="18563000" />
       <workItem from="1595343436944" duration="14040000" />
       <workItem from="1595431439806" duration="20355000" />
-      <workItem from="1595516958514" duration="18752000" />
+      <workItem from="1595516958514" duration="23386000" />
+      <workItem from="1595604055218" duration="2365000" />
+      <workItem from="1595607419400" duration="12619000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -135,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595359725785</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Started adding CSS styles">
+      <created>1595544484892</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595544484892</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,9 +172,14 @@
     <MESSAGE value="Working On DropDown Submit feature" />
     <MESSAGE value="Added more concise comments" />
     <MESSAGE value="Changed front end format display and can now accept zip files on the front sent from the back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed front end format display and can now accept zip files on the front sent from the back" />
+    <MESSAGE value="Started adding CSS styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started adding CSS styles" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595544505135" />
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593459630847">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -179,17 +196,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595359732526">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595544516405">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595359732526" />
-    <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594922350681">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595544516405" />
+    <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595618001063">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594922350681" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595542667173">
+    <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1595618001063" />
+    <state x="735" y="0" width="546" height="659" key="dock-window-1" timestamp="1595620178244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595542667173" />
+    <state x="735" y="0" width="546" height="659" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1595620178244" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595614899172">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595614899172" />
   </component>
 </project>
