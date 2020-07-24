@@ -10,8 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Started adding CSS styles">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Added table for csv files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
@@ -96,7 +97,8 @@
       <workItem from="1595431439806" duration="20355000" />
       <workItem from="1595516958514" duration="23386000" />
       <workItem from="1595604055218" duration="2365000" />
-      <workItem from="1595607419400" duration="12619000" />
+      <workItem from="1595607419400" duration="12660000" />
+      <workItem from="1595622320391" duration="11007000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -147,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595544484892</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added table for csv files">
+      <created>1595621564882</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595621564882</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +182,8 @@
     <MESSAGE value="Added more concise comments" />
     <MESSAGE value="Changed front end format display and can now accept zip files on the front sent from the back" />
     <MESSAGE value="Started adding CSS styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started adding CSS styles" />
+    <MESSAGE value="Added table for csv files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added table for csv files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
@@ -196,21 +206,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595544516405">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595621573471">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595544516405" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595621573471" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595618001063">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1595618001063" />
-    <state x="735" y="0" width="546" height="659" key="dock-window-1" timestamp="1595620178244">
+    <state x="647" y="340" width="639" height="347" key="dock-window-1" timestamp="1595624767884">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="735" y="0" width="546" height="659" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1595620178244" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595614899172">
+    <state x="647" y="340" width="639" height="347" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1595624767884" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595621571583">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595614899172" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595621571583" />
   </component>
 </project>

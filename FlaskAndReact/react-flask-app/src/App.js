@@ -4,10 +4,9 @@ import './App.css';
 import JSZip from 'jszip';
 import ReactTable from "react-table-v6";
 import "react-table-v6/react-table.css";
-import {ReactTabulator} from 'react-tabulator'
-import 'react-tabulator/lib/styles.css'
-
-
+import 'react-tabulator/lib/styles.css';
+import {saveAs} from "file-saver"
+let file_data
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -113,6 +112,9 @@ class App extends React.Component {
                 document.getElementById('loading_or_fail').innerHTML = "Error, " +
                     "please make sure 'results.json' is in json format or empty and try again"
                 document.getElementById('submit_button1').disabled = false
+                document.getElementById('inputName').disabled = false
+                document.getElementById('inputId').disabled = false
+                document.getElementById('inputFiles').disabled = false
             })
     }
 
@@ -187,26 +189,25 @@ class App extends React.Component {
                     return Promise.reject(new Error(response.statusText));
                 }
             })
+            .then()
             .then(JSZip.loadAsync)
             .then(function(zip) {
-                // console.log(zip.file().)
-                console.log(zip.files,"First")
-                console.log(zip,'+++++',typeof zip)
+                console.log(typeof zip,zip)
                 for (let index in zip.files) {
-                    console.log('INDEX',index)
                     return zip.file(index).async("string")
-        }
+                }
             })
 
             .then((text) => {
+                file_data = text
                 let lines = text.toString().split("\n")
                 let result = []
                 let headers = lines[0].split(",")
                 for (let i = 0; i< headers.length;i++) {
-                    this.state.file_columns.push({Header : headers[i], accessor: headers[i], width:250})
+                    this.state.file_columns.push({Header : headers[i], accessor: headers[i], width: 250})
                 }
                 for(let i = 1; i< lines.length;i++){
-                    let obj = {}
+                    let obj = {id:i}
                     let currentline = lines[i].split(",")
                     for (let j = 0 ; j<headers.length;j++) {
                         obj[headers[j]] = currentline[j]
@@ -214,8 +215,17 @@ class App extends React.Component {
                     result.push(obj)
                 }
                 this.setState({file_rows: result})
+                let zip1 = new JSZip()
+                    zip1.file("a_file.csv",`${text}`);
+                    zip1.generateAsync({type: 'blob'}).then(
+                        function (content) {
+                            saveAs(content, "download.zip")
+                        }
+                    )
+                    saveAs(text,'a_file.csv')
 
             })
+
             .then(() => document.getElementById('area2').style.visibility = 'hidden')
             .then(() => document.getElementById('area3').style.visibility = 'visible')
             .catch((error) => {
@@ -225,17 +235,21 @@ class App extends React.Component {
 }
     
     render() {
-
-      let data = this.state.file_rows
-      let columns = this.state.file_columns
-
         return (
             <div>
                 <header className="header">
                     <p className="headerTitle">Proteomics </p>
-                    <p  className="button">Input</p>
-                    <p className="button">Output</p>
+                    <button  className="button">Input</button>
+                    <button className="button">Output</button>
                 </header>
+                <label style={{"display":"block"}}>
+                    <p style={{"display":"inline-block","textAlign":"center","font":"20px Arial Black"}}>
+                        Or download it&nbsp;
+                    </p>
+                    <a className="download_link" target="_blank" download>
+                        here
+                    </a>
+                        </label>
                 <form onSubmit={this.handleSubmit} id = "area1" className={"area1"}>
                     <label>
                         <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the Dataset Name</p>
@@ -304,9 +318,18 @@ class App extends React.Component {
                     />
                     <p id = "loading" style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}}/>
                 </form>
-                <div id= "area3" className={"area3"}>
-                    <ReactTabulator data = {data} columns = {columns} tooltips={true} layout={"fitData"}/>
-                </div>
+                    <div className="area3" id="area3">
+
+                        <ReactTable data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {10}
+                                showPagination={true}
+                                showPaginationBottom={true}
+                                showPaginationTop={true}
+                                resizable={true}
+                                filterable={true}
+                                sortable={true}
+                                pageSizeOptions = {[25,50,100,250,500,1000,2000,3000,4000,5000,10000]}/>
+                    </div>
+
             </div>
         )
     }

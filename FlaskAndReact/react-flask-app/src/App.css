@@ -10,28 +10,43 @@
     padding-left:10px;
     padding-right: 30px;
     font:30px Arial Black;
-    margin:0;
+    margin:10px;
     color:#F2ECE1;
 }
 
-.header_input_output {
-
-}
 
 .custom_upload{
     padding: 10px;
 }
+.download_link{
+  text-align: center;
+  border: none;
+  color: darkblue;
+  cursor: pointer;
+  font: 20px "Arial Black";
+}
+
+.download_link:hover,
+.download_link:focus {
+    text-decoration: underline;
+}
+.download_link:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+    text-decoration: underline;
+}
 
 .button {
+    border: none;
     display: inline-block;
     text-align: center;
-    font: 15px Gill Sans;
+    font: 15px Tahoma;
     margin:0;
     color:#F2ECE1 ;
     padding: 1rem;
     text-decoration: none;
     cursor: pointer;
-    background-position: center;
+    background: none center;
     transition: background 250ms ease-in-out,
                 transform 150ms ease;
 }
@@ -42,7 +57,6 @@
 }
 
 .button:focus {
-    outline: 1px solid #fff;
     outline-offset: -4px;
     text-decoration: underline;
 }

@@ -155,7 +155,7 @@ def dropdown():
         string3 = string3 + e + "$ "
 
     return '{} {} {}'.format(string1, string2, string3)
-#FIXME:
+
 
 @app.route('/dropdown_submit', methods=['GET', 'POST'])
 def dropdown_submit():
