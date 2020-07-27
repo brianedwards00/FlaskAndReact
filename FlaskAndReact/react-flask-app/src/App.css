@@ -23,7 +23,7 @@
   border: none;
   color: darkblue;
   cursor: pointer;
-  font: 20px "Arial Black";
+  font: bold 20px "Comic Sans MS";
 }
 
 .download_link:hover,

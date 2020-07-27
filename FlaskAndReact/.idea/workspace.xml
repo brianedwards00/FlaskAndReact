@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Can download file from backend&#10;e">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Added Input/Output Feature and the ability to download files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
@@ -96,7 +96,8 @@
       <workItem from="1595607419400" duration="12660000" />
       <workItem from="1595622320391" duration="12262000" />
       <workItem from="1595866500222" duration="775000" />
-      <workItem from="1595868054904" duration="8091000" />
+      <workItem from="1595868054904" duration="10075000" />
+      <workItem from="1595882456563" duration="5556000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -161,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595633524741</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added Input/Output Feature and the ability to download files">
+      <created>1595877748067</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1595877748067</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +197,8 @@
     <MESSAGE value="Started adding CSS styles" />
     <MESSAGE value="Added table for csv files" />
     <MESSAGE value="Can download file from backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can download file from backend" />
+    <MESSAGE value="Added Input/Output Feature and the ability to download files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Input/Output Feature and the ability to download files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
@@ -212,10 +221,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595633536467">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595877856957">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595633536467" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595877856957" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595633511201">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -224,9 +233,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="647" y="340" width="639" height="347" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1595624767884" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595633533638">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595882490621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595633533638" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595882490621" />
   </component>
 </project>

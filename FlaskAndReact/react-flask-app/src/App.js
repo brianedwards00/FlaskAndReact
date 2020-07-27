@@ -3,10 +3,10 @@ import MultiLevelSelect from 'react-multi-level-selector'
 import './App.css';
 import JSZip from 'jszip';
 import ReactTable from "react-table-v6";
-import "react-table-v6/react-table.css";
-import 'react-tabulator/lib/styles.css';
+import "react-table-v6/react-table.css"
 import {saveAs} from "file-saver"
-let file_data, file_name, checker = 0
+let file_data, file_name, pic, checker = 0
+
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -49,6 +49,7 @@ class App extends React.Component {
         document.getElementById('loading_or_fail').innerHTML = ""
         document.getElementById('loading').innerHTML = ""
         document.getElementById('submit_button2').disabled = false
+        document.getElementById('csv').style.visibility = 'hidden'
     }
 
     handleOutputButton = (event) => {
@@ -56,6 +57,12 @@ class App extends React.Component {
         if(checker !== 1) {
             window.alert('Please use the program all the way first.')
             return
+        }
+        if(file_name.includes(".csv")) {
+            document.getElementById('csv').style.visibility = 'visible'
+        }
+        else {
+            document.getElementById('png').style.visibility = 'visible'
         }
         document.getElementById('area1').style.visibility = 'hidden'
         document.getElementById('area2').style.visibility = 'hidden'
@@ -92,6 +99,7 @@ class App extends React.Component {
             fileData.append('file' + i.toString(), this.state.selectedFiles[i - 1])
             fileData.append('filename' + i.toString(), this.state.selectedFiles[i - 1].name)
         }
+        checker = 0
         document.getElementById('submit_button1').disabled = true
         document.getElementById('inputName').disabled = true
         document.getElementById('inputId').disabled = true
@@ -156,7 +164,6 @@ class App extends React.Component {
 
     // String of file names will be sorted into their correct DropDown location
     handleDropDownChoice = (event, text) => {
-        checker = 0
         text = text.split(" ")
         for (let i = 0; i < text.length; i++) {
             if (text[i].includes('!')) {
@@ -195,7 +202,6 @@ class App extends React.Component {
 
     handleSecondSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.optionsChosen[0])
         if (this.state.optionsChosen[0] === undefined) {
             window.alert("Please select some file(s)")
             return
@@ -222,28 +228,46 @@ class App extends React.Component {
             .then(JSZip.loadAsync)
             .then(function(zip) {
                 for (let index in zip.files) {
-                    console.log('NAME',zip.file(index).name)
                     file_name = zip.file(index).name.split("/").pop()
-                    return zip.file(index).async("string")
+                    if (file_name.includes(".csv")){
+                        return zip.file(index).async("string")
+                    }
+                    else{
+                        return zip.file(index).async("base64")
+                    }
                 }
             })
             .then((text) => {
-                file_data = text
-                const lines = text.toString().split("\n")
                 let result = []
-                const headers = lines[0].split(",")
-                for (let i = 0; i< headers.length;i++) {
-                    this.state.file_columns.push({Header : headers[i], accessor: headers[i], width: 250})
-                }
-                for(let i = 1; i< lines.length;i++){
-                    let obj = {id:i}
-                    let currentline = lines[i].split(",")
-                    for (let j = 0 ; j<headers.length;j++) {
-                        obj[headers[j]] = currentline[j]
+                file_data = text
+                if(file_name.includes(".csv")){
+                    const lines = text.toString().split("\n")
+                    const headers = lines[0].split(",")
+                    for (let i = 0; i< headers.length;i++) {
+                        this.state.file_columns.push({Header : headers[i], accessor: headers[i], width: 200})
                     }
-                    result.push(obj)
+                    for(let i = 1; i< lines.length;i++){
+                       let obj = {id:i}
+                       let currentline = lines[i].split(",")
+                        for (let j = 0 ; j<headers.length;j++) {
+                            obj[headers[j]] = currentline[j]
+                        }
+                        result.push(obj)
+                    }
+                    this.setState({file_rows: result})
+                    document.getElementById('csv').style.visibility = 'visible'
                 }
-                this.setState({file_rows: result})
+                else {
+                    pic = new Image()
+                    pic.onload = function() {
+                        document.body.appendChild(this)
+                    }
+                    pic.src = "data: cors ;base64," + text
+
+                    document.getElementById('png').innerHTML = pic
+                    document.getElementById('png').style.visibility = 'visible'
+                }
+
                 document.getElementById('area2').style.visibility = 'hidden'
                 document.getElementById('area3').style.visibility = 'visible'
                 checker = 1
@@ -256,7 +280,13 @@ class App extends React.Component {
 
     handleFileDownload = (event) => {
         event.preventDefault()
-        let blob = new Blob([file_data],{type:"text/plain;charset=utf-8"})
+        let blob
+        if(file_name.includes(".csv")){
+            blob = new Blob([file_data],{type:"text/plain;charset=utf-8"})
+        }
+        else {
+            blob = new Blob([pic], {type:"image/png"})
+        }
         saveAs(blob,file_name)
     }
 
@@ -320,7 +350,7 @@ class App extends React.Component {
                     <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}} id = "loading_or_fail"/>
                 </form>
 
-                <form style={{'border': 'solid'}} onSubmit={this.handleSecondSubmit} id="area2" className={"area2"}>
+                <form onSubmit={this.handleSecondSubmit} id="area2" className={"area2"}>
                     <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}
                         id="success"/>
                     <MultiLevelSelect
@@ -337,20 +367,26 @@ class App extends React.Component {
                     <p id = "loading" style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}}/>
                 </form>
                     <div className="area3" id="area3">
-                        <p style={{"display":"inline-block","font":"20px Arial Black", "margin":"0"}}>
+                        <p style={{"display":"inline-block","font":"bold 20px Comic Sans MS", "margin":"0"}}>
                             Or download it
                         </p>
                         <button onClick={this.handleFileDownload} className="download_link">
                             here
                         </button>
-                        <ReactTable data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {10}
+                        <div id="csv" style={{"position":"absolute","visibility":"hidden"}}>
+                        <ReactTable
+                                data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {25}
                                 showPagination={true}
+                                showPageSizeOptions={true}
+                                showPageJump={true}
                                 showPaginationBottom={true}
                                 showPaginationTop={true}
                                 resizable={true}
                                 filterable={true}
                                 sortable={true}
-                                pageSizeOptions = {[25,50,100,250,500,1000,2000,3000,4000,5000,10000]}/>
+                                pageSizeOptions = {[25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
+                        </div>
+                        <div id="png" style={{"visibility":"hidden"}}/>
                     </div>
 
             </div>
