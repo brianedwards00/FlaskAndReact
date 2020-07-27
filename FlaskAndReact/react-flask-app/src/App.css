@@ -14,11 +14,11 @@
     color:#F2ECE1;
 }
 
-
 .custom_upload{
     padding: 10px;
 }
 .download_link{
+  background: none center;
   text-align: center;
   border: none;
   color: darkblue;
@@ -30,6 +30,7 @@
 .download_link:focus {
     text-decoration: underline;
 }
+
 .download_link:focus {
     outline: 1px solid #fff;
     outline-offset: -4px;
@@ -64,6 +65,7 @@
 .button:active {
     transform: scale(0.9);
 }
+
 .area1{
 position: absolute;
 

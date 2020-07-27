@@ -6,7 +6,7 @@ import ReactTable from "react-table-v6";
 import "react-table-v6/react-table.css";
 import 'react-tabulator/lib/styles.css';
 import {saveAs} from "file-saver"
-let file_data
+let file_data, file_name, checker = 0
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -26,13 +26,40 @@ class App extends React.Component {
         }
 
 
-
+        this.handleInputButton = this.handleInputButton.bind(this)
+        this.handleOutputButton = this.handleOutputButton.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
         this.handleDropDownChoice = this.handleDropDownChoice.bind(this)
         this.handleDropDownChange = this.handleDropDownChange.bind(this)
         this.handleSecondSubmit = this.handleSecondSubmit.bind(this)
+        this.handleFileDownload = this.handleFileDownload.bind(this)
+    }
+
+    handleInputButton = (event) => {
+        event.preventDefault()
+        document.getElementById('submit_button1').disabled = false
+        document.getElementById('inputName').disabled = false
+        document.getElementById('inputId').disabled = false
+        document.getElementById('inputFiles').disabled = false
+        document.getElementById('area1').style.visibility = 'visible'
+        document.getElementById('area2').style.visibility = 'hidden'
+        document.getElementById('area3').style.visibility = 'hidden'
+        document.getElementById('loading_or_fail').innerHTML = ""
+        document.getElementById('loading').innerHTML = ""
+        document.getElementById('submit_button2').disabled = false
+    }
+
+    handleOutputButton = (event) => {
+        event.preventDefault()
+        if(checker !== 1) {
+            window.alert('Please use the program all the way first.')
+            return
+        }
+        document.getElementById('area1').style.visibility = 'hidden'
+        document.getElementById('area2').style.visibility = 'hidden'
+        document.getElementById('area3').style.visibility = 'visible'
     }
 
     // Will update the "name" value with whatever value has been inserted in "name" box
@@ -42,7 +69,6 @@ class App extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.selectedFiles)
         for (let i = 1; i < this.state.selectedFiles.length + 1; i++) {
         }
         let fileData = new FormData()
@@ -66,15 +92,18 @@ class App extends React.Component {
             fileData.append('file' + i.toString(), this.state.selectedFiles[i - 1])
             fileData.append('filename' + i.toString(), this.state.selectedFiles[i - 1].name)
         }
-        let obj = {}
-        obj.dataset_name = this.state.dataset_name
-        obj.dataset_id = this.state.dataset_id
         document.getElementById('submit_button1').disabled = true
         document.getElementById('inputName').disabled = true
         document.getElementById('inputId').disabled = true
         document.getElementById('inputFiles').disabled = true
-        // Uses a POST request to send obj as a JSON string
         document.getElementById('loading_or_fail').innerHTML = "Loading..."
+        //Emptying options just in case user wants to chose another directory to receive files from
+        this.setState({options:[{value: 'data', label: 'data', options: []},
+                {value: 'plots', label: 'plots', options: []}]})
+        let obj = {}
+        obj.dataset_name = this.state.dataset_name
+        obj.dataset_id = this.state.dataset_id
+        // Uses a POST request to send obj as a JSON string
         fetch(
             "http://localhost:5000/data", {
                 method: 'POST',
@@ -127,6 +156,7 @@ class App extends React.Component {
 
     // String of file names will be sorted into their correct DropDown location
     handleDropDownChoice = (event, text) => {
+        checker = 0
         text = text.split(" ")
         for (let i = 0; i < text.length; i++) {
             if (text[i].includes('!')) {
@@ -172,7 +202,7 @@ class App extends React.Component {
         }
         document.getElementById('loading').innerHTML = "Loading..."
         document.getElementById('submit_button2').disabled = true
-
+        this.setState({file_rows:[],file_columns:[]})
         fetch(
             "http://localhost:5000/dropdown_submit", {
                 method: 'POST',
@@ -189,20 +219,19 @@ class App extends React.Component {
                     return Promise.reject(new Error(response.statusText));
                 }
             })
-            .then()
             .then(JSZip.loadAsync)
             .then(function(zip) {
-                console.log(typeof zip,zip)
                 for (let index in zip.files) {
+                    console.log('NAME',zip.file(index).name)
+                    file_name = zip.file(index).name.split("/").pop()
                     return zip.file(index).async("string")
                 }
             })
-
             .then((text) => {
                 file_data = text
-                let lines = text.toString().split("\n")
+                const lines = text.toString().split("\n")
                 let result = []
-                let headers = lines[0].split(",")
+                const headers = lines[0].split(",")
                 for (let i = 0; i< headers.length;i++) {
                     this.state.file_columns.push({Header : headers[i], accessor: headers[i], width: 250})
                 }
@@ -215,41 +244,31 @@ class App extends React.Component {
                     result.push(obj)
                 }
                 this.setState({file_rows: result})
-                let zip1 = new JSZip()
-                    zip1.file("a_file.csv",`${text}`);
-                    zip1.generateAsync({type: 'blob'}).then(
-                        function (content) {
-                            saveAs(content, "download.zip")
-                        }
-                    )
-                    saveAs(text,'a_file.csv')
-
+                document.getElementById('area2').style.visibility = 'hidden'
+                document.getElementById('area3').style.visibility = 'visible'
+                checker = 1
             })
-
-            .then(() => document.getElementById('area2').style.visibility = 'hidden')
-            .then(() => document.getElementById('area3').style.visibility = 'visible')
             .catch((error) => {
                 console.error('Error:', error)
             })
 
 }
+
+    handleFileDownload = (event) => {
+        event.preventDefault()
+        let blob = new Blob([file_data],{type:"text/plain;charset=utf-8"})
+        saveAs(blob,file_name)
+    }
+
     
     render() {
         return (
             <div>
                 <header className="header">
                     <p className="headerTitle">Proteomics </p>
-                    <button  className="button">Input</button>
-                    <button className="button">Output</button>
+                    <button onClick={this.handleInputButton} className="button">Input</button>
+                    <button onClick={this.handleOutputButton} className="button">Output</button>
                 </header>
-                <label style={{"display":"block"}}>
-                    <p style={{"display":"inline-block","textAlign":"center","font":"20px Arial Black"}}>
-                        Or download it&nbsp;
-                    </p>
-                    <a className="download_link" target="_blank" download>
-                        here
-                    </a>
-                        </label>
                 <form onSubmit={this.handleSubmit} id = "area1" className={"area1"}>
                     <label>
                         <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the Dataset Name</p>
@@ -263,7 +282,6 @@ class App extends React.Component {
                                title="A-Z, a-z , 0-9 , _ , -"
                                required
                         />
-
                         <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include letters, numbers, underscores ( _ ),
                             and/or hyphens ( - )</p>
                     </label>
@@ -319,7 +337,12 @@ class App extends React.Component {
                     <p id = "loading" style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}}/>
                 </form>
                     <div className="area3" id="area3">
-
+                        <p style={{"display":"inline-block","font":"20px Arial Black", "margin":"0"}}>
+                            Or download it
+                        </p>
+                        <button onClick={this.handleFileDownload} className="download_link">
+                            here
+                        </button>
                         <ReactTable data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {10}
                                 showPagination={true}
                                 showPaginationBottom={true}
