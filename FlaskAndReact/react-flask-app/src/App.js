@@ -2,11 +2,15 @@ import React from 'react';
 import MultiLevelSelect from 'react-multi-level-selector'
 import './App.css';
 import JSZip from 'jszip';
+//FIXME: v7 doesn't work, but v6 does
+// yarn v1.22.4
 import ReactTable from "react-table-v6";
 import "react-table-v6/react-table.css"
 import {saveAs} from "file-saver"
-let file_data, file_name, pic, checker = 0
+let file_data, file_name, pic, checker1 = 0, checker2 = 0
 
+//TODO: Maybe not multiselector, fix removing pic when clicking input, and fix download png, maybe at go back to pick file,
+// maybe add dpkgs name too
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -39,6 +43,10 @@ class App extends React.Component {
 
     handleInputButton = (event) => {
         event.preventDefault()
+        if(checker1 !== 1) {
+            window.alert('Please use the program all the way first.')
+            return
+        }
         document.getElementById('submit_button1').disabled = false
         document.getElementById('inputName').disabled = false
         document.getElementById('inputId').disabled = false
@@ -50,11 +58,13 @@ class App extends React.Component {
         document.getElementById('loading').innerHTML = ""
         document.getElementById('submit_button2').disabled = false
         document.getElementById('csv').style.visibility = 'hidden'
+        document.getElementById('png').style.visibility = 'hidden'
+
     }
 
     handleOutputButton = (event) => {
         event.preventDefault()
-        if(checker !== 1) {
+        if(checker2 !== 1) {
             window.alert('Please use the program all the way first.')
             return
         }
@@ -99,12 +109,13 @@ class App extends React.Component {
             fileData.append('file' + i.toString(), this.state.selectedFiles[i - 1])
             fileData.append('filename' + i.toString(), this.state.selectedFiles[i - 1].name)
         }
-        checker = 0
         document.getElementById('submit_button1').disabled = true
         document.getElementById('inputName').disabled = true
         document.getElementById('inputId').disabled = true
         document.getElementById('inputFiles').disabled = true
         document.getElementById('loading_or_fail').innerHTML = "Loading..."
+        checker1= 0
+        checker2=0
         //Emptying options just in case user wants to chose another directory to receive files from
         this.setState({options:[{value: 'data', label: 'data', options: []},
                 {value: 'plots', label: 'plots', options: []}]})
@@ -112,6 +123,7 @@ class App extends React.Component {
         obj.dataset_name = this.state.dataset_name
         obj.dataset_id = this.state.dataset_id
         // Uses a POST request to send obj as a JSON string
+
         fetch(
             "http://localhost:5000/data", {
                 method: 'POST',
@@ -153,6 +165,8 @@ class App extends React.Component {
                 document.getElementById('inputId').disabled = false
                 document.getElementById('inputFiles').disabled = false
             })
+
+
     }
 
     // Adds a file to the array of files in selectedFiles
@@ -238,13 +252,13 @@ class App extends React.Component {
                 }
             })
             .then((text) => {
-                let result = []
-                file_data = text
                 if(file_name.includes(".csv")){
+                    file_data = text
+                    let result = []
                     const lines = text.toString().split("\n")
                     const headers = lines[0].split(",")
                     for (let i = 0; i< headers.length;i++) {
-                        this.state.file_columns.push({Header : headers[i], accessor: headers[i], width: 200})
+                        this.state.file_columns.push({Header : headers[i], accessor: headers[i]})
                     }
                     for(let i = 1; i< lines.length;i++){
                        let obj = {id:i}
@@ -259,23 +273,20 @@ class App extends React.Component {
                 }
                 else {
                     pic = new Image()
+                    pic.src = "data:image/png;base64," + text
                     pic.onload = function() {
-                        document.body.appendChild(this)
+                        document.getElementById('png').src = pic.src
                     }
-                    pic.src = "data: cors ;base64," + text
-
-                    document.getElementById('png').innerHTML = pic
-                    document.getElementById('png').style.visibility = 'visible'
                 }
 
                 document.getElementById('area2').style.visibility = 'hidden'
                 document.getElementById('area3').style.visibility = 'visible'
-                checker = 1
             })
             .catch((error) => {
                 console.error('Error:', error)
             })
-
+        checker1 = 1
+        checker2= 1
 }
 
     handleFileDownload = (event) => {
@@ -283,11 +294,12 @@ class App extends React.Component {
         let blob
         if(file_name.includes(".csv")){
             blob = new Blob([file_data],{type:"text/plain;charset=utf-8"})
+            saveAs(blob,file_name)
         }
         else {
-            blob = new Blob([pic], {type:"image/png"})
+            saveAs(pic.src,file_name)
         }
-        saveAs(blob,file_name)
+
     }
 
     
@@ -386,9 +398,8 @@ class App extends React.Component {
                                 sortable={true}
                                 pageSizeOptions = {[25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
                         </div>
-                        <div id="png" style={{"visibility":"hidden"}}/>
+                        <img src={pic} id="png" alt = {file_name}/>
                     </div>
-
             </div>
         )
     }

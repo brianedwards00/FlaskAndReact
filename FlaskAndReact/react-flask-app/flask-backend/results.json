@@ -6,7 +6,7 @@
     },
     "Run #2": {
         "dataset_name": "2",
-        "dataset_id": "2",
+        "dataset_id": "22",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #3": {
@@ -35,7 +35,7 @@
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #8": {
-        "dataset_name": "22",
+        "dataset_name": "2",
         "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
@@ -75,13 +75,13 @@
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #16": {
-        "dataset_name": "32",
-        "dataset_id": "252",
+        "dataset_name": "2",
+        "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #17": {
-        "dataset_name": "32",
-        "dataset_id": "252",
+        "dataset_name": "2",
+        "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #18": {
@@ -200,7 +200,7 @@
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #41": {
-        "dataset_name": "w",
+        "dataset_name": "2",
         "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
@@ -255,12 +255,12 @@
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #52": {
-        "dataset_name": "w",
+        "dataset_name": "2",
         "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
     "Run #53": {
-        "dataset_name": "w",
+        "dataset_name": "2",
         "dataset_id": "2",
         "txt_path1": "/mnt/d/Anubhav/Brian/test_docs/Code_in_case.txt"
     },
