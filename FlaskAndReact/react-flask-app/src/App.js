@@ -7,10 +7,10 @@ import JSZip from 'jszip';
 import ReactTable from "react-table-v6";
 import "react-table-v6/react-table.css"
 import {saveAs} from "file-saver"
-let file_data, file_name, pic, checker1 = 0, checker2 = 0
+import {connect} from "react-redux";
 
-//TODO: Maybe not multiselector, fix removing pic when clicking input, and fix download png, maybe at go back to pick file,
-// maybe add dpkgs name too
+let file_data = [], pic1,pic2, checker1 = 0, checker2 = 0
+
 
 // Maybe add a Start Over button that refreshes page
 class App extends React.Component {
@@ -58,8 +58,8 @@ class App extends React.Component {
         document.getElementById('loading').innerHTML = ""
         document.getElementById('submit_button2').disabled = false
         document.getElementById('csv').style.visibility = 'hidden'
-        document.getElementById('png').style.visibility = 'hidden'
-
+        document.getElementById('picture1').style.visibility = 'hidden'
+        document.getElementById('picture2').style.visibility = 'hidden'
     }
 
     handleOutputButton = (event) => {
@@ -68,12 +68,19 @@ class App extends React.Component {
             window.alert('Please use the program all the way first.')
             return
         }
-        if(file_name.includes(".csv")) {
-            document.getElementById('csv').style.visibility = 'visible'
+        for (let i = 0;i<file_data.length;i++){
+
+            if(file_data[i]['file_name'].includes('csv')) {
+                document.getElementById('csv').style.visibility = 'visible'
+            }
+            else {
+                document.getElementById('picture1').style.visibility = 'visible'
+                document.getElementById('picture1').style.visibility = 'hidden'
         }
-        else {
-            document.getElementById('png').style.visibility = 'visible'
         }
+
+
+
         document.getElementById('area1').style.visibility = 'hidden'
         document.getElementById('area2').style.visibility = 'hidden'
         document.getElementById('area3').style.visibility = 'visible'
@@ -123,7 +130,6 @@ class App extends React.Component {
         obj.dataset_name = this.state.dataset_name
         obj.dataset_id = this.state.dataset_id
         // Uses a POST request to send obj as a JSON string
-
         fetch(
             "http://localhost:5000/data", {
                 method: 'POST',
@@ -222,6 +228,7 @@ class App extends React.Component {
         }
         document.getElementById('loading').innerHTML = "Loading..."
         document.getElementById('submit_button2').disabled = true
+        file_data = []
         this.setState({file_rows:[],file_columns:[]})
         fetch(
             "http://localhost:5000/dropdown_submit", {
@@ -242,67 +249,97 @@ class App extends React.Component {
             .then(JSZip.loadAsync)
             .then(function(zip) {
                 for (let index in zip.files) {
-                    file_name = zip.file(index).name.split("/").pop()
+                    let file_name = zip.file(index).name.split("/").pop()
                     if (file_name.includes(".csv")){
-                        return zip.file(index).async("string")
-                    }
+                        file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})}
                     else{
-                        return zip.file(index).async("base64")
+                        file_data.push({file_name:file_name,file_data:zip.file(index).async('base64')})
                     }
                 }
             })
-            .then((text) => {
-                if(file_name.includes(".csv")){
-                    file_data = text
-                    let result = []
-                    const lines = text.toString().split("\n")
-                    const headers = lines[0].split(",")
-                    for (let i = 0; i< headers.length;i++) {
-                        this.state.file_columns.push({Header : headers[i], accessor: headers[i]})
-                    }
-                    for(let i = 1; i< lines.length;i++){
-                       let obj = {id:i}
-                       let currentline = lines[i].split(",")
-                        for (let j = 0 ; j<headers.length;j++) {
-                            obj[headers[j]] = currentline[j]
+            .then(() => {
+                let png_number = 1
+                for (let i =0; i <file_data.length;i++) {
+                    Promise.resolve(file_data[i]['file_data']).then(data => {
+                        if (file_data[i]['file_name'].includes(".csv")) {
+                            let result = []
+                            let lines = data.toString().split('\n')
+                            const headers = lines[0].split(",")
+                            for(let j =0; j<headers.length;j++){
+                                this.state.file_columns.push({Header: headers[j], accessor: headers[j], width:200})
+                            }
+                            for(let k = 1; k<lines.length;k++){
+                                let obj = {id:k}
+                                let current_line = lines[k].split(",")
+                                for (let m = 0; m<headers.length;m++){
+                                    obj[headers[m]] = current_line[m]
+                                }
+                            result.push(obj)
+                            }
+                            this.setState({file_rows:result})
+                            document.getElementById('csv').style.visibility = 'visible'
+                        } else {
+                            if (png_number === 1) {
+                                pic1 = new Image()
+                                pic1.src = "data:image/png;base64," + data
+                                pic1.onload = function () {
+                                    document.getElementById('png1').src = pic1.src
+                                }
+                                document.getElementById('picture1').style.visibility = 'visible'
+                                png_number++
+                            } else {
+                                pic2 = new Image()
+                                pic2.src = "data:image/png;base64," + data
+                                pic2.onload = function () {
+                                    document.getElementById('png2').src = pic2.src
+                                }
+                                document.getElementById('picture2').style.visibility = 'visible'
+                            }
                         }
-                        result.push(obj)
+                            document.getElementById('area2').style.visibility = 'hidden'
+                            document.getElementById('area3').style.visibility = 'visible'
+                            console.log(file_data)
+                            checker1 = 1
+                            checker2= 1
                     }
-                    this.setState({file_rows: result})
-                    document.getElementById('csv').style.visibility = 'visible'
-                }
-                else {
-                    pic = new Image()
-                    pic.src = "data:image/png;base64," + text
-                    pic.onload = function() {
-                        document.getElementById('png').src = pic.src
-                    }
+                        )
                 }
 
-                document.getElementById('area2').style.visibility = 'hidden'
-                document.getElementById('area3').style.visibility = 'visible'
-            })
+                })
             .catch((error) => {
                 console.error('Error:', error)
             })
-        checker1 = 1
-        checker2= 1
+
 }
+
 
     handleFileDownload = (event) => {
         event.preventDefault()
         let blob
-        if(file_name.includes(".csv")){
-            blob = new Blob([file_data],{type:"text/plain;charset=utf-8"})
-            saveAs(blob,file_name)
+        console.log(event.target.id === 'csv_button')
+        for (let i =0; i <file_data.length;i++) {
+            if(event.target.id ==='png1_button') {
+                saveAs(pic1.src, file_data[i]['file_name'])
+                return
+            }
+            if(event.target.id ==='png2_button') {
+                saveAs(pic2.src,file_data[i]['file_name'])
+                return
+            }
+            if(event.target.id === 'csv_button') {
+                Promise.resolve(file_data[i]['file_data'])
+                    .then(data =>{
+                    blob = new Blob([data],{type:"text/plain;charset=utf-8"})
+                    saveAs(blob,file_data[i]['file_name'])
+                        }
+                    )
+                return
+            }
         }
-        else {
-            saveAs(pic.src,file_name)
-        }
-
     }
 
-    
+
+
     render() {
         return (
             <div>
@@ -379,30 +416,69 @@ class App extends React.Component {
                     <p id = "loading" style={{'font':'20px Comic Sans MS','margin':"0",'padding':'15px'}}/>
                 </form>
                     <div className="area3" id="area3">
-                        <p style={{"display":"inline-block","font":"bold 20px Comic Sans MS", "margin":"0"}}>
+                        <div id='csv' style={{"border":"solid","visibility":"hidden","float":'left','width':'100%'}}>
+                            <p style={{"display":"inline-block","font":"bold 20px Comic Sans MS", "margin":"0"}}>
                             Or download it
-                        </p>
-                        <button onClick={this.handleFileDownload} className="download_link">
-                            here
-                        </button>
-                        <div id="csv" style={{"position":"absolute","visibility":"hidden"}}>
-                        <ReactTable
-                                data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {25}
-                                showPagination={true}
-                                showPageSizeOptions={true}
-                                showPageJump={true}
-                                showPaginationBottom={true}
-                                showPaginationTop={true}
-                                resizable={true}
-                                filterable={true}
-                                sortable={true}
-                                pageSizeOptions = {[25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
+                            </p>
+                            <button onClick={this.handleFileDownload} id = 'csv_button' className="download_link">
+                                here
+                            </button>
+                            <div id="csv_table" style={{'maxWidth':'100%','maxHeight':'100%'}}>
+                            <ReactTable
+                                    data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {6}
+                                    showPagination={true}
+                                    showPageSizeOptions={true}
+                                    showPageJump={true}
+                                    showPaginationBottom={true}
+                                    showPaginationTop={true}
+                                    resizable={true}
+                                    filterable={true}
+                                    sortable={true}
+                                    pageSizeOptions = {[6,25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
+                            </div>
                         </div>
-                        <img src={pic} id="png" alt = {file_name}/>
+                        <div id="picture1" style={{"border":"solid","visibility":"hidden","float":'left','width':'47%','padding':'5px','height':'575px','paddingBottom':'5px'}}>
+                            <p style={{"display":"inline-block","font":"bold 20px Comic Sans MS", "margin":"0"}}>
+                            Or download it
+                            </p>
+                            <button onClick={this.handleFileDownload} id = 'png1_button' className="download_link">
+                                here
+                            </button>
+                            <img src={pic1} id="png1" alt="First" style={{'width':'75%','maxWidth':'100%','maxHeight':'100%',}}/>
+                        </div>
+
+                        <div id='picture2' style={{"border":"solid","visibility":"hidden","float":'right','width':'47%','padding':'5px','height':'575px'}}>
+                            <p style={{"display":"inline-block","float":'top',"font":"bold 20px Comic Sans MS", "margin":"0"}}>
+                            Or download it
+                            </p>
+                            <button onClick={this.handleFileDownload} id = 'png2_button' className="download_link">
+                                here
+                            </button>
+                            <img src={pic2} id = "png2" alt="Second" style={{'width':'75%','maxWidth':'100%','maxHeight':'100%'}}/>
+                        </div>
                     </div>
             </div>
         )
     }
 }
 
-export default App
+
+const mapStateToProps = (state) => {
+    return{
+        user: state.user,
+        math: state.math
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        setName: (name) => {
+            dispatch({
+                type: "SET_NAME",
+                payload: name
+            })
+        }
+    };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(App)

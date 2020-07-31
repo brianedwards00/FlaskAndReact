@@ -10,12 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Can now display images">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease">
+      <change afterPath="$PROJECT_DIR$/react-flask-app/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -100,7 +104,10 @@
       <workItem from="1595866500222" duration="775000" />
       <workItem from="1595868054904" duration="10075000" />
       <workItem from="1595882456563" duration="6096000" />
-      <workItem from="1595950044143" duration="14425000" />
+      <workItem from="1595950044143" duration="14626000" />
+      <workItem from="1596035151002" duration="14565000" />
+      <workItem from="1596122077532" duration="17606000" />
+      <workItem from="1596208730239" duration="19792000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -179,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595888335136</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease">
+      <created>1595977399258</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1595977399258</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +223,8 @@
     <MESSAGE value="Can download file from backend" />
     <MESSAGE value="Added Input/Output Feature and the ability to download files" />
     <MESSAGE value="Can now display images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now display images" />
+    <MESSAGE value="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease" />
   </component>
   <component name="WindowStateProjectService">
     <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
@@ -232,10 +247,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595888343376">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595977404562">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595888343376" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595977404562" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595633511201">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -244,9 +259,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="647" y="340" width="639" height="347" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1595624767884" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595888340251">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595977403284">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595888340251" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595977403284" />
   </component>
 </project>

@@ -20,6 +20,7 @@
 .download_link{
   background: none center;
   text-align: center;
+  margin: 0;
   border: none;
   color: darkblue;
   cursor: pointer;
