@@ -10724,6 +10724,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
+txt-file-to-json@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/txt-file-to-json/-/txt-file-to-json-3.0.6.tgz#3694b3b3304e62c4b9f1ef25c1998659e936923a"
+  integrity sha512-DoMaLb7+UTPVRSO+lrKpI/v/md8ONdH1WMyG2V1A8vcwNH6NRkVUXy+kv2e42eSWQPnZ/e2mDTmPqyP+VFN/2A==
+
 type-check@~0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"

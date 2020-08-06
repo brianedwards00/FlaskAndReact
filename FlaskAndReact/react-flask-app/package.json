@@ -23,7 +23,8 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "tabulator": "^0.2.40",
-    "tabulator-tables": "^4.7.2"
+    "tabulator-tables": "^4.7.2",
+    "txt-file-to-json": "^3.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
