@@ -56,7 +56,38 @@ def calculate_tree(path):
 def datadpkgs():
     global target
     data_dpkgs = request.get_data().decode('utf8')
-    target = os.path.join('/mnt/d/Anubhav/storage/data/dpkgs', data_dpkgs)
+    target = os.path.join('/mnt/d/Anubhav/storage/data/dpkgs', data_dpkgs, '430135')
+    try:
+        e = os.listdir(target)
+    except FileNotFoundError:
+        return 'Error'
+    return json.dumps(calculate_tree(target))
+
+
+@app.route('/datadataset_id', methods=['GET', 'POST'])
+def datadataset_id():
+    global target
+    data_dataset_id = request.get_data().decode('utf8').split(',')
+    for i in range(len(data_dataset_id)):
+        data_dataset_id[i] = data_dataset_id[i].lower()
+    target = os.path.join('/mnt/d/Anubhav/storage/data/set_of_Dataset_IDs'
+                          , data_dataset_id[0], data_dataset_id[1])
+    try:
+        e = os.listdir(target)
+    except FileNotFoundError:
+        return 'Error'
+    return json.dumps(calculate_tree(target))
+
+
+@app.route('/datajob_id', methods=['GET', 'POST'])
+def datajob_id():
+    global target
+    data_job_id = request.get_data().decode('utf8').split(',')
+    for i in range(len(data_job_id)):
+        data_job_id[i] = data_job_id[i].lower()
+    target = os.path.join('/mnt/d/Anubhav/storage/data/set_of_Jobs',
+                          data_job_id[1])
+    print(target)
     try:
         e = os.listdir(target)
     except FileNotFoundError:
@@ -103,17 +134,17 @@ def files():
     Receives files and uploads them to 'target'
     :return: Finished as a <string>
     """
-    global counter, target
+    global counter
     filecounter = 1
     # Mount D is mounted to a network share
     # sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d
-    target = os.path.join('/mnt/d/Anubhav/Brian', 'test_docs')
-    if not os.path.isdir(target):
-        os.makedirs(target)
+    record_target = os.path.join('/mnt/d/Anubhav/Brian', 'test_docs')
+    if not os.path.isdir(record_target):
+        os.makedirs(record_target)
     for i in request.files:
         file = request.files[i]
         filename = secure_filename(file.filename)
-        destination = "/".join([target, filename])
+        destination = "/".join([record_target, filename])
         file.save(destination)
         name, extension = os.path.splitext(destination)
         with open("results.json", "r+") as file_json:
@@ -143,9 +174,8 @@ def files():
                 file_json.seek(0)
                 json.dump(json_data, file_json, indent=4)
                 filecounter += 1
-
     counter += 1
-    response = "FINISHED with data"
+    response = "Finished writing data"
     return response
 
 
@@ -211,20 +241,30 @@ def dropdown_submit():
             file_names.append(inner1['value'])
     print('The real file name is:', file_names)
     if len(file_names) > 1 or not any('.txt' in s for s in file_names):
-        f = open("error.txt",'w+')
+        print('Writing error...')
+        f = open("error.txt", 'w+')
         f.close()
         zipf.write('error.txt')
+        zipf.close()
     else:
         for files in file_names:
             for (roots, directories, file_array) in os.walk(target, topdown=True):
                 if files in file_array:
                     print('Writing to zipfile...')
-                    zipf.write(os.path.join(roots,files))
+                    zipf.write(os.path.join(roots, files))
                     # Since for now, only 1 file is in file_names,
-                    # I will break after the one file has been found
-                    break
-                print('A',roots)
-                print('B',directories)
-                print('C',file_array)
-    zipf.close()
+                    # I will return zipf after the one file has been zipped
+                    zipf.close()
+                    return send_file('data.zip', as_attachment=True)
+                print('A', roots)
+                print('B', directories)
+                print('C', file_array)
+            print('Writing error...')
+            f = open("error.txt", 'w+')
+            f.close()
+            zipf.write('error.txt')
+            zipf.close()
     return send_file('data.zip', as_attachment=True)
+
+#1 to n
+@app.route('/pipeline')

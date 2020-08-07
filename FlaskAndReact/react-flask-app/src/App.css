@@ -19,6 +19,8 @@
     padding: 10px;
 }
 
+
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -123,3 +125,94 @@ padding: 10px;
 }
 
 
+
+.pipeline{
+    font-size: 15px;
+    border: none;
+    display: inline-block;
+    outline: none;
+    padding: 0.5em 1.4em;
+    text-decoration: none;
+    background: #1C2C58;
+    color: #F2ECE1;
+    border-radius: 3px;
+
+}
+
+.pipeline:active{
+    -ms-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+
+}
+
+.submit1{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    position:relative;
+    top:10px;
+    display:inline-block;
+    padding:0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Comic Sans MS',sans-serif;
+    font-weight:400;
+    color:#F2ECE1;
+    background-color:#1C2C58;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+}
+.submit1:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+
+
+.submit2{
+    left: 200px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    position:relative;
+    top:10px;
+    display:inline-block;
+    padding:0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Comic Sans MS',sans-serif;
+    font-weight:400;
+    color:#F2ECE1;
+    background-color:#1C2C58;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+}
+.submit2:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+
+.submit3{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    position:relative;
+    top:10px;
+    display:inline-block;
+    padding:0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Comic Sans MS',sans-serif;
+    font-weight:400;
+    color:#F2ECE1;
+    background-color:#1C2C58;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+}
+.submit3:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}

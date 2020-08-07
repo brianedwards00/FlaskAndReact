@@ -10,19 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease">
-      <change afterPath="$PROJECT_DIR$/../FlaskAndReact - Copy (2)/.idea/FlaskAndReact.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/edwa533.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NoFlaskAndReact/.idea/FlaskAndReact.iml" afterDir="false" />
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Revamped display and text files can now be put on a table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +109,8 @@
       <workItem from="1596467072322" duration="23216000" />
       <workItem from="1596554513680" duration="11482000" />
       <workItem from="1596567106547" duration="7476000" />
-      <workItem from="1596638613332" duration="41710000" />
+      <workItem from="1596638613332" duration="42374000" />
+      <workItem from="1596724536973" duration="29329000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -202,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595977399258</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Revamped display and text files can now be put on a table">
+      <created>1596693572278</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596693572278</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +234,8 @@
     <MESSAGE value="Added Input/Output Feature and the ability to download files" />
     <MESSAGE value="Can now display images" />
     <MESSAGE value="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease" />
+    <MESSAGE value="Revamped display and text files can now be put on a table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revamped display and text files can now be put on a table" />
   </component>
   <component name="WindowStateProjectService">
     <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
@@ -256,25 +258,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1595977404562">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1596693581326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595977404562" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596693581326" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596480189712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1596480189712" />
-    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596680873479">
+    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596750281462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596680873479" />
+    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596750281462" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1596479776348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1280.680@0.0.1280.680" timestamp="1596479776348" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595977403284">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1596736098836">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595977403284" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1596736098836" />
   </component>
 </project>

@@ -49,18 +49,13 @@ class App extends React.Component {
 
     handleInputButton = event => {
         event.preventDefault()
-        if(checker1 === 1) {
-            window.alert('Please use the program all the way first.')
-            return
-        }
-        document.getElementById('area1').style.visibility = 'hidden'
-        document.getElementById('area2').style.visibility = 'hidden'
-        document.getElementById('submit_button2').disabled = false
-        //document.getElementById('csv').style.visibility = 'hidden'
-        //document.getElementById('picture1').style.visibility = 'hidden'
-        //document.getElementById('picture2').style.visibility = 'hidden'
-
-
+            if (checker1 === 1) {
+                window.alert('Please finish the task at hand first.')
+                return
+            }
+            document.getElementById('area1').style.visibility = 'hidden'
+            document.getElementById('area2').style.visibility = 'hidden'
+            document.getElementById('submit_button2').disabled = false
     }
 
     handleOutputButton = (event) => {
@@ -91,15 +86,21 @@ class App extends React.Component {
 
     handlePNNLButton = (event) => {
         event.preventDefault()
-        if(checker1 === 1) {
-            window.alert('Please use the program all the way first.')
-            return
-        }
-        document.getElementById('area1').style.visibility = 'visible'
-        document.getElementById('area2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
+            if (checker1 === 1 && event.target.id !=='back_button') {
+                window.alert('Please use the program all the way first.')
+                return
+            }
+            if (event.target.id ==='back_button') {
+                checker1--
+            }
+            document.getElementById('area1').style.visibility = 'visible'
+            document.getElementById('area2').style.visibility = 'hidden'
+            document.getElementById('area3').style.visibility = 'hidden'
+            document.getElementById('table').style.visibility = 'hidden'
+            document.getElementById('success').style.visibility = 'hidden'
+            document.getElementById('loading1.2').style.visibility = 'hidden'
+            document.getElementById('loading1.2').style.visibility = 'hidden'
+            document.getElementById('loading1.2').style.visibility = 'hidden'
     }
 
     handleNMDCButton = (event) => {
@@ -151,6 +152,7 @@ class App extends React.Component {
                         document.getElementById('inputId').disabled = false
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
+                        checker1 = 0
                     }
                     else {
                         this.state.options.push(JSON.parse(response))
@@ -177,27 +179,133 @@ class App extends React.Component {
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
                         document.getElementById('area3').style.visibility = 'visible'
+                        document.getElementById('success').innerHTML = 'Success! Now please submit ONE .txt file table that you would like to see:'
                         document.getElementById('success').style.visibility = 'visible'
                     }
                 })}
         if (event.target.id === 'area1.2') {
+            document.getElementById('loading1.2').innerHTML = 'Loading...'
+            document.getElementById('loading1.2').style.visibility = 'visible'
             if(this.state.dataset_id !== '' && this.state.study_name1 !== '') {
+                let array = []
                 obj.dataset_id = this.state.dataset_id
                 obj.study_name = this.state.study_name1
-                document.getElementById('loading1.2').style.visibility = 'visible'
+                array.push(this.state.study_name1,this.state.dataset_id)
+                            fetch("http://localhost:5000/datadataset_id", {
+                                method: 'POST',
+                                body: array
+                            })
+                                .then(response => response.text())
+                                .then(response => {
+                                    if (response === 'Error')
+                                    {
+                                        document.getElementById('loading1.2').innerHTML =
+                                            'Error, no dataset_id/study name combo found. Please try again.'
+                                        document.getElementById('submit_button1.1').disabled = false
+                                        document.getElementById('submit_button1.2').disabled = false
+                                        document.getElementById('submit_button1.3').disabled = false
+                                        document.getElementById('inputDatapackageId').disabled = false
+                                        document.getElementById('jobNum').disabled = false
+                                        document.getElementById('inputId').disabled = false
+                                        document.getElementById('study_name1').disabled = false
+                                        document.getElementById('study_name2').disabled = false
+                                        checker1 = 0
+                                    }
+                                    else {
+                                        this.state.options.push(JSON.parse(response))
+                                        fetch(
+                                            "http://localhost:5000/data", {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Content-Type': 'application/json'
+                                                },
+                                                body: JSON.stringify(obj)
+                                            })
+                                            .then(response => response)
+                                            .catch(error => console.log('Error:',error))
+                                        document.getElementById('area1').style.visibility = 'hidden'
+                                        document.getElementById('loading1.1').style.visibility = 'hidden'
+                                        document.getElementById('loading1.2').style.visibility = 'hidden'
+                                        document.getElementById('loading1.3').style.visibility = 'hidden'
+                                        document.getElementById('submit_button1.1').disabled = false
+                                        document.getElementById('submit_button1.2').disabled = false
+                                        document.getElementById('submit_button1.3').disabled = false
+                                        document.getElementById('inputDatapackageId').disabled = false
+                                        document.getElementById('jobNum').disabled = false
+                                        document.getElementById('inputId').disabled = false
+                                        document.getElementById('study_name1').disabled = false
+                                        document.getElementById('study_name2').disabled = false
+                                        document.getElementById('area3').style.visibility = 'visible'
+                                        document.getElementById('success').innerHTML = 'Success! Now please submit ONE .txt file table that you would like to see:'
+                                        document.getElementById('success').style.visibility = 'visible'
+                                    }})
             }
             else {
+                document.getElementById('loading1.2').style.visibility = 'hidden'
                 window.alert("Please ensure that you have a value in 'dataset ID' and 'study name'.")
                 return
             }
         }
         if (event.target.id === 'area1.3') {
+            document.getElementById('loading1.3').innerHTML = 'Loading...'
+            document.getElementById('loading1.3').style.visibility = 'visible'
             if(this.state.job_number !== '' && this.state.study_name2 !== '') {
+                let array = []
                 obj.job_number = this.state.job_number
                 obj.study_name = this.state.study_name2
-                document.getElementById('loading1.3').style.visibility = 'visible'
+                // Since study name doesn't matter at the moment, only pushing
+                // job number
+                array.push(this.state.study_name2,this.state.job_number)
+                fetch("http://localhost:5000/datajob_id", {
+                    method: 'POST',
+                    body: array
+                })
+                    .then(response => response.text())
+                    .then(response => {
+                        if (response === 'Error') {
+                            document.getElementById('loading1.3').innerHTML =
+                                'Error, no job_number/study name combo found. Please try again.'
+                            document.getElementById('submit_button1.1').disabled = false
+                            document.getElementById('submit_button1.2').disabled = false
+                            document.getElementById('submit_button1.3').disabled = false
+                            document.getElementById('inputDatapackageId').disabled = false
+                            document.getElementById('jobNum').disabled = false
+                            document.getElementById('inputId').disabled = false
+                            document.getElementById('study_name1').disabled = false
+                            document.getElementById('study_name2').disabled = false
+                            checker1 = 0
+                        }
+                        else {
+                            this.state.options.push(JSON.parse(response))
+                            fetch(
+                                "http://localhost:5000/data", {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(obj)
+                                })
+                                .then(response => response)
+                                .catch(error => console.log('Error:',error))
+                            document.getElementById('area1').style.visibility = 'hidden'
+                            document.getElementById('loading1.1').style.visibility = 'hidden'
+                            document.getElementById('loading1.2').style.visibility = 'hidden'
+                            document.getElementById('loading1.3').style.visibility = 'hidden'
+                            document.getElementById('submit_button1.1').disabled = false
+                            document.getElementById('submit_button1.2').disabled = false
+                            document.getElementById('submit_button1.3').disabled = false
+                            document.getElementById('inputDatapackageId').disabled = false
+                            document.getElementById('jobNum').disabled = false
+                            document.getElementById('inputId').disabled = false
+                            document.getElementById('study_name1').disabled = false
+                            document.getElementById('study_name2').disabled = false
+                            document.getElementById('area3').style.visibility = 'visible'
+                            document.getElementById('success').innerHTML = 'Success! Now please submit ONE .txt file table that you would like to see:'
+                            document.getElementById('success').style.visibility = 'visible'
+                        }})
             }
             else {
+                document.getElementById('loading1.3').style.visibility = 'hidden'
                 window.alert("Please ensure that you have a value in 'job number' and 'study name'.")
                 return
             }
@@ -213,6 +321,13 @@ class App extends React.Component {
         document.getElementById('study_name2').disabled = true
         //Emptying options just in case user wants to chose another directory to receive files from
 
+    }
+
+    // Puts files into selectedFiles
+    handleFileChange = event => {
+        this.setState({
+            selectedFiles: event.target.files,
+        })
     }
 
     handleFileSubmit = (event) => {
@@ -258,12 +373,11 @@ class App extends React.Component {
         }
         this.setState({options:[]})
         checker1=1
+        document.getElementById('loading2').innerHTML = 'Loading...'
         document.getElementById('loading2').style.visibility = 'visible'
         document.getElementById('submit_button2').disabled = true
         document.getElementById('inputFiles').disabled = true
-        this.setState({options:[{value: 'data', label: 'data', options: []},
-                {value: 'plots', label: 'plots', options: []}]})
-
+        this.setState({options:[]})
         fetch(
             "http://localhost:5000/files", {
                 method: 'POST',
@@ -296,12 +410,6 @@ class App extends React.Component {
 
     }
 
-    // Puts files into selectedFiles
-    handleFileChange = event => {
-        this.setState({
-            selectedFiles: event.target.files,
-        })
-    }
 
     // String of file names will be sorted into their correct DropDown location
     handleDropDownChoice = (event, text) => {
@@ -347,7 +455,7 @@ class App extends React.Component {
             window.alert("Please select some file(s)")
             return
         }
-        //Since it's a multiselector, its hard to make sure user submit one only
+        document.getElementById('table').style.visibility = 'hidden'
         document.getElementById('submit_button3').disabled = true
         document.getElementById('loading3').innerHTML = 'Loading...'
         document.getElementById('loading3').style.visibility = 'visible'
@@ -375,7 +483,7 @@ class App extends React.Component {
                     let file_name = zip.file(index).name.split("/").pop()
                     if(file_name.includes('error.txt')) {
                         document.getElementById('loading3').innerHTML =
-                            'Error, please submit ONE TEXT file please.'
+                            'Error, please submit ONE TEXT file from this directory please.'
                         document.getElementById('submit_button3').disabled = false
                         return
                     }
@@ -402,18 +510,21 @@ class App extends React.Component {
                                     const headers = lines[0].split(/\s+/)
                                     for (let j = 0; j < headers.length; j++) {
                                         if (headers[j] !== "")
-                                            this.state.file_columns.push({Header: headers[j], accessor: headers[j], width: 200})
+                                            this.state.file_columns.push({Header: headers[j], accessor: headers[j], width: 125})
                                     }
                                     for (let k = 1; k < lines.length; k++) {
                                         let obj = {id: k}
                                         let current_line = lines[k].split(/\s+/)
                                         for (let m = 0; m < headers.length; m++) {
-                                            obj[headers[m]] = current_line[m]
+                                            if (current_line[m]!=="")
+                                                obj[headers[m]] = current_line[m]
                                         }
                                     result.push(obj)
                                     }
                                     this.setState({file_rows:result})
-                                    document.getElementById('success').style.visibility = 'hidden'
+                                    document.getElementById('success').innerHTML = 'Feel free to look at another text file.'
+                                    document.getElementById('submit_button3').disabled = false
+                                    document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('table').style.visibility = 'visible'
                                 }
                                 if (file_data[i]['file_name'].includes(".csv")) {
@@ -467,26 +578,18 @@ class App extends React.Component {
     handleFileDownload = (event) => {
         event.preventDefault()
         let blob
-        console.log(event.target.id === 'csv_button')
-        for (let i =0; i <file_data.length;i++) {
-            if(event.target.id ==='png1_button') {
-                saveAs(pic1.src, file_data[i]['file_name'])
-                return
-            }
-            if(event.target.id ==='png2_button') {
-                saveAs(pic2.src,file_data[i]['file_name'])
-                return
-            }
-            if(event.target.id === 'csv_button') {
+        for (let i = 0; i<file_data.length; i++) {
+            if(file_data[i]['file_name'].includes('.txt')){
                 Promise.resolve(file_data[i]['file_data'])
-                    .then(data =>{
-                    blob = new Blob([data],{type:"text/plain;charset=utf-8"})
-                    saveAs(blob,file_data[i]['file_name'])
-                        }
-                    )
+                    .then(data => {
+                        blob = new Blob([data], {type:"text/plain;charset=utf-8"})
+                        saveAs(blob,file_data[i]['file_name'])
+                    })
                 return
             }
+            console.log('A')
         }
+        console.log('B')
     }
 
 
@@ -515,14 +618,19 @@ class App extends React.Component {
 
    <div id="area1" className='area1'>
       <p style={{'font': 'bold 15px Comic Sans MS'}}>
-      You have selected the 'PNNL' option to run the MePro internally.
-      <br/>Fill in only one section below, then click 'Submit' to run the pipeline.
-          <br/>There are 3 possible sections one can fill out.
+      You have selected the 'PNNL' option to run the MetaProteomics internally.
+      <br/>Fill in only one section below, then click 'Submit' to view data.
+          <br/>There are 3 possible sections one can fill out or you can run the pipeline below.
+          <br/>
+          <br/>
+          <button className={"pipeline"}>Run Pipeline</button>
+
       </p>
 
 
          <form id='area1.1' onSubmit={this.handleSubmit}>
-            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the datapackage ID</p>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','paddingBottom':'-10px','lineHeight':'40px'}}>
+                Enter the datapackage ID (ETC: ~10-15min)</p>
             <input
                type="text"
                name="datapackage_id"
@@ -533,10 +641,10 @@ class App extends React.Component {
                title="0-9"
                />
             <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include integers 0-9, no decimal points</p>
-            <input style={{'fontSize': '20px','position':'relative','top':'10px'}}
+            <input className={'submit1'}
             id = "submit_button1.1"
             type="submit"
-            value="Submit"
+            value="Display"
             />
             <div id='loading1.1' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
@@ -544,16 +652,16 @@ class App extends React.Component {
 
 
          <form id='area1.2' onSubmit={this.handleSubmit}>
-            <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>Enter the dataset ID</p>
+            <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>Enter the dataset ID (ETC: ~1-2min)</p>
             <input type="text"
                name="dataset_id"
                id="inputId"
                onChange={this.handleChange}
                className="custom_box"
-               pattern="[0-9, ]{1,}"
-               title="0-9, ' ', ','"
+               pattern="[0-9]{1,}"
+               title="0-9"
                />
-            <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include integers 0-9, spaces, and/or commas, no decimal points</p>
+            <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include integers 0-9, no decimal points</p>
             <label>
             <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>Enter the study name</p>
             <input type="text"
@@ -562,14 +670,14 @@ class App extends React.Component {
                onChange={this.handleChange}
                className="custom_box"
                pattern="[a-zA-Z0-9 ]{1,}"
-               title="A-Z,a-z,0-9"
+               title="A-Z,a-z,0-9, ' '"
                />
             <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only letters and/or integers 0-9, no decimal points</p>
             </label>
-            <input style={{'fontSize': '20px','position':'relative','top':'10px'}}
+            <input className={'submit1'}
             id = "submit_button1.2"
             type="submit"
-            value="Submit"
+            value="Display"
             />
             <div id='loading1.2' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
@@ -579,17 +687,17 @@ class App extends React.Component {
 
 
           <form id='area1.3' onSubmit={this.handleSubmit}>
-            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the job number</p>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the job number(ETC: ~1-2min)</p>
             <input
                type="text"
                name="job_number"
                id="jobNum"
                onChange={this.handleChange}
                className="custom_box"
-               pattern="[0-9, ]{1,}"
-               title="0-9, ' ', ','"
+               pattern="[0-9]{1,}"
+               title="0-9"
                />
-            <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include integers 0-9, spaces, and/or commas, no decimal points</p>
+            <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include integers 0-9, no decimal points</p>
             <label>
             <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>Enter the study name</p>
             <input type="text"
@@ -602,10 +710,10 @@ class App extends React.Component {
                />
             <p style={{'font':'12px Times New Roman','margin':"0",'padding':'5px'}}>Must only include letters and/or integers 0-9, no decimal points</p>
             </label>
-            <input style={{'fontSize': '20px','position':'relative','top':'10px'}}
+            <input className={'submit1'}
             id = "submit_button1.3"
             type="submit"
-            value="Submit"
+            value="Display"
             />
             <div id='loading1.3' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
@@ -613,7 +721,7 @@ class App extends React.Component {
 
     <div id="area2" className='area2'>
         <p style={{'font': 'bold 15px Comic Sans MS'}}>
-            You have selected the 'NMDC' option to run the MePro externally.
+            You have selected the 'NMDC' option to run the MetaProteomics externally.
             <br/>In order to do so, please upload one of each file asked below:
             <br/>
             <br/>-Raw (.raw)
@@ -623,7 +731,7 @@ class App extends React.Component {
         </p>
 
         <form id='area2.1' onSubmit={this.handleFileSubmit}>
-            <label style={{'font':'19px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>
+            <p style={{'font':'19px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>
                 Please select up to 4 files
                 (instead of clicking once to select one file,
                 hold the CTRL button before clicking each file in order to select multiple at the same time):
@@ -636,20 +744,19 @@ class App extends React.Component {
                                required
                                title=".txt .fasta. or .raw"
                         />
-            </label>
+            </p>
                         <br/>
-                        <br/>
-                        <input style={{'fontSize': '20px','position':'relative','top':'10px'}}
+                        <input className={'pipeline'}
                            id = "submit_button2"
                            type="submit"
-                           value="Submit"
+                           value="Run Pipeline"
                         />
                         <div id='loading2' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
         </form>
     </div>
 
     <div id='area3' className='area3'>
-        <form onSubmit={this.handleMultiSubmit}>
+        <form onSubmit={this.handleMultiSubmit} style={{'width':'100%','maxWidth':'1270px'}}>
                     <p id = 'success' style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
                         Success! Now please submit ONE .txt file table that you would like to see:
                     </p>
@@ -659,27 +766,32 @@ class App extends React.Component {
                     name = "optionsChosen"
                     onChange = {this.handleDropDownChange}
                     />
-                    <input style={{'fontSize': '20px','position':'relative','top':'10px', 'left':'200px'}}
+                    <input className={'submit2'}
                            type="submit"
                            value="Submit"
                            id = "submit_button3"
                     />
                     <div id='loading3' style={{'visibility':'hidden', 'margin':'0 25px','font':'20px Comic Sans MS','paddingTop':'10px','paddingLeft': '175px'}}>Loading...</div>
         </form>
-            <div id="table" style={{'maxWidth':'100%','maxHeight':'100%','visibility':'hidden'}}>
-                <br/>
-                <br/>
-                <br/>
+            <div id="table" style={{'width':'100%','maxWidth':'1250px','maxHeight':'100%','visibility':'hidden'}}>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
-                    Table created! Or you can download it here.
+                    Table created!
+                    <br/>
+                    Along with filtering/sorting features, you can stretch the column names
+                    to reveal the longer values in the corresponding column.
+                    <br/>
                 </p>
+                <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
+                    Or download it
+                </p>
+                <button onClick={this.handleFileDownload} className={"download_link"}>here</button>
                 <br/>
                 <br/>
-                <input style={{'fontSize': '20px','position':'relative','margin':'0','padding':'5px'}}
-                       type="submit"
-                       value="Go Back"
+                <input className={'submit3'}
+                       type="button"
+                       value="Go Back to PNNL Options"
                        id = "back_button"
-                    //onSubmit={}
+                       onClick={this.handlePNNLButton}
                 />
                 <br/>
                 <ReactTable
@@ -695,8 +807,6 @@ class App extends React.Component {
                     pageSizeOptions = {[10,25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
             </div>
     </div>
-
-
 </div>
         )
     }
