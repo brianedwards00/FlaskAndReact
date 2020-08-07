@@ -9,7 +9,7 @@ import "react-table-v6/react-table.css"
 import {saveAs} from "file-saver"
 import {connect} from "react-redux";
 
-let file_data = [], pic1,pic2, checker1 = 0, checker2 = 0, multisel_checker = 0
+let pic1,pic2, checker1 = 0, checker2 = 0, multisel_checker = 0
 
 
 // Maybe add a Start Over button that refreshes page
@@ -28,7 +28,8 @@ class App extends React.Component {
             options: [],
             optionsChosen: [],
             file_rows: [],
-            file_columns: []
+            file_columns: [],
+            file_data: []
         }
 
 
@@ -40,7 +41,6 @@ class App extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFileSubmit = this.handleFileSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
-        this.handleDropDownChoice = this.handleDropDownChoice.bind(this)
         this.handleDropDownChange = this.handleDropDownChange.bind(this)
         this.handleMultiSubmit = this.handleMultiSubmit.bind(this)
         this.handleFileDownload = this.handleFileDownload.bind(this)
@@ -65,9 +65,9 @@ class App extends React.Component {
             window.alert('Please use the program all the way first.')
             return
         }
-        for (let i = 0;i<file_data.length;i++){
+        for (let i = 0;i<this.state.file_data.length;i++){
 
-            if(file_data[i]['file_name'].includes('csv')) {
+            if(this.state.file_data[i]['file_name'].includes('csv')) {
                 document.getElementById('csv').style.visibility = 'visible'
             }
             else {
@@ -97,6 +97,7 @@ class App extends React.Component {
             document.getElementById('area2').style.visibility = 'hidden'
             document.getElementById('area3').style.visibility = 'hidden'
             document.getElementById('table').style.visibility = 'hidden'
+            document.getElementById('csv').style.visibility = 'hidden'
             document.getElementById('success').style.visibility = 'hidden'
             document.getElementById('loading1.2').style.visibility = 'hidden'
             document.getElementById('loading1.2').style.visibility = 'hidden'
@@ -383,22 +384,16 @@ class App extends React.Component {
                 method: 'POST',
                 body: fileData,
             })
-            .then(response => response)
-            .then(fileData => {
-                document.getElementById('loading2').innerHTML = 'Almost finished...'
-                console.log('Success:', fileData)
-                fetch("http://localhost:5000/dropdown")
-                    .then(response => response.text())
-                    .then((text) => {
-                        this.handleDropDownChoice(event,text)
-                        document.getElementById('area2').style.visibility = 'hidden'
-                        document.getElementById('loading2').style.visibility = 'hidden'
-                        document.getElementById('loading2').innerHTML = 'Loading...'
-                        document.getElementById('inputFiles').disabled = false
-                        document.getElementById('inputFiles').value = null
-                        document.getElementById('submit_button2').disabled = false
-                        document.getElementById('area3').style.visibility = 'visible'
-            })})
+            .then(response => response.text())
+            .then(response =>{
+                this.state.options.push(JSON.parse(response))
+                document.getElementById('submit_button2').disabled = false
+                document.getElementById('inputFiles').disabled = false
+                document.getElementById('loading2').style.visibility = 'hidden'
+                document.getElementById('area2').style.visibility = 'hidden'
+                document.getElementById('area4').style.visibility = 'visible'
+
+            })
             .catch((error) => {
                 console.error('Error:', error)
                 document.getElementById('loading2').innerHTML = "Error, " +
@@ -408,39 +403,6 @@ class App extends React.Component {
             })
 
 
-    }
-
-
-    // String of file names will be sorted into their correct DropDown location
-    handleDropDownChoice = (event, text) => {
-        text = text.split(" ")
-        for (let i = 0; i < text.length; i++) {
-            if (text[i].includes('!')) {
-                text[i] = text[i].replace('!','')
-                this.setState({
-                    options: this.state.options.concat({value: text[i],label:text[i]})
-                })
-            }
-            if (text[i].includes('?')){
-                text[i] = text[i].replace('?','')
-                this.setState({
-                    options :this.state.options.concat(
-                        this.state.options[0].options.push({value: text[i],label:text[i]}))
-                })
-            }
-            if (text[i].includes('$')){
-                text[i] = text[i].replace('$','')
-                this.setState({
-                    options :this.state.options.concat(
-                        this.state.options[1].options.push({value: text[i],label:text[i]}))
-                })
-            }
-        }
-        for (let i = 0; i < this.state.options.length;i++) {
-            if (!isNaN(this.state.options[i])) {
-                this.state.options.splice(i)
-            }
-        }
     }
 
 
@@ -456,11 +418,13 @@ class App extends React.Component {
             return
         }
         document.getElementById('table').style.visibility = 'hidden'
+        document.getElementById('csv').style.visibility = 'hidden'
         document.getElementById('submit_button3').disabled = true
+        document.getElementById('submit_button4').disabled = true
         document.getElementById('loading3').innerHTML = 'Loading...'
         document.getElementById('loading3').style.visibility = 'visible'
-        file_data = []
-        this.setState({file_rows:[],file_columns:[]})
+        this.setState({file_rows:[],file_columns:[], file_data:[]})
+        let self = this.state
         fetch(
             "http://localhost:5000/dropdown_submit", {
                 method: 'POST',
@@ -485,25 +449,26 @@ class App extends React.Component {
                         document.getElementById('loading3').innerHTML =
                             'Error, please submit ONE TEXT file from this directory please.'
                         document.getElementById('submit_button3').disabled = false
+                        document.getElementById('submit_button4').disabled = false
                         return
                     }
                     if(file_name.includes('.txt')){
-                        file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
+                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
                     }
                     if (file_name.includes(".csv")){
-                        file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
+                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
                     }
-                    if (file_name.includes(".png")){
-                        file_data.push({file_name:file_name,file_data:zip.file(index).async('base64')})
+                    if (file_name.includes(".png") || file_name.includes(".jpg")){
+                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('base64')})
                     }
                 }
             })
             .then(() => {
                 let png_number = 1
-                for (let i =0; i <file_data.length;i++) {
-                    Promise.resolve(file_data[i]['file_data'])
+                for (let i =0; i <this.state.file_data.length;i++) {
+                    Promise.resolve(this.state.file_data[i]['file_data'])
                         .then(data => {
-                                if (file_data[i]['file_name'].includes('.txt')) {
+                                if (this.state.file_data[i]['file_name'].includes('.txt')) {
                                     console.log('TXT')
                                     let result = []
                                     let lines = data.toString().split('\n')
@@ -527,7 +492,7 @@ class App extends React.Component {
                                     document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('table').style.visibility = 'visible'
                                 }
-                                if (file_data[i]['file_name'].includes(".csv")) {
+                                if (this.state.file_data[i]['file_name'].includes(".csv")) {
                                     console.log('CSV')
                                     let result = []
                                     let lines = data.toString().split('\n')
@@ -543,10 +508,16 @@ class App extends React.Component {
                                         }
                                         result.push(obj)
                                     }
-                                    this.setState({file_rows: result[0]})
+                                    this.setState({file_rows: result})
+                                    document.getElementById('success2').innerHTML = 'Feel free to choose 1 .csv' +
+                                        ' and/or up to 2 .png/jpg again'
+                                    document.getElementById('submit_button4').disabled = false
+                                    document.getElementById('loading3').style.visibility = 'hidden'
+                                    document.getElementById('csv').style.visibility = 'visible'
                                 }
-                                if (file_data[i]['file_name'].includes(".png")) {
-                                    console.log('PNG')
+                                if (this.state.file_data[i]['file_name'].includes(".png") ||
+                                this.state.file_data[i]['file_name'].includes(".jpg")) {
+                                    console.log('PNG/JPG')
                                     if (png_number === 1) {
                                         pic1 = new Image()
                                         pic1.src = "data:image/png;base64," + data
@@ -578,20 +549,27 @@ class App extends React.Component {
     handleFileDownload = (event) => {
         event.preventDefault()
         let blob
-        for (let i = 0; i<file_data.length; i++) {
-            if(file_data[i]['file_name'].includes('.txt')){
-                Promise.resolve(file_data[i]['file_data'])
-                    .then(data => {
-                        blob = new Blob([data], {type:"text/plain;charset=utf-8"})
-                        saveAs(blob,file_data[i]['file_name'])
-                    })
-                return
-            }
-            console.log('A')
+        console.log(event.target.id)
+        if (event.target.id === 'download1') {
+            Promise.resolve(this.state.file_data[0]['file_data'])
+                .then(data => {
+                    blob = new Blob([data], {type: "text/plain;charset=utf-8"})
+                    saveAs(blob, this.state.file_data[0]['file_name'])
+                })
         }
-        console.log('B')
+        if (event.target.id === 'download2') {
+            for (let i = 0; i < this.state.file_data.length; i++) {
+                if (this.state.file_data[i]['file_name'].includes('.csv')) {
+                    Promise.resolve(this.state.file_data[i]['file_data'])
+                        .then(data => {
+                            blob = new Blob([data], {type: "text/plain;charset=utf-8"})
+                            saveAs(blob, this.state.file_data[i]['file_name'])
+                        })
+                    return
+                }
+            }
+        }
     }
-
 
 
     render() {
@@ -619,8 +597,9 @@ class App extends React.Component {
    <div id="area1" className='area1'>
       <p style={{'font': 'bold 15px Comic Sans MS'}}>
       You have selected the 'PNNL' option to run the MetaProteomics internally.
-      <br/>Fill in only one section below, then click 'Submit' to view data.
-          <br/>There are 3 possible sections one can fill out or you can run the pipeline below.
+      <br/>Fill in only ONE section below, then click 'Display' to view data,
+          <br/>
+          or click 'Run Pipeline' instead
           <br/>
           <br/>
           <button className={"pipeline"}>Run Pipeline</button>
@@ -687,7 +666,7 @@ class App extends React.Component {
 
 
           <form id='area1.3' onSubmit={this.handleSubmit}>
-            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the job number(ETC: ~1-2min)</p>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the job number (ETC: ~1-2min)</p>
             <input
                type="text"
                name="job_number"
@@ -771,7 +750,7 @@ class App extends React.Component {
                            value="Submit"
                            id = "submit_button3"
                     />
-                    <div id='loading3' style={{'visibility':'hidden', 'margin':'0 25px','font':'20px Comic Sans MS','paddingTop':'10px','paddingLeft': '175px'}}>Loading...</div>
+                    <div id='loading3' style={{'visibility':'hidden', 'margin':'0 25px','font':'20px Comic Sans MS','paddingLeft': '175px'}}>Loading...</div>
         </form>
             <div id="table" style={{'width':'100%','maxWidth':'1250px','maxHeight':'100%','visibility':'hidden'}}>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
@@ -780,11 +759,67 @@ class App extends React.Component {
                     Along with filtering/sorting features, you can stretch the column names
                     to reveal the longer values in the corresponding column.
                     <br/>
+                    <br/>
                 </p>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
                     Or download it
                 </p>
-                <button onClick={this.handleFileDownload} className={"download_link"}>here</button>
+                <button id="download1" onClick={this.handleFileDownload} className={"download_link"}>here</button>
+                <br/>
+                <br/>
+                <input className={'submit3'}
+                       type="button"
+                       value="Go Back to PNNL Options"
+                       id = "back_button"
+                       onClick={this.handlePNNLButton}
+                />
+                <br/>
+                <ReactTable
+                    data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {10}
+                    showPagination={true}
+                    showPageSizeOptions={true}
+                    showPageJump={true}
+                    showPaginationBottom={true}
+                    showPaginationTop={true}
+                    resizable={true}
+                    filterable={true}
+                    sortable={true}
+                    pageSizeOptions = {[10,25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
+            </div>
+    </div>
+
+    <div id='area4' className='area4'>
+        <form onSubmit={this.handleMultiSubmit} style={{'width':'100%','maxWidth':'1270px'}}>
+            <p id = 'success2' style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
+                Pipeline completed! Now please select up to 1 .csv and 2 .png/.jpg
+                to view at a time.
+            </p>
+            <MultiLevelSelect
+                id = "select"
+                options={this.state.options}
+                name = "optionsChosen"
+                onChange = {this.handleDropDownChange}
+            />
+            <input className={'submit2'}
+                   type="submit"
+                   value="Submit"
+                   id = "submit_button4"
+            />
+        </form>
+        <div id="csv" style={{'width':'100%','maxWidth':'1250px','maxHeight':'100%','visibility':'hidden'}}>
+            <br/>
+                <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
+                    Data retrieved! Scroll down to see them all.
+                    <br/>
+                    Along with filtering/sorting features, you can stretch the column names
+                    to reveal the longer values in the corresponding column.
+                    <br/>
+                    <br/>
+                </p>
+                <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
+                    Or download it
+                </p>
+                <button id="download2" onClick={this.handleFileDownload} className={"download_link"}>here</button>
                 <br/>
                 <br/>
                 <input className={'submit3'}

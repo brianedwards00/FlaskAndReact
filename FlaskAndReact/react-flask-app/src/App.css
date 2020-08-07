@@ -117,6 +117,12 @@ position: absolute;
 visibility: hidden;
 }
 
+.area4{
+padding: 5px;
+position: absolute;
+visibility: hidden;
+}
+
 
 .custom_box{
 width: 50%;
@@ -127,6 +133,7 @@ padding: 10px;
 
 
 .pipeline{
+    cursor: pointer;
     font-size: 15px;
     border: none;
     display: inline-block;
@@ -147,6 +154,7 @@ padding: 10px;
 }
 
 .submit1{
+    cursor: pointer;
     font-size: 15px;
     border: none;
     outline: none;
@@ -171,6 +179,7 @@ padding: 10px;
 
 
 .submit2{
+    cursor: pointer;
     left: 200px;
     font-size: 15px;
     border: none;
@@ -195,6 +204,7 @@ padding: 10px;
 }
 
 .submit3{
+    cursor: pointer;
     font-size: 15px;
     border: none;
     outline: none;

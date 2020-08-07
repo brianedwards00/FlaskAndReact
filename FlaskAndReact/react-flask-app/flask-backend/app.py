@@ -52,11 +52,20 @@ def calculate_tree(path):
     return d
 
 
+def pipeline(path):
+    sum = 0
+    for i in range(1, 999):
+        sum += i
+    f = open(os.path.join(path, str(sum)) + '.txt', 'w+')
+    f.close()
+    return f
+
+
 @app.route('/datadpkgs', methods=['GET', 'POST'])
 def datadpkgs():
     global target
     data_dpkgs = request.get_data().decode('utf8')
-    target = os.path.join('/mnt/d/Anubhav/storage/data/dpkgs', data_dpkgs, '430135')
+    target = os.path.join('/mnt/d/Anubhav/storage/data/dpkgs', data_dpkgs)
     try:
         e = os.listdir(target)
     except FileNotFoundError:
@@ -134,11 +143,11 @@ def files():
     Receives files and uploads them to 'target'
     :return: Finished as a <string>
     """
-    global counter
+    global counter, target
     filecounter = 1
     # Mount D is mounted to a network share
     # sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d
-    record_target = os.path.join('/mnt/d/Anubhav/Brian', 'test_docs')
+    record_target = os.path.join('/mnt/d/Anubhav/storage/data/external')
     if not os.path.isdir(record_target):
         os.makedirs(record_target)
     for i in request.files:
@@ -175,37 +184,11 @@ def files():
                 json.dump(json_data, file_json, indent=4)
                 filecounter += 1
     counter += 1
-    response = "Finished writing data"
-    return response
-
-
-@app.route('/dropdown', methods=['GET', 'POST'])
-def dropdown():
-    """
-    Creates the dropdown choices from a specific network file location
-    :return: All the file names including in 'target'
-    """
-    global target, dpkg
-    string1 = ""
-    string2 = ""
-    string3 = ""
-    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', dpkg, 'analysis_result')
-    entries = os.listdir(target)
-    for e in entries:
-        if e != "data" and e != "plots":
-            string1 = string1 + e + "! "
-        else:
-            continue
-    target1 = os.path.join(target, 'data')
-    entries = os.listdir(target1)
-    for e in entries:
-        string2 = string2 + e + "? "
-    target2 = os.path.join(target, 'plots')
-    entries = os.listdir(target2)
-    for e in entries:
-        string3 = string3 + e + "$ "
-
-    return '{} {} {}'.format(string1, string2, string3)
+    print("Finished writing data")
+    print('Running pipeline now...')
+    target = record_target.replace('data', 'results')
+    print('Finished pipeline...saving results')
+    return json.dumps(calculate_tree(target))
 
 
 @app.route('/dropdown_submit', methods=['GET', 'POST'])
@@ -240,31 +223,42 @@ def dropdown_submit():
         else:
             file_names.append(inner1['value'])
     print('The real file name is:', file_names)
-    if len(file_names) > 1 or not any('.txt' in s for s in file_names):
-        print('Writing error...')
+    if '/data' in target and (len(file_names) > 1 or not any('.txt' in s for s in file_names)):
+        print('Writing file type error...')
         f = open("error.txt", 'w+')
         f.close()
         zipf.write('error.txt')
         zipf.close()
-    else:
-        for files in file_names:
-            for (roots, directories, file_array) in os.walk(target, topdown=True):
-                if files in file_array:
-                    print('Writing to zipfile...')
-                    zipf.write(os.path.join(roots, files))
-                    # Since for now, only 1 file is in file_names,
-                    # I will return zipf after the one file has been zipped
+        return send_file('data.zip', as_attachment=True)
+    if '/results' in target:
+        for f in file_names:
+            if ('.csv' not in f and '.jpg' not in f and '.png' not in f) \
+                    or len(file_names) > 3:
+                print('Writing file type error...')
+                f = open("error.txt", 'w+')
+                f.close()
+                zipf.write('error.txt')
+                zipf.close()
+                return send_file('data.zip', as_attachment=True)
+    loop = 0
+    for files in file_names:
+        for (roots, directories, file_array) in os.walk(target, topdown=True):
+            if files in file_array:
+                print('Writing', files, 'to zipfile...')
+                loop += 1
+                zipf.write(os.path.join(roots, files))
+                if '/data' in target:
                     zipf.close()
+                    print('Sending back...')
                     return send_file('data.zip', as_attachment=True)
-                print('A', roots)
-                print('B', directories)
-                print('C', file_array)
-            print('Writing error...')
-            f = open("error.txt", 'w+')
-            f.close()
-            zipf.write('error.txt')
-            zipf.close()
+            print('A', roots)
+            print('B', directories)
+            print('C', file_array)
+    if '/results' in target and loop != len(file_names):
+        print('Writing not found error...')
+        f = open("error.txt", 'w+')
+        f.close()
+        zipf.write('error.txt')
+    zipf.close()
+    print('Sending back...')
     return send_file('data.zip', as_attachment=True)
-
-#1 to n
-@app.route('/pipeline')
