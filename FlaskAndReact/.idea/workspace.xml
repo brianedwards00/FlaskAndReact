@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Revamped display and text files can now be put on a table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
@@ -112,6 +111,7 @@
       <workItem from="1596638613332" duration="42374000" />
       <workItem from="1596724536973" duration="29329000" />
       <workItem from="1596818188000" duration="21359000" />
+      <workItem from="1596845500596" duration="13539000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -267,10 +267,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1596480189712" />
-    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596819873990">
+    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596846127875">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596819873990" />
+    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596846127875" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1596479776348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

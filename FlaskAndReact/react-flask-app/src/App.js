@@ -408,6 +408,9 @@ class App extends React.Component {
 
     handleDropDownChange =(optionsChosen) => {
         this.setState({optionsChosen})
+        //TODO: Add download here too
+        document.getElementById('pic_div1').style.visibility = 'hidden'
+        document.getElementById('pic_div2').style.visibility = 'hidden'
     }
 
 
@@ -423,8 +426,12 @@ class App extends React.Component {
         document.getElementById('submit_button4').disabled = true
         document.getElementById('loading3').innerHTML = 'Loading...'
         document.getElementById('loading3').style.visibility = 'visible'
+        document.getElementById('pic_div1').style.visibility = 'hidden'
+        document.getElementById('pic_div2').style.visibility = 'hidden'
+        document.getElementById('pic_div1').position = 'relative'
+        document.getElementById('pic_div2').position = 'relative'
         this.setState({file_rows:[],file_columns:[], file_data:[]})
-        let self = this.state
+        let self = this
         fetch(
             "http://localhost:5000/dropdown_submit", {
                 method: 'POST',
@@ -447,24 +454,24 @@ class App extends React.Component {
                     let file_name = zip.file(index).name.split("/").pop()
                     if(file_name.includes('error.txt')) {
                         document.getElementById('loading3').innerHTML =
-                            'Error, please submit ONE TEXT file from this directory please.'
+                            'Error, please submit the allowed file(s).'
                         document.getElementById('submit_button3').disabled = false
                         document.getElementById('submit_button4').disabled = false
                         return
                     }
                     if(file_name.includes('.txt')){
-                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
+                        self.state.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
                     }
                     if (file_name.includes(".csv")){
-                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
+                        self.state.file_data.push({file_name:file_name,file_data:zip.file(index).async('string')})
                     }
                     if (file_name.includes(".png") || file_name.includes(".jpg")){
-                        self.file_data.push({file_name:file_name,file_data:zip.file(index).async('base64')})
+                        self.state.file_data.push({file_name:file_name,file_data:zip.file(index).async('base64')})
                     }
                 }
             })
             .then(() => {
-                let png_number = 1
+                let png_number = 1, absolue_pos = 0
                 for (let i =0; i <this.state.file_data.length;i++) {
                     Promise.resolve(this.state.file_data[i]['file_data'])
                         .then(data => {
@@ -489,11 +496,13 @@ class App extends React.Component {
                                     this.setState({file_rows:result})
                                     document.getElementById('success').innerHTML = 'Feel free to look at another text file.'
                                     document.getElementById('submit_button3').disabled = false
+                                    document.getElementById('submit_button4').disabled = false
                                     document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('table').style.visibility = 'visible'
                                 }
                                 if (this.state.file_data[i]['file_name'].includes(".csv")) {
                                     console.log('CSV')
+                                    absolue_pos++
                                     let result = []
                                     let lines = data.toString().split('\n')
                                     const headers = lines[0].split(",")
@@ -512,6 +521,7 @@ class App extends React.Component {
                                     document.getElementById('success2').innerHTML = 'Feel free to choose 1 .csv' +
                                         ' and/or up to 2 .png/jpg again'
                                     document.getElementById('submit_button4').disabled = false
+                                    document.getElementById('submit_button3').disabled = false
                                     document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('csv').style.visibility = 'visible'
                                 }
@@ -522,18 +532,21 @@ class App extends React.Component {
                                         pic1 = new Image()
                                         pic1.src = "data:image/png;base64," + data
                                         pic1.onload = function () {
-                                            //document.getElementById('png1').src = pic1.src
+                                            document.getElementById('pic1').src = pic1.src
                                         }
-                                        //document.getElementById('picture1').style.visibility = 'visible'
+                                        document.getElementById('pic_div1').style.visibility = 'visible'
                                         png_number++
                                     } else {
                                         pic2 = new Image()
                                         pic2.src = "data:image/png;base64," + data
                                         pic2.onload = function () {
-                                            //    document.getElementById('png2').src = pic2.src
+                                            document.getElementById('pic2').src = pic2.src
                                         }
-                                        //document.getElementById('picture2').style.visibility = 'visible'
+                                        document.getElementById('pic_div2').style.visibility = 'visible'
                                     }
+                                    document.getElementById('submit_button4').disabled = false
+                                    document.getElementById('submit_button3').disabled = false
+                                    document.getElementById('loading3').style.visibility = 'hidden'
                                 }
 
                             }
@@ -569,6 +582,7 @@ class App extends React.Component {
                 }
             }
         }
+        //TODO: separate p to show when just image, output button
     }
 
 
@@ -597,9 +611,9 @@ class App extends React.Component {
    <div id="area1" className='area1'>
       <p style={{'font': 'bold 15px Comic Sans MS'}}>
       You have selected the 'PNNL' option to run the MetaProteomics internally.
-      <br/>Fill in only ONE section below, then click 'Display' to view data,
+      <br/>Fill in only ONE section below, then click 'Run Pipeline',
           <br/>
-          or click 'Run Pipeline' instead
+          or click the section's 'Display' button to view its pre-analyzed data instead.
           <br/>
           <br/>
           <button className={"pipeline"}>Run Pipeline</button>
@@ -750,7 +764,7 @@ class App extends React.Component {
                            value="Submit"
                            id = "submit_button3"
                     />
-                    <div id='loading3' style={{'visibility':'hidden', 'margin':'0 25px','font':'20px Comic Sans MS','paddingLeft': '175px'}}>Loading...</div>
+                    <div id='loading3' style={{'visibility':'hidden', 'margin':'0 25px','font':'20px Comic Sans MS','paddingLeft': '175px','paddingTop':'10px'}}>Loading...</div>
         </form>
             <div id="table" style={{'width':'100%','maxWidth':'1250px','maxHeight':'100%','visibility':'hidden'}}>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
@@ -762,7 +776,7 @@ class App extends React.Component {
                     <br/>
                 </p>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
-                    Or download it
+                    Or download the table
                 </p>
                 <button id="download1" onClick={this.handleFileDownload} className={"download_link"}>here</button>
                 <br/>
@@ -817,7 +831,7 @@ class App extends React.Component {
                     <br/>
                 </p>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
-                    Or download it
+                    Or download the table
                 </p>
                 <button id="download2" onClick={this.handleFileDownload} className={"download_link"}>here</button>
                 <br/>
@@ -830,6 +844,7 @@ class App extends React.Component {
                 />
                 <br/>
                 <ReactTable
+                    style={{'position':'relative'}}
                     data={this.state.file_rows} columns = {this.state.file_columns} defaultPageSize = {10}
                     showPagination={true}
                     showPageSizeOptions={true}
@@ -841,6 +856,12 @@ class App extends React.Component {
                     sortable={true}
                     pageSizeOptions = {[10,25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
             </div>
+        <div id="pic_div1" style={{'visibility':'hidden','width':'45%','maxWidth:':'200','float':'left'}}>
+            <img src={pic1} id = {'pic1'} alt={'PNG/JPG 1'}/>
+        </div>
+        <div id="pic_div2" style={{'visibility':'hidden','width':'45%','maxWidth:':'200px','float':'right'}}>
+            <img src={pic2} id = {'pic2'} alt={'PNG/JPG 2'}/>
+        </div>
     </div>
 </div>
         )
