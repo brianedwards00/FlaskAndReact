@@ -10,10 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="Revamped display and text files can now be put on a table">
+    <list default="true" id="7c756aab-2c19-4e0d-8403-20109ff2284a" name="Default Changelist" comment="PNG and csv files can now be displayed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/flask-backend/results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-flask-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-flask-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +111,8 @@
       <workItem from="1596638613332" duration="42374000" />
       <workItem from="1596724536973" duration="29329000" />
       <workItem from="1596818188000" duration="21359000" />
-      <workItem from="1596845500596" duration="13539000" />
+      <workItem from="1596845500596" duration="13626000" />
+      <workItem from="1596906444731" duration="19414000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1594338618409</created>
@@ -204,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596693572278</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="PNG and csv files can now be displayed">
+      <created>1596866325095</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1596866325095</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,13 +244,14 @@
     <MESSAGE value="Can now display images" />
     <MESSAGE value="Fixed basic bugs, now can properly display/download images as well as the ability to move through the website with ease" />
     <MESSAGE value="Revamped display and text files can now be put on a table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revamped display and text files can now be put on a table" />
+    <MESSAGE value="PNG and csv files can now be displayed" />
+    <option name="LAST_COMMIT_MESSAGE" value="PNG and csv files can now be displayed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1595544505135">
+    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1596866340740">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595544505135" />
+    <state x="329" y="200" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596866340740" />
     <state x="91" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593459630847">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -259,25 +268,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594674961206" />
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1596693581326">
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2" timestamp="1596866339706">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596693581326" />
+    <state x="241" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596866339706" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596480189712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1596480189712" />
-    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596846127875">
+    <state x="633" y="0" width="653" height="687" key="dock-window-1" timestamp="1596906750913">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596846127875" />
+    <state x="633" y="0" width="653" height="687" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1596906750913" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1596479776348">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1280.680@0.0.1280.680" timestamp="1596479776348" />
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1596736098836">
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1596921032566">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1596736098836" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1596921032566" />
   </component>
 </project>

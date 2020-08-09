@@ -9,7 +9,7 @@ import "react-table-v6/react-table.css"
 import {saveAs} from "file-saver"
 import {connect} from "react-redux";
 
-let pic1,pic2, checker1 = 0, checker2 = 0, multisel_checker = 0
+let pic1,pic2, checker1 = 0, checker2 = 1
 
 
 // Maybe add a Start Over button that refreshes page
@@ -39,40 +39,55 @@ class App extends React.Component {
         this.handleNMDCButton = this.handleNMDCButton.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleInternalPipe = this.handleInternalPipe.bind(this)
         this.handleFileSubmit = this.handleFileSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
         this.handleDropDownChange = this.handleDropDownChange.bind(this)
         this.handleMultiSubmit = this.handleMultiSubmit.bind(this)
         this.handleFileDownload = this.handleFileDownload.bind(this)
-
     }
 
     handleInputButton = event => {
         event.preventDefault()
-            if (checker1 === 1) {
-                window.alert('Please finish the task at hand first.')
-                return
-            }
-            document.getElementById('area1').style.visibility = 'hidden'
-            document.getElementById('area2').style.visibility = 'hidden'
-            document.getElementById('submit_button2').disabled = false
+        if (checker1 === 1) {
+            window.alert('Please finish the task at hand first.')
+            return
+        }
+        document.getElementById('area1').style.visibility = 'hidden'
+        document.getElementById('area2').style.visibility = 'hidden'
+        document.getElementById('area3').style.visibility = 'hidden'
+        document.getElementById('table').style.visibility = 'hidden'
+        document.getElementById('csv').style.visibility = 'hidden'
+        document.getElementById('success').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('success2').style.visibility = 'hidden'
+        document.getElementById('area4').style.visibility = 'hidden'
+        document.getElementById('data_success').style.visibility = 'hidden'
+        document.getElementById('pic_div1').style.visibility = 'hidden'
+        document.getElementById('pic_div2').style.visibility = 'hidden'
+        document.getElementById('submit_button4').style.visibility = 'hidden'
+        document.getElementById('p_table').style.visibility = 'hidden'
     }
 
     handleOutputButton = (event) => {
-        /*
         event.preventDefault()
-        if(checker2 !== 1) {
-            window.alert('Please use the program all the way first.')
+        if(checker2 === 1) {
+            window.alert('Please finish the task at hand first.')
             return
         }
         for (let i = 0;i<this.state.file_data.length;i++){
-
-            if(this.state.file_data[i]['file_name'].includes('csv')) {
-                document.getElementById('csv').style.visibility = 'visible'
+            if(this.state.file_data[i]['file_name'].includes('txt')) {
+                document.getElementById('table').style.visibility = 'visible'
             }
-            else {
-                document.getElementById('picture1').style.visibility = 'visible'
-                document.getElementById('picture1').style.visibility = 'hidden'
+            if(this.state.file_data[i]['file_name'].includes('csv')) {
+                document.getElementById('table').style.visibility = 'visible'
+            }
+            if(this.state.file_data[i]['file_name'].includes('png') ||
+            this.state.file_data[i]['file_name'].includes('jpg')) {
+                document.getElementById('pic_div1').style.visibility = 'hidden'
+                document.getElementById('pic_div2').style.visibility = 'hidden'
         }
         }
 
@@ -81,43 +96,245 @@ class App extends React.Component {
         document.getElementById('area1').style.visibility = 'hidden'
         document.getElementById('area2').style.visibility = 'hidden'
         document.getElementById('area3').style.visibility = 'visible'
-         */
+
     }
 
     handlePNNLButton = (event) => {
         event.preventDefault()
-            if (checker1 === 1 && event.target.id !=='back_button') {
-                window.alert('Please use the program all the way first.')
-                return
-            }
-            if (event.target.id ==='back_button') {
-                checker1--
-            }
-            document.getElementById('area1').style.visibility = 'visible'
-            document.getElementById('area2').style.visibility = 'hidden'
-            document.getElementById('area3').style.visibility = 'hidden'
-            document.getElementById('table').style.visibility = 'hidden'
-            document.getElementById('csv').style.visibility = 'hidden'
-            document.getElementById('success').style.visibility = 'hidden'
-            document.getElementById('loading1.2').style.visibility = 'hidden'
-            document.getElementById('loading1.2').style.visibility = 'hidden'
-            document.getElementById('loading1.2').style.visibility = 'hidden'
+        if (checker1 === 1 && event.target.id !=='back_button') {
+            window.alert('Please use the program all the way first.')
+            return
+        }
+        if (event.target.id ==='back_button') {
+            checker1--
+        }
+        document.getElementById('area1').style.visibility = 'visible'
+        document.getElementById('area2').style.visibility = 'hidden'
+        document.getElementById('area3').style.visibility = 'hidden'
+        document.getElementById('table').style.visibility = 'hidden'
+        document.getElementById('csv').style.visibility = 'hidden'
+        document.getElementById('success').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('success2').style.visibility = 'hidden'
+        document.getElementById('area4').style.visibility = 'hidden'
+        document.getElementById('pipeline1.0').disabled = false
+        document.getElementById('submit_button1.1').disabled = false
+        document.getElementById('submit_button1.2').disabled = false
+        document.getElementById('submit_button1.3').disabled = false
+        document.getElementById('inputDatapackageId').disabled = false
+        document.getElementById('jobNum').disabled = false
+        document.getElementById('inputId').disabled = false
+        document.getElementById('study_name1').disabled = false
+        document.getElementById('study_name2').disabled = false
+        document.getElementById('data_success').style.visibility = 'hidden'
+        document.getElementById('pic_div1').style.visibility = 'hidden'
+        document.getElementById('pic_div2').style.visibility = 'hidden'
+        document.getElementById('submit_button4').style.visibility = 'hidden'
+        document.getElementById('p_table').style.visibility = 'hidden'
+
     }
 
     handleNMDCButton = (event) => {
         event.preventDefault()
-        if(checker1 === 1) {
+        if(checker1 === 1 && event.target.id !=='back_button') {
             window.alert('Please use the program all the way first.')
             return
         }
+        document.getElementById('data_success').style.visibility = 'hidden'
+        document.getElementById('pic_div1').style.visibility = 'hidden'
+        document.getElementById('pic_div2').style.visibility = 'hidden'
         document.getElementById('area1').style.visibility = 'hidden'
         document.getElementById('area2').style.visibility = 'visible'
-        document.getElementById('loading2').style.visibility = 'hidden'
+        document.getElementById('area3').style.visibility = 'hidden'
+        document.getElementById('table').style.visibility = 'hidden'
+        document.getElementById('csv').style.visibility = 'hidden'
+        document.getElementById('success').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('loading1.2').style.visibility = 'hidden'
+        document.getElementById('success2').style.visibility = 'hidden'
+        document.getElementById('area4').style.visibility = 'hidden'
+        document.getElementById('submit_button4').style.visibility = 'hidden'
+        document.getElementById('p_table').style.visibility = 'hidden'
     }
 
     // Will update the "name" value with whatever value has been inserted in "name" box
     handleChange = ({target}) => {
         this.setState({[target.name]: target.value})
+    }
+
+
+    handleInternalPipe = event => {
+        event.preventDefault()
+        if(this.state.datapackage_id ==='' && this.state.dataset_id ==='' && this.state.job_number ===''
+        && this.state.study_name1 ==='' && this.state.study_name2 ==='')
+        {
+            window.alert('Please fill in something.')
+            return
+        }
+        if(!((this.state.datapackage_id !== '' && this.state.dataset_id ==='' && this.state.job_number ===''
+                && this.state.study_name1 ==='' && this.state.study_name2 ==='') ||
+            (this.state.datapackage_id === '' && this.state.dataset_id !=='' && this.state.job_number ===''
+                && this.state.study_name1 !=='' && this.state.study_name2 ==='') ||
+            (this.state.datapackage_id === '' && this.state.dataset_id ==='' && this.state.job_number !==''
+                && this.state.study_name1 ==='' && this.state.study_name2 !==''))) {
+            window.alert('Please only have one section completed to run the pipeline.')
+            return
+        }
+        this.setState({options:[]})
+        let obj = {}
+        if(this.state.datapackage_id !== '' && /^\d+$/.test(this.state.datapackage_id)) {
+            obj.datapackage_id = this.state.datapackage_id
+            document.getElementById('loading1.0').innerHTML = 'Loading...'
+            document.getElementById('loading1.0').style.visibility = 'visible'
+            fetch("http://localhost:5000/resultsdpkgs", {
+                method: 'POST',
+                body: this.state.datapackage_id
+            })
+                .then(response => response.text())
+                .then(response => {
+                    if(response === 'Error') {
+                        document.getElementById('loading1.0').innerHTML = 'Pipeline failed. Try again.'
+                        document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
+                        document.getElementById('pipeline1.0').disabled = false
+                        document.getElementById('submit_button1.1').disabled = false
+                        document.getElementById('submit_button1.2').disabled = false
+                        document.getElementById('submit_button1.3').disabled = false
+                        document.getElementById('inputDatapackageId').disabled = false
+                        document.getElementById('jobNum').disabled = false
+                        document.getElementById('inputId').disabled = false
+                        document.getElementById('study_name1').disabled = false
+                        document.getElementById('study_name2').disabled = false
+                    }
+                    else {
+                        this.state.options.push(JSON.parse(response))
+                        fetch(
+                            "http://localhost:5000/data", {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(obj)
+                            })
+                            .then(response => response)
+                            .catch(error => console.log('Error:',error))
+                        document.getElementById('area1').style.visibility = 'hidden'
+                        document.getElementById('loading1.0').style.visibility = 'hidden'
+                        document.getElementById('area2').style.visibility = 'hidden'
+                        document.getElementById('area4').style.visibility = 'visible'
+                        document.getElementById('success2').style.visibility = 'visible'
+                        document.getElementById('submit_button4').style.visibility = 'visible'
+                    }
+                })
+        }
+        if(this.state.dataset_id !== '' && this.state.study_name1 !== ''
+            && /^\d+$/.test(this.state.dataset_id) && this.state.study_name1.match("^[A-Za-z0-9]+$")) {
+            obj.dataset_id = this.state.dataset_id
+            obj.study_name1 = this.state.study_name1
+            let array = []
+            document.getElementById('loading1.0').style.visibility = 'visible'
+            array.push(this.state.study_name1,this.state.dataset_id)
+            fetch("http://localhost:5000/resultsdataset_id", {
+                method: 'POST',
+                body: array
+            })
+                .then(response => response.text())
+                .then(response => {
+                    if(response === 'Error') {
+                        document.getElementById('loading1.0').innerHTML = 'Pipeline failed. Try again.';                      document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
+                        document.getElementById('pipeline1.0').disabled = false
+                        document.getElementById('submit_button1.1').disabled = false
+                        document.getElementById('submit_button1.2').disabled = false
+                        document.getElementById('submit_button1.3').disabled = false
+                        document.getElementById('inputDatapackageId').disabled = false
+                        document.getElementById('jobNum').disabled = false
+                        document.getElementById('inputId').disabled = false
+                        document.getElementById('study_name1').disabled = false
+                        document.getElementById('study_name2').disabled = false
+                    }
+                    else {
+                        this.state.options.push(JSON.parse(response))
+                        fetch(
+                            "http://localhost:5000/data", {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(obj)
+                            })
+                            .then(response => response)
+                            .catch(error => console.log('Error:',error))
+                        document.getElementById('area1').style.visibility = 'hidden'
+                        document.getElementById('loading1.0').style.visibility = 'hidden'
+                        document.getElementById('area2').style.visibility = 'hidden'
+                        document.getElementById('area4').style.visibility = 'visible'
+                        document.getElementById('success2').style.visibility = 'visible'
+                        document.getElementById('submit_button4').style.visibility = 'visible'
+                    }
+                })
+
+        }
+        if(this.state.job_number !== '' && this.state.study_name2 !== ''
+            && /^\d+$/.test(this.state.job_number) && this.state.study_name2.match("^[A-Za-z0-9]+$")) {
+            obj.job_number = this.state.job_number
+            obj.study_name2 = this.state.study_name2
+            document.getElementById('loading1.0').style.visibility = 'visible'
+            let array = []
+            document.getElementById('loading1.0').style.visibility = 'visible'
+            array.push(this.state.study_name2,this.state.job_number)
+            fetch("http://localhost:5000/resultsjob_id", {
+                method: 'POST',
+                body: array
+            })
+                .then(response => response.text())
+                .then(response => {
+                    if(response === 'Error') {
+                        document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
+                        document.getElementById('pipeline1.0').disabled = false
+                        document.getElementById('submit_button1.1').disabled = false
+                        document.getElementById('submit_button1.2').disabled = false
+                        document.getElementById('submit_button1.3').disabled = false
+                        document.getElementById('inputDatapackageId').disabled = false
+                        document.getElementById('jobNum').disabled = false
+                        document.getElementById('inputId').disabled = false
+                        document.getElementById('study_name1').disabled = false
+                        document.getElementById('study_name2').disabled = false
+                    }
+                    else {
+                        this.state.options.push(JSON.parse(response))
+                        fetch(
+                            "http://localhost:5000/data", {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(obj)
+                            })
+                            .then(response => response)
+                            .catch(error => console.log('Error:',error))
+                        document.getElementById('area1').style.visibility = 'hidden'
+                        document.getElementById('loading1.0').style.visibility = 'hidden'
+                        document.getElementById('area2').style.visibility = 'hidden'
+                        document.getElementById('area4').style.visibility = 'visible'
+                        document.getElementById('success2').style.visibility = 'visible'
+                        document.getElementById('submit_button4').style.visibility = 'visible'
+                    }
+                })
+
+
+        }
+        checker1 = 1
+        document.getElementById('submit_button1.1').disabled = true
+        document.getElementById('pipeline1.0').disabled = true
+        document.getElementById('submit_button1.2').disabled = true
+        document.getElementById('submit_button1.3').disabled = true
+        document.getElementById('inputDatapackageId').disabled = true
+        document.getElementById('jobNum').disabled = true
+        document.getElementById('inputId').disabled = true
+        document.getElementById('study_name1').disabled = true
+        document.getElementById('study_name2').disabled = true
     }
 
     handleSubmit = (event) => {
@@ -145,6 +362,7 @@ class App extends React.Component {
                     {
                         document.getElementById('loading1.1').innerHTML =
                             'Error, no datapackage ID found. Please try again.'
+                        document.getElementById('pipeline1.0').disabled = false
                         document.getElementById('submit_button1.1').disabled = false
                         document.getElementById('submit_button1.2').disabled = false
                         document.getElementById('submit_button1.3').disabled = false
@@ -154,6 +372,7 @@ class App extends React.Component {
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
                         checker1 = 0
+
                     }
                     else {
                         this.state.options.push(JSON.parse(response))
@@ -313,6 +532,7 @@ class App extends React.Component {
         }
         checker1=1
         document.getElementById('submit_button1.1').disabled = true
+        document.getElementById('pipeline1.0').disabled = true
         document.getElementById('submit_button1.2').disabled = true
         document.getElementById('submit_button1.3').disabled = true
         document.getElementById('inputDatapackageId').disabled = true
@@ -392,7 +612,8 @@ class App extends React.Component {
                 document.getElementById('loading2').style.visibility = 'hidden'
                 document.getElementById('area2').style.visibility = 'hidden'
                 document.getElementById('area4').style.visibility = 'visible'
-
+                document.getElementById('success2').style.visibility = 'visible'
+                document.getElementById('submit_button4').style.visibility = 'visible'
             })
             .catch((error) => {
                 console.error('Error:', error)
@@ -408,7 +629,6 @@ class App extends React.Component {
 
     handleDropDownChange =(optionsChosen) => {
         this.setState({optionsChosen})
-        //TODO: Add download here too
         document.getElementById('pic_div1').style.visibility = 'hidden'
         document.getElementById('pic_div2').style.visibility = 'hidden'
     }
@@ -420,6 +640,8 @@ class App extends React.Component {
             window.alert("Please select some file(s)")
             return
         }
+        document.getElementById('data_success').style.visibility = 'hidden'
+        document.getElementById('p_table').style.visibility = 'hidden'
         document.getElementById('table').style.visibility = 'hidden'
         document.getElementById('csv').style.visibility = 'hidden'
         document.getElementById('submit_button3').disabled = true
@@ -428,8 +650,6 @@ class App extends React.Component {
         document.getElementById('loading3').style.visibility = 'visible'
         document.getElementById('pic_div1').style.visibility = 'hidden'
         document.getElementById('pic_div2').style.visibility = 'hidden'
-        document.getElementById('pic_div1').position = 'relative'
-        document.getElementById('pic_div2').position = 'relative'
         this.setState({file_rows:[],file_columns:[], file_data:[]})
         let self = this
         fetch(
@@ -494,10 +714,10 @@ class App extends React.Component {
                                     result.push(obj)
                                     }
                                     this.setState({file_rows:result})
+                                    document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('success').innerHTML = 'Feel free to look at another text file.'
                                     document.getElementById('submit_button3').disabled = false
                                     document.getElementById('submit_button4').disabled = false
-                                    document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('table').style.visibility = 'visible'
                                 }
                                 if (this.state.file_data[i]['file_name'].includes(".csv")) {
@@ -520,24 +740,34 @@ class App extends React.Component {
                                     this.setState({file_rows: result})
                                     document.getElementById('success2').innerHTML = 'Feel free to choose 1 .csv' +
                                         ' and/or up to 2 .png/jpg again'
+                                    document.getElementById('data_success').style.visibility = 'visible'
+                                    document.getElementById('p_table').style.visibility = 'visible'
                                     document.getElementById('submit_button4').disabled = false
                                     document.getElementById('submit_button3').disabled = false
                                     document.getElementById('loading3').style.visibility = 'hidden'
                                     document.getElementById('csv').style.visibility = 'visible'
+                                    checker1=0
+                                    checker2=0
                                 }
                                 if (this.state.file_data[i]['file_name'].includes(".png") ||
                                 this.state.file_data[i]['file_name'].includes(".jpg")) {
                                     console.log('PNG/JPG')
                                     if (png_number === 1) {
                                         pic1 = new Image()
+                                        pic1.alt = this.state.file_data[i]['file_name']
                                         pic1.src = "data:image/png;base64," + data
                                         pic1.onload = function () {
                                             document.getElementById('pic1').src = pic1.src
                                         }
+                                        document.getElementById('data_success').style.visibility = 'visible'
                                         document.getElementById('pic_div1').style.visibility = 'visible'
+
                                         png_number++
+                                        checker1=0
+                                        checker2 = 0
                                     } else {
                                         pic2 = new Image()
+                                        pic2.alt = this.state.file_data[i]['file_name']
                                         pic2.src = "data:image/png;base64," + data
                                         pic2.onload = function () {
                                             document.getElementById('pic2').src = pic2.src
@@ -547,11 +777,14 @@ class App extends React.Component {
                                     document.getElementById('submit_button4').disabled = false
                                     document.getElementById('submit_button3').disabled = false
                                     document.getElementById('loading3').style.visibility = 'hidden'
+
                                 }
 
                             }
                         )
-                }})
+                }
+            }
+                )
             .catch((error) => {
                 console.error('Error:', error)
             })
@@ -582,11 +815,41 @@ class App extends React.Component {
                 }
             }
         }
-        //TODO: separate p to show when just image, output button
+        if(event.target.id === 'download3' || event.target.id === 'download4') {
+            for (let i = 0; i < this.state.file_data.length; i++) {
+                if (this.state.file_data[i]['file_name'].includes('.png') ||
+                this.state.file_data[i]['file_name'].includes('.jpg')) {
+                    if(event.target.id === 'download3') {
+                        saveAs(pic1.src, pic1.alt)
+                        return
+                    }
+                    if(event.target.id === 'download4') {
+                        saveAs(pic2.src,pic2.alt)
+                        return
+                    }
+                }
+            }
+        }
     }
 
 
     render() {
+        const data = [{
+    name: 'Tanner Linsley',
+    age: 26,
+    friend: {
+      name: 'Jason Maurer',
+      age: 23,
+    }
+  }]
+        const columns = [{
+            Header: 'Name',
+            accessor: 'name'
+        },
+            {
+                Header: 'Age',
+                accessor: 'age'
+            }]
         return (
 <div>
 
@@ -616,8 +879,8 @@ class App extends React.Component {
           or click the section's 'Display' button to view its pre-analyzed data instead.
           <br/>
           <br/>
-          <button className={"pipeline"}>Run Pipeline</button>
-
+          <button id = 'pipeline1.0' onClick={this.handleInternalPipe} className={"pipeline"}>Run Pipeline</button>
+          <div id='loading1.0' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
       </p>
 
 
@@ -809,7 +1072,7 @@ class App extends React.Component {
                 to view at a time.
             </p>
             <MultiLevelSelect
-                id = "select"
+                id = "select2"
                 options={this.state.options}
                 name = "optionsChosen"
                 onChange = {this.handleDropDownChange}
@@ -822,12 +1085,16 @@ class App extends React.Component {
         </form>
         <div id="csv" style={{'width':'100%','maxWidth':'1250px','maxHeight':'100%','visibility':'hidden'}}>
             <br/>
-                <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px'}}>
+                <p id='data_success'
+                    style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','visibility':'hidden'}}>
                     Data retrieved! Scroll down to see them all.
                     <br/>
-                    Along with filtering/sorting features, you can stretch the column names
-                    to reveal the longer values in the corresponding column.
                     <br/>
+                </p>
+                <p id="p_table"
+                    style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px','visibility':'hidden'}}>
+                    For tables, along with filtering/sorting features, you can stretch the column names
+                    to reveal the longer values in the corresponding column.
                     <br/>
                 </p>
                 <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
@@ -836,12 +1103,6 @@ class App extends React.Component {
                 <button id="download2" onClick={this.handleFileDownload} className={"download_link"}>here</button>
                 <br/>
                 <br/>
-                <input className={'submit3'}
-                       type="button"
-                       value="Go Back to PNNL Options"
-                       id = "back_button"
-                       onClick={this.handlePNNLButton}
-                />
                 <br/>
                 <ReactTable
                     style={{'position':'relative'}}
@@ -857,9 +1118,17 @@ class App extends React.Component {
                     pageSizeOptions = {[10,25, 50,100,250,500,1000,2000,3000,4000,5000,10000,25000,50000]}/>
             </div>
         <div id="pic_div1" style={{'visibility':'hidden','width':'45%','maxWidth:':'200','float':'left'}}>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
+                Or download the picture
+            </p>
+            <button id="download3" onClick={this.handleFileDownload} className={"download_link"}>here</button>
             <img src={pic1} id = {'pic1'} alt={'PNG/JPG 1'}/>
         </div>
         <div id="pic_div2" style={{'visibility':'hidden','width':'45%','maxWidth:':'200px','float':'right'}}>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'paddingLeft':'5px',"display":'inline-block'}}>
+                Or download the picture
+            </p>
+            <button id="download4" onClick={this.handleFileDownload} className={"download_link"}>here</button>
             <img src={pic2} id = {'pic2'} alt={'PNG/JPG 2'}/>
         </div>
     </div>

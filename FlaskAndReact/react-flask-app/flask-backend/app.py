@@ -73,6 +73,19 @@ def datadpkgs():
     return json.dumps(calculate_tree(target))
 
 
+@app.route('/resultsdpkgs', methods=['GET', 'POST'])
+def resultsdpkgs():
+    global target
+    results_dpkgs = request.get_data().decode('utf8')
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', results_dpkgs,'430135')
+    try:
+        e = os.listdir(target)
+    except FileNotFoundError:
+        return 'Error'
+    pipeline(target)
+    return json.dumps(calculate_tree(target))
+
+
 @app.route('/datadataset_id', methods=['GET', 'POST'])
 def datadataset_id():
     global target
@@ -85,6 +98,22 @@ def datadataset_id():
         e = os.listdir(target)
     except FileNotFoundError:
         return 'Error'
+    return json.dumps(calculate_tree(target))
+
+
+@app.route('/resultsdataset_id', methods=['GET', 'POST'])
+def resultsdataset_id():
+    global target
+    results_dataset_id = request.get_data().decode('utf8').split(',')
+    for i in range(len(results_dataset_id)):
+        results_dataset_id[i] = results_dataset_id[i].lower()
+    target = os.path.join('/mnt/d/Anubhav/storage/results/set_of_Dataset_IDs'
+                          , results_dataset_id[0], results_dataset_id[1])
+    try:
+        e = os.listdir(target)
+    except FileNotFoundError:
+        return 'Error'
+    pipeline(target)
     return json.dumps(calculate_tree(target))
 
 
@@ -101,6 +130,22 @@ def datajob_id():
         e = os.listdir(target)
     except FileNotFoundError:
         return 'Error'
+    return json.dumps(calculate_tree(target))
+
+
+@app.route('/resultsjob_id', methods=['GET', 'POST'])
+def resultsjob_id():
+    global target
+    results_job_id = request.get_data().decode('utf8').split(',')
+    for i in range(len(results_job_id)):
+        results_job_id[i] = results_job_id[i].lower()
+    target = os.path.join('/mnt/d/Anubhav/storage/results/set_of_Jobs'
+                          , results_job_id[1])
+    try:
+        e = os.listdir(target)
+    except FileNotFoundError:
+        return 'Error'
+    pipeline(target)
     return json.dumps(calculate_tree(target))
 
 
