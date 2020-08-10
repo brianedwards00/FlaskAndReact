@@ -38,7 +38,7 @@ class App extends React.Component {
         this.handlePNNLButton = this.handlePNNLButton.bind(this)
         this.handleNMDCButton = this.handleNMDCButton.bind(this)
         this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDisplay = this.handleDisplay.bind(this)
         this.handleInternalPipe = this.handleInternalPipe.bind(this)
         this.handleFileSubmit = this.handleFileSubmit.bind(this)
         this.handleFileChange = this.handleFileChange.bind(this)
@@ -60,8 +60,6 @@ class App extends React.Component {
         document.getElementById('csv').style.visibility = 'hidden'
         document.getElementById('success').style.visibility = 'hidden'
         document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
         document.getElementById('success2').style.visibility = 'hidden'
         document.getElementById('area4').style.visibility = 'hidden'
         document.getElementById('data_success').style.visibility = 'hidden'
@@ -74,21 +72,23 @@ class App extends React.Component {
     handleOutputButton = (event) => {
         event.preventDefault()
         if(checker2 === 1) {
-            window.alert('Please finish the task at hand first.')
+            window.alert('Please complete running the pipeline first.')
             return
         }
         for (let i = 0;i<this.state.file_data.length;i++){
-            if(this.state.file_data[i]['file_name'].includes('txt')) {
-                document.getElementById('table').style.visibility = 'visible'
-            }
             if(this.state.file_data[i]['file_name'].includes('csv')) {
-                document.getElementById('table').style.visibility = 'visible'
+                document.getElementById('csv').style.visibility = 'visible'
             }
+            console.log(pic2.alt)
             if(this.state.file_data[i]['file_name'].includes('png') ||
             this.state.file_data[i]['file_name'].includes('jpg')) {
-                document.getElementById('pic_div1').style.visibility = 'hidden'
-                document.getElementById('pic_div2').style.visibility = 'hidden'
-        }
+                document.getElementById('pic_div1').style.visibility = 'visible'
+                if(pic2.alt !=='') {
+                    document.getElementById('pic_div2').style.visibility = 'visible'
+                }
+            }
+            document.getElementById('success2').style.visibility = 'visible'
+            document.getElementById('p_table').style.visibility = 'visible'
         }
 
 
@@ -106,7 +106,11 @@ class App extends React.Component {
             return
         }
         if (event.target.id ==='back_button') {
-            checker1--
+            this.setState({
+                file_rows: [],
+                file_columns: []
+            })
+            checker1=0
         }
         document.getElementById('area1').style.visibility = 'visible'
         document.getElementById('area2').style.visibility = 'hidden'
@@ -114,8 +118,6 @@ class App extends React.Component {
         document.getElementById('table').style.visibility = 'hidden'
         document.getElementById('csv').style.visibility = 'hidden'
         document.getElementById('success').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
         document.getElementById('loading1.2').style.visibility = 'hidden'
         document.getElementById('success2').style.visibility = 'hidden'
         document.getElementById('area4').style.visibility = 'hidden'
@@ -151,8 +153,6 @@ class App extends React.Component {
         document.getElementById('table').style.visibility = 'hidden'
         document.getElementById('csv').style.visibility = 'hidden'
         document.getElementById('success').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
-        document.getElementById('loading1.2').style.visibility = 'hidden'
         document.getElementById('loading1.2').style.visibility = 'hidden'
         document.getElementById('success2').style.visibility = 'hidden'
         document.getElementById('area4').style.visibility = 'hidden'
@@ -196,7 +196,6 @@ class App extends React.Component {
                 .then(response => response.text())
                 .then(response => {
                     if(response === 'Error') {
-                        document.getElementById('loading1.0').innerHTML = 'Pipeline failed. Try again.'
                         document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
                         document.getElementById('pipeline1.0').disabled = false
                         document.getElementById('submit_button1.1').disabled = false
@@ -207,6 +206,7 @@ class App extends React.Component {
                         document.getElementById('inputId').disabled = false
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
+                        checker1= 0
                     }
                     else {
                         this.state.options.push(JSON.parse(response))
@@ -243,7 +243,7 @@ class App extends React.Component {
                 .then(response => response.text())
                 .then(response => {
                     if(response === 'Error') {
-                        document.getElementById('loading1.0').innerHTML = 'Pipeline failed. Try again.';                      document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
+                        document.getElementById('loading1.0').innerHTML = 'File not found. Try again.'
                         document.getElementById('pipeline1.0').disabled = false
                         document.getElementById('submit_button1.1').disabled = false
                         document.getElementById('submit_button1.2').disabled = false
@@ -253,6 +253,7 @@ class App extends React.Component {
                         document.getElementById('inputId').disabled = false
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
+                        checker1= 0
                     }
                     else {
                         this.state.options.push(JSON.parse(response))
@@ -301,6 +302,8 @@ class App extends React.Component {
                         document.getElementById('inputId').disabled = false
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
+                        checker1= 0
+                        checker2 = 1
                     }
                     else {
                         this.state.options.push(JSON.parse(response))
@@ -326,6 +329,7 @@ class App extends React.Component {
 
         }
         checker1 = 1
+        checker2 = 1
         document.getElementById('submit_button1.1').disabled = true
         document.getElementById('pipeline1.0').disabled = true
         document.getElementById('submit_button1.2').disabled = true
@@ -337,9 +341,10 @@ class App extends React.Component {
         document.getElementById('study_name2').disabled = true
     }
 
-    handleSubmit = (event) => {
+    handleDisplay = (event) => {
         event.preventDefault()
         console.log(event.target.id)
+        document.getElementById('loading1.0').style.visibility = 'hidden'
         if(this.state.datapackage_id ==='' && this.state.dataset_id ==='' && this.state.job_number ===''
         && this.state.study_name1 ==='' && this.state.study_name2 ==='')
         {
@@ -348,7 +353,7 @@ class App extends React.Component {
         }
         this.setState({options:[]})
         let obj = {}
-        if (event.target.id ==='area1.1') {
+        if (event.target.id ==='area1.1' && this.state.datapackage_id !== '') {
             document.getElementById('loading1.1').innerHTML = 'Loading...'
             obj.datapackage_id = this.state.datapackage_id
             document.getElementById('loading1.1').style.visibility = 'visible'
@@ -372,6 +377,7 @@ class App extends React.Component {
                         document.getElementById('study_name1').disabled = false
                         document.getElementById('study_name2').disabled = false
                         checker1 = 0
+                        checker2 = 1
 
                     }
                     else {
@@ -387,6 +393,7 @@ class App extends React.Component {
                             .then(response => response)
                             .catch(error => console.log('Error:',error))
                         document.getElementById('area1').style.visibility = 'hidden'
+                        document.getElementById('pipeline1.0').disabled = false
                         document.getElementById('loading1.1').style.visibility = 'hidden'
                         document.getElementById('loading1.2').style.visibility = 'hidden'
                         document.getElementById('loading1.3').style.visibility = 'hidden'
@@ -403,7 +410,7 @@ class App extends React.Component {
                         document.getElementById('success').style.visibility = 'visible'
                     }
                 })}
-        if (event.target.id === 'area1.2') {
+        else if (event.target.id === 'area1.2' && this.state.dataset_id !== '' && this.state.study_name1 !== '') {
             document.getElementById('loading1.2').innerHTML = 'Loading...'
             document.getElementById('loading1.2').style.visibility = 'visible'
             if(this.state.dataset_id !== '' && this.state.study_name1 !== '') {
@@ -420,8 +427,9 @@ class App extends React.Component {
                                     if (response === 'Error')
                                     {
                                         document.getElementById('loading1.2').innerHTML =
-                                            'Error, no dataset_id/study name combo found. Please try again.'
+                                            'Error, no dataset_id/study name combo<br/> found. Please try again.'
                                         document.getElementById('submit_button1.1').disabled = false
+                                        document.getElementById('pipeline1.0').disabled = false
                                         document.getElementById('submit_button1.2').disabled = false
                                         document.getElementById('submit_button1.3').disabled = false
                                         document.getElementById('inputDatapackageId').disabled = false
@@ -430,6 +438,7 @@ class App extends React.Component {
                                         document.getElementById('study_name1').disabled = false
                                         document.getElementById('study_name2').disabled = false
                                         checker1 = 0
+                                        checker2 = 1
                                     }
                                     else {
                                         this.state.options.push(JSON.parse(response))
@@ -448,6 +457,7 @@ class App extends React.Component {
                                         document.getElementById('loading1.2').style.visibility = 'hidden'
                                         document.getElementById('loading1.3').style.visibility = 'hidden'
                                         document.getElementById('submit_button1.1').disabled = false
+                                        document.getElementById('pipeline1.0').disabled = false
                                         document.getElementById('submit_button1.2').disabled = false
                                         document.getElementById('submit_button1.3').disabled = false
                                         document.getElementById('inputDatapackageId').disabled = false
@@ -466,7 +476,7 @@ class App extends React.Component {
                 return
             }
         }
-        if (event.target.id === 'area1.3') {
+        else if (event.target.id === 'area1.3' && this.state.job_number !== '' && this.state.study_name2 !== '') {
             document.getElementById('loading1.3').innerHTML = 'Loading...'
             document.getElementById('loading1.3').style.visibility = 'visible'
             if(this.state.job_number !== '' && this.state.study_name2 !== '') {
@@ -484,8 +494,9 @@ class App extends React.Component {
                     .then(response => {
                         if (response === 'Error') {
                             document.getElementById('loading1.3').innerHTML =
-                                'Error, no job_number/study name combo found. Please try again.'
+                                'Error, no job_number/study name combo<br/>found. Please try again.'
                             document.getElementById('submit_button1.1').disabled = false
+                            document.getElementById('pipeline1.0').disabled = false
                             document.getElementById('submit_button1.2').disabled = false
                             document.getElementById('submit_button1.3').disabled = false
                             document.getElementById('inputDatapackageId').disabled = false
@@ -494,6 +505,7 @@ class App extends React.Component {
                             document.getElementById('study_name1').disabled = false
                             document.getElementById('study_name2').disabled = false
                             checker1 = 0
+                            checker2 = 1
                         }
                         else {
                             this.state.options.push(JSON.parse(response))
@@ -522,6 +534,7 @@ class App extends React.Component {
                             document.getElementById('area3').style.visibility = 'visible'
                             document.getElementById('success').innerHTML = 'Success! Now please submit ONE .txt file table that you would like to see:'
                             document.getElementById('success').style.visibility = 'visible'
+                            document.getElementById('pipeline1.0').disabled = false
                         }})
             }
             else {
@@ -530,7 +543,15 @@ class App extends React.Component {
                 return
             }
         }
+        else {
+            window.alert('Wrong Display button clicked.')
+            document.getElementById('loading1.1').style.visibility = 'hidden'
+            document.getElementById('loading1.2').style.visibility = 'hidden'
+            document.getElementById('loading1.3').style.visibility = 'hidden'
+            return
+        }
         checker1=1
+        checker2 = 1
         document.getElementById('submit_button1.1').disabled = true
         document.getElementById('pipeline1.0').disabled = true
         document.getElementById('submit_button1.2').disabled = true
@@ -594,6 +615,7 @@ class App extends React.Component {
         }
         this.setState({options:[]})
         checker1=1
+        checker2 =1
         document.getElementById('loading2').innerHTML = 'Loading...'
         document.getElementById('loading2').style.visibility = 'visible'
         document.getElementById('submit_button2').disabled = true
@@ -621,6 +643,7 @@ class App extends React.Component {
                     "please make sure 'results.json' is in json format or empty and try again"
                 document.getElementById('submit_button2').disabled = false
                 document.getElementById('inputFiles').disabled = false
+                checker1 = 0
             })
 
 
@@ -677,6 +700,8 @@ class App extends React.Component {
                             'Error, please submit the allowed file(s).'
                         document.getElementById('submit_button3').disabled = false
                         document.getElementById('submit_button4').disabled = false
+                        checker1 =1
+                        checker2 =1
                         return
                     }
                     if(file_name.includes('.txt')){
@@ -691,7 +716,7 @@ class App extends React.Component {
                 }
             })
             .then(() => {
-                let png_number = 1, absolue_pos = 0
+                let png_number = 1
                 for (let i =0; i <this.state.file_data.length;i++) {
                     Promise.resolve(this.state.file_data[i]['file_data'])
                         .then(data => {
@@ -719,10 +744,11 @@ class App extends React.Component {
                                     document.getElementById('submit_button3').disabled = false
                                     document.getElementById('submit_button4').disabled = false
                                     document.getElementById('table').style.visibility = 'visible'
+                                    checker1 = 1
+                                    checker2 = 1
                                 }
                                 if (this.state.file_data[i]['file_name'].includes(".csv")) {
                                     console.log('CSV')
-                                    absolue_pos++
                                     let result = []
                                     let lines = data.toString().split('\n')
                                     const headers = lines[0].split(",")
@@ -884,8 +910,8 @@ class App extends React.Component {
       </p>
 
 
-         <form id='area1.1' onSubmit={this.handleSubmit}>
-            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','paddingBottom':'-10px','lineHeight':'40px'}}>
+         <form id='area1.1' onSubmit={this.handleDisplay} style={{'float':'left','display':'inline-block','margin':'0 12px 0 0'}}>
+            <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','paddingBottom':'-10px','lineHeight':'40px','display':'block'}}>
                 Enter the datapackage ID (ETC: ~10-15min)</p>
             <input
                type="text"
@@ -902,12 +928,9 @@ class App extends React.Component {
             type="submit"
             value="Display"
             />
-            <div id='loading1.1' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
+            <div id='loading1.1' style={{'visibility':'hidden', 'margin':'0 25px','padding':'10px','font':'15px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
-         <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>---------------OR---------------</p>
-
-
-         <form id='area1.2' onSubmit={this.handleSubmit}>
+         <form id='area1.2' onSubmit={this.handleDisplay} style={{'float':'left','display':'inline-block','margin':'0 20px 0 0'}}>
             <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>Enter the dataset ID (ETC: ~1-2min)</p>
             <input type="text"
                name="dataset_id"
@@ -935,14 +958,9 @@ class App extends React.Component {
             type="submit"
             value="Display"
             />
-            <div id='loading1.2' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
+            <div id='loading1.2' style={{'visibility':'hidden', 'margin':'0 25px','padding':'10px','font':'15px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
-
-
-         <p style={{'font':'20px Comic Sans MS','margin':"3px",'lineHeight':'40px'}}>---------------OR---------------</p>
-
-
-          <form id='area1.3' onSubmit={this.handleSubmit}>
+          <form id='area1.3' onSubmit={this.handleDisplay} style={{'float':'left','display':'inline-block','margin':'0 20px 0 0'}}>
             <p style={{'font':'20px Comic Sans MS','margin':"0",'padding':'5px','lineHeight':'40px'}}>Enter the job number (ETC: ~1-2min)</p>
             <input
                type="text"
@@ -971,7 +989,7 @@ class App extends React.Component {
             type="submit"
             value="Display"
             />
-            <div id='loading1.3' style={{'visibility':'hidden','display':'inline-block', 'margin':'0 25px','padding':'10px','font':'20px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
+            <div id='loading1.3' style={{'visibility':'hidden', 'margin':'0 25px','padding':'10px','font':'15px Comic Sans MS','verticalAlign':'top'}}>Loading...</div>
          </form>
    </div>
 
