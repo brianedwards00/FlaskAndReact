@@ -1,7 +1,7 @@
 .header{
     display: block;
     text-align: left;
-    background: #1C2C58;
+    background: midnightblue;
 }
 
 .headerTitle {
@@ -102,6 +102,7 @@
 padding: 5px;
 position: absolute;
 visibility: hidden;
+border:5px outset black;
 }
 
 .area2{

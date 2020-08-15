@@ -77,7 +77,7 @@ def datadpkgs():
 def resultsdpkgs():
     global target
     results_dpkgs = request.get_data().decode('utf8')
-    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', results_dpkgs,'430135')
+    target = os.path.join('/mnt/d/Anubhav/storage/results/dpkgs', results_dpkgs)
     try:
         e = os.listdir(target)
     except FileNotFoundError:
@@ -98,7 +98,9 @@ def datadataset_id():
         e = os.listdir(target)
     except FileNotFoundError:
         return 'Error'
-    return json.dumps(calculate_tree(target))
+    x = json.dumps(calculate_tree(target))
+    print(x)
+    return x
 
 
 @app.route('/resultsdataset_id', methods=['GET', 'POST'])
@@ -277,7 +279,7 @@ def dropdown_submit():
         return send_file('data.zip', as_attachment=True)
     if '/results' in target:
         for f in file_names:
-            if ('.csv' not in f and '.jpg' not in f and '.png' not in f) \
+            if ('.tsv' not in f and '.jpg' not in f and '.png' not in f) \
                     or len(file_names) > 3:
                 print('Writing file type error...')
                 f = open("error.txt", 'w+')
