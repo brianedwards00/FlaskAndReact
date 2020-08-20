@@ -28,7 +28,8 @@ This project solves the above problem as I created an interface to the pipeline 
     * 128, `target = os.path.join('*here*/Anubhav/storage/data/set_of_Jobs', data_job_id[1])`
     * 144, `target = os.path.join('*here*/Anubhav/storage/results/set_of_Jobs', results_job_id[1])`
 - Then after, supposedly you will have to mount to the network share drive, so on the command line, run:
-   *`*sudo mount -t drvfs '//pnl/Projects/MSSHARE' *here*`
+
+    * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' *here*`
 ---
 ## How to Run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
