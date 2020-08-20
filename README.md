@@ -15,7 +15,7 @@ This project solves the above problem as I created an interface to the pipeline 
 
 ## Before Running
 ##### Scenario 1
-- If you plan on using the default `target` path values, before running the app, on the command line, run:
+- If you plan on using the default variable `target` in [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py) path values, before running the app, on the command line, run:
 
     * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d`
 ##### Scenario 2
