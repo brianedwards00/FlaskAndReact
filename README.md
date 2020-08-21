@@ -15,11 +15,11 @@ This project solves the above problem as I created a Web Application to the pipe
 
 ## Before Running
 ##### Scenario 1
-- If you plan on using the default variable `target` path values in the back-end's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), before running the app, on the command line, run:
+- If you plan on using the default variable `target` mount path value in the back-end's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), before running the app, on the command line, run:
 
     * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d`
 ##### Scenario 2
-- If you like to utilize your own unique path, ensure that the variable `target` is facing the right directory for each function by going into the back-ends's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), and changing lines (only edit where it says `*here*`):
+- If you like to utilize your own unique mount path, ensure that the variable `target` is facing the right directory for each function by going into the back-ends's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), and changing lines (only edit where it says `*here*`):
 
     * 68 `target = os.path.join('*here*/Anubhav/storage/data/dpkgs', data_dpkgs)`
     * 80, `target = os.path.join('*here*/Anubhav/storage/results/dpkgs', results_dpkgs)`
