@@ -14,7 +14,7 @@ This project solves the above problem as I created a Web Application to the pipe
 ---
 ## How To Install Project on Your Computer
 #### Prerequisites 
-First things first, I am assuming that you are using a Ubuntu command line, or a familiar Linux one at the least
+First things first, I am assuming that you are using a Ubuntu command line, or a familiar Linux one at the least <br/>
 On the command line, run the following to install the necessary coding language and package manager:
 - `sudo apt install python3.8`
 - `sudo apt-get install yarn`
