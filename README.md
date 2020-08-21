@@ -14,7 +14,7 @@ This project solves the above problem as I created a Web Application to the pipe
 ---
 ## How To Install Project on Your Computer
 #### Prerequisites 
-On the command line, run the following to install the necessary components:
+On the command line, run the following to install the necessary coding language and package manager:
 - `sudo apt install python3.8`
 - `sudo apt-get install yarn`
 - `sudo apt-get update`
@@ -24,7 +24,7 @@ On the command line, run the following to install the necessary components:
 On the command line, find a path to put the project in, then run the following in order:
 - `git clone https://github.com/brianedwards00/FlaskAndReact.git`
 
-#### Install virtual environment
+#### Install back-end and its virtual environment
 After, we will need to install the back-end and the virtual environment it will run in, so as a continuation of the last section, run the following in order:
 - `cd FlaskAndReact`
 - `cd FlaskAndReact`
