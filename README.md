@@ -15,30 +15,30 @@ This project solves the above problem as I created a Web Application to the pipe
 ## How To Install Project on Your Computer
 #### Prerequisites 
 On the command line, run the following to install the necessary components:
-`sudo apt install python3.8`
-`sudo apt-get install yarn`
-`sudo apt-get update`
-`yarn install`
+-`sudo apt install python3.8`
+-`sudo apt-get install yarn`
+-`sudo apt-get update`
+-`yarn install`
 
 #### Install Project
 On the command line, find a path to put the project in, then run the following in order:
-`git clone https://github.com/brianedwards00/FlaskAndReact.git`
+-`git clone https://github.com/brianedwards00/FlaskAndReact.git`
 
 #### Install virtual environment
 After, we will need to install the back-end and the virtual environment it will run in, so as a continuation of the last section, run the following in order:
-`cd FlaskAndReact`
-`cd FlaskAndReact`
-`cd react-flask-app`
-`cd flask-backend`
-`sudo apt-get install python3-venv`
-`python3 -m venv venv`
-`source venv/bin/activate`
-`pip install flask python-dotenv`
+-`cd FlaskAndReact`
+-`cd FlaskAndReact`
+-`cd react-flask-app`
+-`cd flask-backend`
+-`sudo apt-get install python3-venv`
+-`python3 -m venv venv`
+-`source venv/bin/activate`
+-`pip install flask python-dotenv`
 (If nothing happens, Enter once)
-`pip install flask-cors`
+-`pip install flask-cors`
 (If nothing happens, Enter once)
-`deactivate`
-cd ..
+-`deactivate`
+- `cd ..`
 
 ---
 
