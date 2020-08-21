@@ -66,13 +66,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 #### Available Scripts
 You know you are in the project directory on the command line when you run `ls` and you receive <br/>
 `flask-backend  node_modules  package.json  public  src  yarn.lock` <br/> <br/>
-Here, you can run the front-end and the back-end by running:
+Here, you can start the front-end and the back-end by running:
 ###### `yarn start`
 - Runs the front-end (what the users see)
 - Opens [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ###### `yarn start-api`
 - Runs the back-end (processor and retriever)
+- You as a user do not need to access this directly
 
 **Note: You need to run both to successfully run the web-application!**
 
