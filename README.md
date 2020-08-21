@@ -64,13 +64,15 @@ After, we will need to install the back-end and the virtual environment it will 
 ## How to Run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 #### Available Scripts
-In the project directory on the command line, you can run:
+You know you are in the project directory on the command line when you run `ls` and you receive <br/>
+`flask-backend  node_modules  package.json  public  src  yarn.lock` <br/>
+Here, you can run the front-end and the back-end by running: <br/>
 ###### `yarn start`
 - Runs the front-end (what the users see)
 - Opens [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ###### `yarn start-api`
-- Runs the back-end (the processor and retriever)
+- Runs the back-end (processor and retriever)
 
 **Note: You need to run both to successfully run the web-application!**
 
