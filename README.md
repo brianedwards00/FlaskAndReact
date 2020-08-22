@@ -89,3 +89,30 @@ Here, you can start the front-end and the back-end by running:
 - Adding functionality to view cross-tabs
 - Making plots more interactive, instead of the current png/jpg
 - To successfully implement the Redux library into the app
+---
+## Dependencies
+@testing-library/jest-dom: Custom jest matchers to test the state of the DOM
+@testing-library/react: Simple and complete React DOM testing utilities that encourage good testing practices.
+@testing-library/user-event: Simulate user events for react-testing-library
+blueimp-canvas-to-blob: Canvas to Blob is a polyfill for the standard JavaScript canvas.toBlob method. It can be used to create Blob objects from an HTML canvas element.
+file-saver: An HTML5 saveAs() FileSaver implementation
+jquery: JavaScript library for DOM operations
+jszip: Create, read and edit .zip files with JavaScript http://stuartk.com/jszip
+package-json-to-readme: Generate a README.md from package.json contents
+react: React is a JavaScript library for building user interfaces.
+react-csv-to-table: React library to show a simple table
+react-dom: React package for working with the DOM.
+react-multi-level-selector: Multi level dropdown options selector for application
+react-redux: Official React bindings for Redux
+react-scripts: Configuration and scripts for Create React App.
+react-select: A Select control built with and for ReactJS
+react-table: Hooks for building lightweight, fast and extendable datagrids for React
+react-table-v6: A fast, lightweight, opinionated table and datagrid built on React
+react-tabulator: React Tabulator is based on tabulator - a JS table library with many advanced features.
+redux: Predictable state container for JavaScript apps
+redux-logger: Logger for Redux
+tabulator: Put data into tables
+tabulator-tables: Interactive table generation JavaScript library
+txt-file-to-json: Reads a txt file having a table and returns an array of obects. In which each object consists of all headers as keys and there data as values.
+Dev Dependencies
+None
