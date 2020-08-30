@@ -114,3 +114,14 @@ Here, you can start the front-end and the back-end by running:
 - tabulator: Put data into tables <br/>
 - tabulator-tables: Interactive table generation JavaScript library <br/>
 - txt-file-to-json: Reads a txt file having a table and returns an array of obects. In which each object consists of all headers as keys and there data as values. <br/>
+---
+## Virtual Environment (For Back-end) Requirements and Versions
+- click==7.1.2 </br>
+- Flask==1.1.2 <br/>
+- Flask-Cors==3.0.8 <br/>
+- itsdangerous==1.1.0 <br/>
+- Jinja2==2.11.2 <br/>
+- MarkupSafe==1.1.1 <br/>
+- python-dotenv==0.14.0 <br/>
+- six==1.15.0 <br/>
+- Werkzeug==1.0.1 <br/>
