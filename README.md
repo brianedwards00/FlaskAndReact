@@ -47,7 +47,7 @@ After, we will need to install the back-end and the virtual environment it will 
 ##### Scenario 1
 - If you plan on using the default variable `target` mount path value in the back-end's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), before running the app, on the command line, run:
 
-    * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d`
+    * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' /mnt/d` <br/>
 (This will point your D partition to the network file drive)
 ##### Scenario 2
 - If you like to utilize your own unique mount path, ensure that the variable `target` is facing the right directory for each function by going into the back-ends's [App.py](https://github.com/brianedwards00/FlaskAndReact/blob/master/FlaskAndReact/react-flask-app/flask-backend/app.py), and changing lines (only edit where it says `*here*`):
