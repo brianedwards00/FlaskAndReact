@@ -58,7 +58,7 @@ After, we will need to install the back-end and the virtual environment it will 
     * 112, `target = os.path.join('*here*/Anubhav/storage/results/set_of_Dataset_IDs', results_dataset_id[0], results_dataset_id[1])`
     * 128, `target = os.path.join('*here*/Anubhav/storage/data/set_of_Jobs', data_job_id[1])`
     * 144, `target = os.path.join('*here*/Anubhav/storage/results/set_of_Jobs', results_job_id[1])`
-- Then after, supposedly you will have to mount to the network share drive, so on the command line, run:
+- Then after, you will have to mount to the network share drive, so on the command line, run:
 
     * `sudo mount -t drvfs '//pnl/Projects/MSSHARE' *here*`
 ---
