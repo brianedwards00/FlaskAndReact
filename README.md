@@ -131,15 +131,18 @@ Here, you can start the front-end and the back-end by running:
 ### Pre-Pipeline Display for Internal Processing
 ![Example1](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%201.png)
 ### Output After Clicking "Display" (Internal)
+#### Here the user will choose which specific results they would like to display, up to 1 table and 2 graphs
 ![Example2](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%202.png)
 ### Output After Clicking "Run Pipeline" (Internal)
+#### Here the user will choose which specific results they would like to display, up to 1 table and 2 graphs
 ![Example3](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%203.png)
 ### Pre-Pipeline Display for External Processing
 ![Example4](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/External%201.png)
 ### Output After Clicking "Run Pipeline" (External)
+#### Here the user will choose which specific results they would like to display, up to 1 table and 2 graphs
 ![Example5](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/External%202.png)
-### Table Output
+### Table Output (Downloadable)
 ![Example6](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Output%201.png)
-### Graph Output
+### Graph Output (Downloadable)
 ![Example7](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Output%202.png)
 
