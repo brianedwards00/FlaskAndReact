@@ -132,3 +132,10 @@ Here, you can start the front-end and the back-end by running:
 ![Example1](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%201.png)
 ### Output After Clicking "Display"
 ![Example2](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%202.png)
+### Output After Clicking "Run Pipeline"
+![Example3](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%203.png)
+### Pre-Pipeline Display for External Processing
+![Example4](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/External%201.png)
+### Output After Clicking "Run Pipeline"
+![Example5](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/External%202.png)
+
