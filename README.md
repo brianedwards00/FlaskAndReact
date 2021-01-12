@@ -128,5 +128,5 @@ Here, you can start the front-end and the back-end by running:
 - Werkzeug==1.0.1 <br/>
 ---
 ## Visual Examples
-###Pre-Pipeline Display for Internal Processing
+### Pre-Pipeline Display for Internal Processing
 ![Example1](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%201.png)
