@@ -126,3 +126,6 @@ Here, you can start the front-end and the back-end by running:
 - python-dotenv==0.14.0 <br/>
 - six==1.15.0 <br/>
 - Werkzeug==1.0.1 <br/>
+---
+## Visual Examples
+![Example1](https://github.com/brianedwards00/FlaskAndReact/blob/master/README%20Images/Internal%201.png)
