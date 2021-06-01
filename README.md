@@ -9,7 +9,7 @@ A group has developed a solution [here](https://github.com/PNNL-Comp-Mass-Spec/N
 
 ---
 ## What Am I Offering?
-This project solves the above problem as I created a Web Application to the pipeline that researchers can use to analyze their protein and peptide data. This web application is functional, user-friendly, and easy-to-use with a simple step-by-stop process. This is supposed to wrap around a workflow so it can have the ability to fetch its results.
+This project solves the above problem as I created a Web Application to the pipeline that researchers can use to analyze their protein and peptide data. This front/back-end web application is functional, user-friendly, and easy-to-use with a simple step-by-stop process. This is supposed to wrap around a workflow so it can have the ability to fetch its results.
 
 ---
 ## How To Install Project on Your Computer
